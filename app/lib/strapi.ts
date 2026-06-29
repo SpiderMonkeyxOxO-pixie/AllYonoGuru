@@ -15,7 +15,7 @@ async function fetchAPI<T>(
       "Content-Type": "application/json",
       ...(STRAPI_TOKEN ? { Authorization: `Bearer ${STRAPI_TOKEN}` } : {}),
     },
-    next: { revalidate: 3600 },
+    next: { revalidate: 60 },
   });
 
   if (!res.ok) {
