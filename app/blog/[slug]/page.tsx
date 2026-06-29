@@ -28,6 +28,30 @@ async function getPost(slug: string) {
   }
 }
 
+// Minimal inline-link support for blog content: [label](url) becomes a
+// real clickable Link. No other markdown syntax is supported by design —
+// keep article content as plain prose, only links need to render specially.
+function renderParagraph(text: string): React.ReactNode[] {
+  const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const parts: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  let key = 0;
+
+  while ((match = linkPattern.exec(text)) !== null) {
+    if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
+    const [, label, href] = match;
+    parts.push(
+      <Link key={key++} href={href} style={{ color: "#f59e0b", textDecoration: "underline" }}>
+        {label}
+      </Link>
+    );
+    lastIndex = match.index + match[0].length;
+  }
+  if (lastIndex < text.length) parts.push(text.slice(lastIndex));
+  return parts;
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -40,7 +64,8 @@ export async function generateMetadata({
   return {
     title: post.seo.metaTitle,
     description: post.seo.metaDescription,
-    alternates: { canonical: `${SITE}/blog/${post.slug}` },
+    keywords: post.seo.keywords,
+    alternates: { canonical: post.seo.canonicalURL ?? `${SITE}/blog/${post.slug}` },
     openGraph: {
       title: post.seo.metaTitle,
       description: post.seo.metaDescription,
@@ -157,7 +182,7 @@ export default async function BlogPostPage({
           <div style={{ maxWidth: "760px", margin: "0 auto" }}>
             {paragraphs.map((para, i) => (
               <p key={i} style={{ fontSize: "15px", color: "#94a3b8", lineHeight: "1.8", marginBottom: "24px" }}>
-                {para}
+                {renderParagraph(para)}
               </p>
             ))}
 
