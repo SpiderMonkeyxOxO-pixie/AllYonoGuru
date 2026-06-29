@@ -22,6 +22,8 @@ async function getBlogPosts() {
 
 const SITE = "https://allyonoguru.com";
 
+export const revalidate = 60;
+
 export const metadata: Metadata = {
   title: "Blog — Guides, Game Tips & Updates | AllYonoGuru",
   description:

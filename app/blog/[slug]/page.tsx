@@ -10,6 +10,8 @@ import { getBlogPostBySlug } from "../../lib/strapi";
 
 const SITE = "https://allyonoguru.com";
 
+export const revalidate = 60;
+
 export function generateStaticParams() {
   return BLOG_POSTS_STATIC.map((p) => ({ slug: p.slug }));
 }
