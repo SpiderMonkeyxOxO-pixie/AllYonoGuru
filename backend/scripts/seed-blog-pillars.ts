@@ -54,7 +54,7 @@ async function main() {
 
   for (const post_ of data.posts) {
     try {
-      const result = await post("blog-posts", post_);
+      const result = await post("blog-posts?status=draft", post_);
       console.log(`  ✓ ${post_.title} (id=${result.data.id}) [DRAFT]`);
     } catch (err) {
       console.log(`  ✗ ${post_.title}: ${(err as Error).message}`);
