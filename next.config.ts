@@ -12,6 +12,7 @@ const nextConfig: NextConfig = {
       { protocol: "http",  hostname: "localhost" },
       { protocol: "https", hostname: "allyonoguru.com" },
       { protocol: "https", hostname: "cdn.allyonoguru.com" },
+      { protocol: "https", hostname: "cms.allyonoguru.com" },
     ],
   },
 
