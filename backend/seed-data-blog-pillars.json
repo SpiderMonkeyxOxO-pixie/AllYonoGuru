@@ -1,0 +1,64 @@
+{
+  "posts": [
+    {
+      "slug": "rummy-sequence-rules-pure-sequence-explained",
+      "title": "Rummy Sequence Rules: Pure Sequence, Sets, and Valid Hand Combinations",
+      "excerpt": "A clear breakdown of pure sequences, impure sequences, and sets in 13-card Rummy, and why one pure sequence is the single most important rule to understand.",
+      "author": "AllYonoGuru Team",
+      "tag": "Guides",
+      "content": "In 13-card Rummy, every valid hand depends on correctly forming sequences and sets from the cards you're dealt. Understanding the difference between these groupings, and which one is mandatory, is the foundation of the entire game.\n\nA sequence is three or more consecutive cards of the same suit. A pure sequence is a sequence with no joker used as a substitute, for example 4-5-6 of hearts in natural order. An impure sequence allows a joker to stand in for a missing card, such as 4-5-Joker-7 of hearts, where the joker represents the 6.\n\nThe single most important rule in 13-card Rummy is that a valid hand must include at least one pure sequence. Without it, a declaration is invalid regardless of how the rest of the hand is arranged, even if every other card is grouped correctly. Many new players lose points not because their overall hand is weak, but because they declare without a pure sequence in place.\n\nA set, by contrast, is three or four cards of the same rank from different suits, for example 7 of hearts, 7 of spades, and 7 of diamonds. Sets do not require a particular suit order and can include a joker as a substitute for a missing rank.\n\nA practical way to approach a new hand is to sort your cards by suit first, then scan for any three consecutive cards you already hold. Securing a pure sequence early gives you a foundation to build the rest of the hand around, rather than scrambling to find one near the end of a round.\n\nThis article explains general Rummy mechanics and does not cover every house rule variation between apps. Always check the in-app rules screen for the specific table format you're playing, since minor differences in joker handling and scoring exist across different Rummy apps in the Yono network.",
+      "seo": {
+        "metaTitle": "Rummy Sequence Rules: Pure Sequence vs Impure Sequence",
+        "metaDescription": "Learn the difference between pure sequences, impure sequences, and sets in 13-card Rummy, and why a pure sequence is required to declare a valid hand."
+      }
+    },
+    {
+      "slug": "teen-patti-hand-ranking-and-sequence-order",
+      "title": "Teen Patti Hand Ranking and Sequence Order Explained",
+      "excerpt": "From a trail down to a high card, here is the complete Teen Patti hand ranking order, including the detail about suited versus mixed sequences new players often miss.",
+      "author": "AllYonoGuru Team",
+      "tag": "Guides",
+      "content": "Teen Patti hands are ranked from strongest to weakest, and knowing this order is the first thing any new player needs to learn before sitting at a table. The ranking order is fixed across most standard variants, though wild-card formats can shift the math.\n\nThe strongest hand is a trail, sometimes called a set, three cards of the same rank, such as three nines. Below that is a pure sequence, three consecutive cards of the same suit, like 4-5-6 of spades. A sequence, sometimes called a run, is three consecutive cards across different suits, such as 4 of spades, 5 of hearts, and 6 of clubs, the same numerical order as a pure sequence but without the suit match.\n\nBelow a sequence is a colour, three cards of the same suit that are not in consecutive order. A pair comes next, two cards of matching rank plus one unrelated card. The weakest hand is a high card, where none of the above combinations apply, and the hand is judged by its highest-ranking individual card.\n\nA detail that trips up new players is the gap between a pure sequence and a regular sequence. Both contain three consecutive cards, but only the suited version counts as a pure sequence and ranks higher. Mixing up the two when comparing hands at the table is one of the most common beginner mistakes.\n\nSome app variants introduce wild cards or joker rules that can change which hand wins a particular round, so the ranking order above reflects the standard format. Always confirm the active rule set on the table screen before you begin, since the app may be running a variant rather than the classic format.\n\nThis guide is for general educational purposes and reflects standard Teen Patti rules. Specific apps may implement minor rule variations.",
+      "seo": {
+        "metaTitle": "Teen Patti Hand Ranking: Complete Sequence Order Explained",
+        "metaDescription": "The full Teen Patti hand ranking from trail to high card, plus the key difference between a pure sequence and a regular sequence new players often miss."
+      }
+    },
+    {
+      "slug": "online-gaming-laws-in-india-what-players-should-know",
+      "title": "Online Gaming Laws in India: What Players Should Know",
+      "excerpt": "Online gaming regulation in India varies by state and by game type. A general overview of how skill-based games are treated differently from games of chance.",
+      "author": "AllYonoGuru Team",
+      "tag": "Legal",
+      "content": "India does not have a single, uniform national law governing all online games. Instead, gaming regulation is split between central legislation and individual state laws, and the legal treatment of a game often comes down to one key distinction: is it a game of skill, or a game of chance?\n\nUnder Indian law, games of chance are generally treated differently from games that courts have recognised as requiring skill. The Supreme Court has previously held that certain card games, including Rummy, involve memory, strategy, and decision-making rather than pure luck, a classification that has shaped how these games are regulated compared to games where the outcome is determined entirely by random chance.\n\nThis distinction is significant because it affects whether and how a game can legally operate in a given state. However, the legal landscape is not static. Some states have introduced their own specific restrictions on online gaming, while others have not. The classification of a game as skill-based at a national level does not automatically guarantee uniform treatment in every state.\n\nFor players, this means the legal position of any given app or game format can depend heavily on where you are located. A game that operates without restriction in one state may be subject to different rules in another. Regulations have also evolved over time as state and central authorities respond to industry growth.\n\nAllYonoGuru lists apps independently and includes age restrictions and state-availability disclaimers precisely because of this legal variability. We are not a legal authority, and nothing in this article should be read as legal advice for your specific situation.\n\nIf you are uncertain about the legal status of any game or app in your state, the most reliable approach is to check your state government's current gaming regulations directly, since this is an area where rules can and do change.",
+      "seo": {
+        "metaTitle": "Online Gaming Laws in India: Skill vs Chance Explained",
+        "metaDescription": "A general overview of how Indian law treats skill-based games differently from games of chance, and why state-level rules matter. Not legal advice."
+      }
+    },
+    {
+      "slug": "understanding-android-app-permissions-before-you-install",
+      "title": "Understanding Android App Permissions Before You Install",
+      "excerpt": "Not every permission an app requests is necessary for it to function. How to read a permissions list and spot requests that do not match what a card game app needs.",
+      "author": "AllYonoGuru Team",
+      "tag": "Safety",
+      "content": "Every Android app declares the permissions it needs to function, and reviewing this list before installing is one of the simplest safety habits a user can build. For game apps specifically, the permissions requested should roughly match what the app actually does, and mismatches are worth paying attention to.\n\nA typical card game app needs very little beyond basic storage access for saving game data and, in some cases, network access for online play. If an app requests access to your contacts, SMS messages, call logs, or device location without a clear reason tied to its features, that is a reasonable point to pause and investigate further before proceeding.\n\nAndroid groups permissions into categories, and some are more sensitive than others. Storage and network access are common and generally low-risk for a card game. Contacts, SMS, and phone-call permissions are higher-risk categories, since they expose personal data that has no obvious connection to gameplay.\n\nWhen installing an APK from outside the Play Store, the permissions screen appears during installation, and it is worth reading rather than tapping through automatically. If you are unsure why an app needs a specific permission, many Android versions let you deny individual permissions after installation and observe whether the app still functions normally.\n\nKeeping your device's built-in protection features active, even when installing from outside the Play Store, adds another layer of review, since these tools can flag installation files that match known harmful patterns.\n\nThis article offers general safety guidance and is not a substitute for your own judgement. Reviewing permissions is one part of a broader practice of checking an app's source and reputation before installing it.",
+      "seo": {
+        "metaTitle": "Android App Permissions: What to Check Before You Install",
+        "metaDescription": "How to read an Android app's permission list and identify requests that do not match what a card game app should reasonably need."
+      }
+    },
+    {
+      "slug": "how-to-compare-rummy-apps-features-that-matter",
+      "title": "How to Compare Rummy Apps: Features That Actually Matter",
+      "excerpt": "With dozens of Rummy apps available, comparing table formats, device requirements, and practice options matters more than going by name recognition alone.",
+      "author": "AllYonoGuru Team",
+      "tag": "Guides",
+      "content": "With a large number of Rummy apps available on Android, choosing which one to install often comes down to more than just a familiar name. A more useful approach is comparing apps against a consistent set of practical criteria.\n\nTable format variety is one of the clearest differentiators. Some apps offer only Points Rummy, while others include Pool Rummy and Deals Rummy as well. If you prefer longer sessions with elimination-style play, an app limited to single-deal formats will feel restrictive regardless of its other features.\n\nDevice requirements matter more than many players initially consider. Minimum Android version and app size affect whether an app runs smoothly on your specific device. An app requiring a recent Android version or a large amount of storage may not be practical on an older or storage-constrained phone, even if its gameplay features are appealing.\n\nAn offline practice mode is a genuinely useful feature for newer players, letting you build familiarity with sequencing and joker handling against simulated opponents before playing in a live setting. Not every app includes this, and its absence is worth weighing if you are still learning the game.\n\nInterface clarity is harder to quantify but still relevant, how clearly an app displays your hand, the discard pile, and remaining card count affects how easy the game is to follow, particularly during faster-paced rounds.\n\nAllYonoGuru's directory lists each app's version, package size, minimum Android requirement, and feature set independently, so you can compare these details side by side rather than relying on app store descriptions alone. This article is general guidance and does not rank or endorse any specific app over another.",
+      "seo": {
+        "metaTitle": "How to Compare Rummy Apps: Key Features to Check",
+        "metaDescription": "A practical framework for comparing Rummy apps: table formats, device requirements, and practice modes, instead of choosing by name recognition alone."
+      }
+    }
+  ]
+}
