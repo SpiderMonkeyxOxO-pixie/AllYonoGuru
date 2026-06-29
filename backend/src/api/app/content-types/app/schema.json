@@ -25,7 +25,7 @@
       "type": "string",
       "required": true,
       "minLength": 100,
-      "maxLength": 120
+      "maxLength": 160
     },
     "description": {
       "type": "text",
