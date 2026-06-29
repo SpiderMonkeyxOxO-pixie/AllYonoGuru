@@ -1,0 +1,22 @@
+# AllYonoGuru
+
+> AllYonoGuru is an independent directory of Android skill-based card game apps (Rummy, Teen Patti, and related table games). We list app details, download links, and FAQs for each game, and publish guides on rules, strategy, app safety, and Indian gaming regulations.
+
+AllYonoGuru is not affiliated with, endorsed by, or connected to SBI, YONO by SBI, or any bank. Listings are independent and do not constitute legal or financial advice. Some apps may be restricted in certain states; all games are intended for users 18+.
+
+## Categories
+
+- [Rummy Guru](https://allyonoguru.com/rummy-guru): Directory of Rummy apps, with download links, version info, and feature comparisons.
+- [Teen Patti Guru](https://allyonoguru.com/teen-patti-guru): Directory of Teen Patti apps, with download links, version info, and feature comparisons.
+
+## Guides
+
+- [Blog](https://allyonoguru.com/blog): Articles on game rules, app safety, and Indian online gaming regulations.
+
+## Pages
+
+- [Home](https://allyonoguru.com/): Full directory of listed apps.
+- [About](https://allyonoguru.com/about): Who we are and how we list apps.
+- [Contact](https://allyonoguru.com/contact): Contact information.
+- [Disclaimer](https://allyonoguru.com/disclaimer): Legal disclaimer and age/state restrictions.
+- [Privacy Policy](https://allyonoguru.com/privacy-policy): Privacy policy.

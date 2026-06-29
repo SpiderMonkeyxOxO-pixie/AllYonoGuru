@@ -5,20 +5,16 @@ import Navbar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
 import { BlogPostingSchema, BreadcrumbSchema } from "../../components/seo/JsonLd";
 import { ChevronRightIcon, ShieldIcon } from "../../components/icons/Icons";
-import { getAllBlogPosts, getBlogPostBySlug } from "../../lib/strapi";
+import { getBlogPostBySlug } from "../../lib/strapi";
 
 const SITE = "https://allyonoguru.com";
 
-export const revalidate = 60;
-
-export async function generateStaticParams() {
-  try {
-    const posts = await getAllBlogPosts();
-    return posts.map((p) => ({ slug: p.slug }));
-  } catch {
-    return [];
-  }
-}
+// Forced dynamic (no ISR): this route relies on notFound() to 404 for
+// unknown slugs. Combining generateStaticParams + ISR caching with
+// notFound() causes Next.js to cache the not-found render as a 200
+// response — force-dynamic renders fresh on every request, which both
+// fixes the 404 status and removes the old 60s staleness window.
+export const dynamic = "force-dynamic";
 
 async function getPost(slug: string) {
   try {

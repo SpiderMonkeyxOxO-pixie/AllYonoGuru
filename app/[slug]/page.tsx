@@ -31,17 +31,12 @@ const SIBLING_URLS: Record<string, string> = {
   allyonoupdate:   "https://allyonoupdate.com",
 };
 
-// ── Static params ─────────────────────────────────────────────────────────────
-// Generates routes for all apps + all categories (published or draft).
-// Draft categories render with noindex; they're blocked by robots.txt too.
-
-export function generateStaticParams() {
-  const appParams  = APPS_STATIC.map((a) => ({ slug: a.slug }));
-  const catParams  = CATEGORIES_STATIC.map((c) => ({ slug: c.slug }));
-  return [...appParams, ...catParams];
-}
-
-export const revalidate = 60;
+// Forced dynamic (no ISR): this route relies on notFound() to 404 for
+// unknown slugs. Combining generateStaticParams + ISR caching with
+// notFound() causes Next.js to cache the not-found render as a 200
+// response — force-dynamic renders fresh on every request, which both
+// fixes the 404 status and removes the old 60s staleness window.
+export const dynamic = "force-dynamic";
 
 // Strapi-first, static-fallback: if Strapi is unreachable or has no
 // matching app yet, fall back to the bundled static catalog.
