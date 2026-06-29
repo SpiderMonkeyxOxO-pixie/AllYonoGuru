@@ -64,12 +64,12 @@ export const metadata: Metadata = {
   category: "technology",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const promoEntries = getPromoCodes();
+  const promoEntries = await getPromoCodes();
 
   return (
     <html lang="en" className={`${plusJakartaSans.variable} scroll-smooth`}>

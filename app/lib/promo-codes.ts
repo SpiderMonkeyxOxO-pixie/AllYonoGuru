@@ -1,12 +1,15 @@
 import fs from "fs";
 import path from "path";
 import { APPS_STATIC } from "./static-data";
+import { getAllPromoCodes } from "./strapi";
 import type { PromoCardData } from "./promo-types";
 
 // Server-only module (uses `fs`) — call only from Server Components (see app/layout.tsx).
-// Edit `promo-code.txt` at the project root to update codes; no code changes needed here.
+// Strapi-first: edit codes daily in Strapi Admin → Content Manager → Promo Code.
+// Falls back to `promo-code.txt` at the project root if Strapi is unreachable
+// or has no entries yet.
 
-function cleanCode(value?: string): string | null {
+function cleanCode(value?: string | null): string | null {
   const v = value?.trim();
   return !v || v === "-" ? null : v;
 }
@@ -23,21 +26,43 @@ export function parsePromoCodes(raw: string): Omit<PromoCardData, "slug" | "logo
     .filter((entry) => entry.name);
 }
 
-export function getPromoCodes(): PromoCardData[] {
+function withLogos(entries: Omit<PromoCardData, "slug" | "logo">[]): PromoCardData[] {
+  const logoBySlug = new Map<string, { slug: string; logo: string }>();
+  for (const app of APPS_STATIC) {
+    logoBySlug.set(app.name.toLowerCase(), { slug: app.slug, logo: app.iconUrl });
+  }
+
+  return entries.map((entry) => {
+    const match = logoBySlug.get(entry.name.toLowerCase());
+    return { ...entry, slug: match?.slug ?? null, logo: match?.logo ?? null };
+  });
+}
+
+function getStaticPromoCodes(): Omit<PromoCardData, "slug" | "logo">[] {
   let raw = "";
   try {
     raw = fs.readFileSync(path.join(process.cwd(), "promo-code.txt"), "utf-8");
   } catch {
     return [];
   }
+  return parsePromoCodes(raw);
+}
 
-  const logoBySlug = new Map<string, { slug: string; logo: string }>();
-  for (const app of APPS_STATIC) {
-    logoBySlug.set(app.name.toLowerCase(), { slug: app.slug, logo: app.iconUrl });
+export async function getPromoCodes(): Promise<PromoCardData[]> {
+  try {
+    const entries = await getAllPromoCodes();
+    if (entries.length > 0) {
+      return withLogos(
+        entries.map((entry) => ({
+          name: entry.appName,
+          morning: cleanCode(entry.morningCode),
+          afternoon: cleanCode(entry.afternoonCode),
+          evening: cleanCode(entry.eveningCode),
+        }))
+      );
+    }
+  } catch {
+    // Strapi unavailable — fall through to the static file.
   }
-
-  return parsePromoCodes(raw).map((entry) => {
-    const match = logoBySlug.get(entry.name.toLowerCase());
-    return { ...entry, slug: match?.slug ?? null, logo: match?.logo ?? null };
-  });
+  return withLogos(getStaticPromoCodes());
 }

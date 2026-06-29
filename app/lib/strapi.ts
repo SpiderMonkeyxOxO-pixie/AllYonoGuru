@@ -102,6 +102,19 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPostEntry | n
   return post ? resolveCoverImage(post) : null;
 }
 
+export interface StrapiPromoCodeEntry {
+  appName: string;
+  morningCode: string | null;
+  afternoonCode: string | null;
+  eveningCode: string | null;
+}
+
+export async function getAllPromoCodes(): Promise<StrapiPromoCodeEntry[]> {
+  return fetchAPI<StrapiPromoCodeEntry[]>("/promo-codes", {
+    "pagination[pageSize]": "200",
+  });
+}
+
 export async function getGlobalConfig(): Promise<GlobalConfig | null> {
   try {
     return await fetchAPI<GlobalConfig>("/global", {

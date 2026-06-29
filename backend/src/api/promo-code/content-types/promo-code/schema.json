@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "promo_codes",
+  "info": {
+    "singularName": "promo-code",
+    "pluralName": "promo-codes",
+    "displayName": "Promo Code",
+    "description": "Daily promo codes per app, shown in the site's Promo Codes modal."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "appName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "morningCode": {
+      "type": "string"
+    },
+    "afternoonCode": {
+      "type": "string"
+    },
+    "eveningCode": {
+      "type": "string"
+    }
+  }
+}

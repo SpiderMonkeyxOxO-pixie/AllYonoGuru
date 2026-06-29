@@ -11,6 +11,8 @@ const PUBLIC_READ_ACTIONS = [
   "api::global.global.find",
   "api::blog-post.blog-post.find",
   "api::blog-post.blog-post.findOne",
+  "api::promo-code.promo-code.find",
+  "api::promo-code.promo-code.findOne",
 ];
 
 async function enablePublicReadPermissions(strapi: Core.Strapi) {
