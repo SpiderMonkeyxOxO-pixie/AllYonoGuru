@@ -34,6 +34,7 @@ export async function getAllApps(): Promise<AppEntry[]> {
     "populate[links]": "true",
     "filters[publishedAt][$notNull]": "true",
     "sort": "navOrder:asc",
+    "pagination[pageSize]": "200",
   });
 }
 
