@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_seos",
+  "info": {
+    "displayName": "Seo",
+    "description": "SEO meta fields for pages and entries",
+    "icon": "search"
+  },
+  "options": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string",
+      "required": true,
+      "maxLength": 70
+    },
+    "metaDescription": {
+      "type": "text",
+      "required": true,
+      "maxLength": 160
+    },
+    "canonicalURL": {
+      "type": "string"
+    },
+    "ogImage": {
+      "type": "string"
+    },
+    "keywords": {
+      "type": "string"
+    }
+  }
+}

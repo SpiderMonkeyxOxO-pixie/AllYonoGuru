@@ -1,0 +1,64 @@
+{
+  "kind": "singleType",
+  "collectionName": "global",
+  "info": {
+    "singularName": "global",
+    "pluralName": "globals",
+    "displayName": "Global",
+    "description": "Site-wide configuration: name, disclaimer text, nav lists"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "siteName": {
+      "type": "string",
+      "required": true,
+      "default": "AllYonoGuru.com"
+    },
+    "siteTagline": {
+      "type": "string",
+      "default": "Yono Game All — Android Skill Game Apps Directory"
+    },
+    "siteUrl": {
+      "type": "string",
+      "default": "https://allyonoguru.com"
+    },
+    "organizationName": {
+      "type": "string",
+      "default": "AllYonoGuru.com"
+    },
+    "organizationLegalName": {
+      "type": "string",
+      "default": "MD Varnav Infotech LLP"
+    },
+    "contactEmail": {
+      "type": "email",
+      "default": "contact@allyonoguru.com"
+    },
+    "disclaimer": {
+      "type": "text",
+      "required": true,
+      "default": "Allyonoguru is not affiliated with, endorsed by, or connected to SBI, YONO by SBI, or any bank."
+    },
+    "ageRestriction": {
+      "type": "string",
+      "default": "18+"
+    },
+    "stateNote": {
+      "type": "string",
+      "default": "Some apps may be restricted in certain states."
+    },
+    "navApps": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::app.app"
+    },
+    "navCategories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    }
+  }
+}

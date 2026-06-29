@@ -1,0 +1,67 @@
+# AllYonoGuru — Promo Codes
+# Edit codes below. Do not rename the app names in the left column —
+# they must match the app names on the site exactly to show the right logo.
+#
+# Format:   App Name | Morning Code | Afternoon Code | Evening Code
+# Use a single  -  for any slot that has no code yet (shows "Not released yet").
+# Lines starting with # are ignored.
+
+Rummy Guru | RUMMYGURU50 | - | -
+Teen Patti Guru | - | TEENPATTI25 | -
+Jaiho Rummy | JAIHO100BONUS | JAIHO100BONUS | -
+Yono Rummy | - | - | YONOEVENING10
+ABC Rummy | - | - | -
+Boss Rummy | - | - | -
+Game Rummy | - | - | -
+Gogo Rummy | - | - | -
+Hi Rummy | - | - | -
+Ind Rummy | - | - | -
+INR Rummy | - | - | -
+Joy Rummy | - | - | -
+Love Rummy | - | - | -
+OkRummy | - | - | -
+Rumble Rummy | - | - | -
+Rummy 91 | - | - | -
+Rummy 77 | - | - | -
+Rummy 888 | - | - | -
+Rummy Ludo | - | - | -
+Top Rummy | - | - | -
+Jaiho Arcade | - | - | -
+Jaiho Arcade+ | - | - | -
+Jaiho Win | - | - | -
+Jaiho 91 | - | - | -
+Yono Arcade | - | - | -
+Yono Games | - | - | -
+Bet 213 | - | - | -
+Bingo 101 | - | - | -
+Club INR | - | - | -
+Ind Bingo | - | - | -
+Ind Club | - | - | -
+Maha Games | - | - | -
+MBM Bet | - | - | -
+Neta VIP | - | - | -
+Yono VIP | - | - | -
+Jaiho Spin | - | - | -
+Spin 101 | - | - | -
+Spin 777 | - | - | -
+Spin Crush | - | - | -
+Spin Gold | - | - | -
+Spin Lucky | - | - | -
+Spin Winner | - | - | -
+Yes Spin | - | - | -
+Slot Spin | - | - | -
+101z | - | - | -
+Share Slots | - | - | -
+567 Slots | - | - | -
+777 Game | - | - | -
+789 Jackpot | - | - | -
+Hindi 777 | - | - | -
+Ind Slots | - | - | -
+Jaiho Slot | - | - | -
+Jahio 777 | - | - | -
+Jaiho 777 | - | - | -
+Saga Slots | - | - | -
+Slots Winner | - | - | -
+Yn 777 | - | - | -
+Yono 777 | - | - | -
+Yono Slots | - | - | -

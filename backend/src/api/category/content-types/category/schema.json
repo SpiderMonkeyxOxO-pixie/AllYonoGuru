@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "Category",
+    "description": "A multi-app listing page (stays DRAFT until 3–5 real apps are added)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "targetKeyword": {
+      "type": "string",
+      "required": true
+    },
+    "secondaryKeyword": {
+      "type": "string"
+    },
+    "kd": {
+      "type": "integer",
+      "min": 0,
+      "max": 100
+    },
+    "searchVolume": {
+      "type": "integer",
+      "min": 0
+    },
+    "primaryDomain": {
+      "type": "enumeration",
+      "enum": [
+        "allyonoguru",
+        "allyonoindia",
+        "allyonoofficial",
+        "allyonoupdate"
+      ],
+      "required": true,
+      "default": "allyonoguru"
+    },
+    "navOrder": {
+      "type": "integer",
+      "default": 99
+    },
+    "apps": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::app.app",
+      "inversedBy": "categories"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "faq": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.faq"
+    },
+    "compliance": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.compliance"
+    }
+  }
+}

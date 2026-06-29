@@ -1,0 +1,17 @@
+node_modules/
+.tmp/
+.cache/
+dist/
+build/
+.env
+.env.local
+.env.production
+exports/
+*.db
+*.db-shm
+*.db-wal
+.strapi/
+.strapi-updater.json
+public/uploads/*
+!public/uploads/.gitkeep
+types/generated/

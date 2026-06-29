@@ -1,0 +1,111 @@
+{
+  "kind": "collectionType",
+  "collectionName": "apps",
+  "info": {
+    "singularName": "app",
+    "pluralName": "apps",
+    "displayName": "App",
+    "description": "A single Android game app listed in the AllYonoGuru directory"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "tagline": {
+      "type": "string",
+      "required": true,
+      "minLength": 100,
+      "maxLength": 120
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "downloadUrl": {
+      "type": "string",
+      "required": true
+    },
+    "appVersion": {
+      "type": "string"
+    },
+    "packageSize": {
+      "type": "string"
+    },
+    "minAndroid": {
+      "type": "string"
+    },
+    "iconUrl": {
+      "type": "string"
+    },
+    "screenshotUrls": {
+      "type": "json"
+    },
+    "targetKeyword": {
+      "type": "string",
+      "required": true
+    },
+    "secondaryKeyword": {
+      "type": "string"
+    },
+    "kd": {
+      "type": "integer",
+      "min": 0,
+      "max": 100
+    },
+    "searchVolume": {
+      "type": "integer",
+      "min": 0
+    },
+    "primaryDomain": {
+      "type": "enumeration",
+      "enum": [
+        "allyonoguru",
+        "allyonoindia",
+        "allyonoofficial",
+        "allyonoupdate"
+      ],
+      "required": true,
+      "default": "allyonoguru"
+    },
+    "navOrder": {
+      "type": "integer",
+      "default": 99
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "faq": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.faq"
+    },
+    "compliance": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.compliance"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "apps"
+    }
+  }
+}

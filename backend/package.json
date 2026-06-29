@@ -1,0 +1,46 @@
+{
+  "name": "allyonoguru-backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "AllYonoGuru — Strapi 5 CMS backend",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "seed": "ts-node -e \"require('./scripts/seed.ts')\""
+  },
+  "dependencies": {
+    "@strapi/plugin-cloud": "^5.0.0",
+    "@strapi/plugin-users-permissions": "^5.0.0",
+    "@strapi/strapi": "^5.0.0",
+    "better-sqlite3": "^12.0.0",
+    "esbuild": "^0.28.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.4",
+    "styled-components": "^6.4.3",
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@strapi/typescript-utils": "^5.0.0",
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=24.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "allyonoguru-backend-001"
+  },
+  "allowScripts": {
+    "@swc/core@1.15.43": true,
+    "better-sqlite3@12.11.1": true,
+    "core-js-pure@3.49.0": true,
+    "esbuild@0.28.1": true,
+    "esbuild@0.27.7": true,
+    "esbuild@0.21.5": true,
+    "sharp@0.33.5": true
+  }
+}

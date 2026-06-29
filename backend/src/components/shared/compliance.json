@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_compliances",
+  "info": {
+    "displayName": "Compliance",
+    "description": "Compliance and disclaimer settings for a page",
+    "icon": "shield"
+  },
+  "options": {},
+  "attributes": {
+    "showDisclaimer": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "showAgeGate": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "stateRestrictionNote": {
+      "type": "string",
+      "default": "Some apps may be restricted in certain states."
+    }
+  }
+}

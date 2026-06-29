@@ -1,0 +1,742 @@
+@import "tailwindcss";
+
+/* ============================================
+   ALLYONOGURU.COM — PREMIUM DARK UI FOUNDATION
+   Design System: Game-Directory Dark Premium
+   ============================================ */
+
+:root {
+  /* Brand Colors */
+  --color-navy-950: #020817;
+  --color-navy-900: #0a0f1e;
+  --color-navy-800: #0d1526;
+  --color-navy-700: #111827;
+
+  /* Guru Accent Palette — amber/saffron */
+  --color-amber-400: #f59e0b;
+  --color-amber-500: #d97706;
+  --color-orange-400: #fb923c;
+  --color-orange-500: #f97316;
+  --color-saffron:   #ff9933;
+
+  /* Supporting */
+  --color-emerald-400: #34d399;
+  --color-emerald-500: #10b981;
+  --color-slate-400:   #94a3b8;
+  --color-slate-300:   #cbd5e1;
+
+  /* Glow Colors */
+  --glow-amber:   rgba(245, 158, 11, 0.15);
+  --glow-orange:  rgba(251, 146, 60, 0.15);
+  --glow-emerald: rgba(16, 185, 129, 0.12);
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--color-navy-950);
+  --color-foreground: #f1f5f9;
+}
+
+/* ============================================
+   BASE RESET & FOUNDATION
+   ============================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: #020817;
+  color: #f1f5f9;
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   CUSTOM SCROLLBAR
+   ============================================ */
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0a0f1e; }
+::-webkit-scrollbar-thumb { background: #2d1f0a; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #f59e0b; }
+
+/* ============================================
+   GLASSMORPHISM UTILITIES
+   ============================================ */
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+}
+
+.glass-card-strong {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 20px;
+}
+
+/* ============================================
+   GLOW EFFECTS
+   ============================================ */
+
+.glow-amber {
+  box-shadow: 0 0 30px rgba(245, 158, 11, 0.25), 0 0 60px rgba(245, 158, 11, 0.08);
+}
+
+.glow-orange {
+  box-shadow: 0 0 30px rgba(251, 146, 60, 0.2), 0 0 60px rgba(251, 146, 60, 0.08);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.2), 0 0 60px rgba(16, 185, 129, 0.08);
+}
+
+.glow-button {
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.45), 0 4px 24px rgba(245, 158, 11, 0.25);
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 32px rgba(245, 158, 11, 0.65), 0 4px 32px rgba(245, 158, 11, 0.35);
+}
+
+/* ============================================
+   GRADIENT TEXT
+   ============================================ */
+
+.gradient-text {
+  background: linear-gradient(135deg, #f59e0b, #fb923c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradient-text-gold {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ============================================
+   ANIMATED BACKGROUNDS
+   ============================================ */
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(245, 158, 11, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 158, 11, 0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.bg-radial-amber {
+  background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(245, 158, 11, 0.08) 0%, transparent 60%);
+}
+
+/* ============================================
+   TRUST BADGE & STATUS INDICATORS
+   ============================================ */
+
+.status-verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: rgba(245, 158, 11, 0.10);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #f59e0b;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34d399;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.85); }
+}
+
+/* ============================================
+   CARD HOVER INTERACTIONS
+   ============================================ */
+
+.card-hover {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+/* ============================================
+   GRADIENT BACKGROUNDS
+   ============================================ */
+
+.bg-hero-gradient {
+  background:
+    radial-gradient(ellipse 100% 60% at 50% -20%, rgba(245, 158, 11, 0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 50%, rgba(251, 146, 60, 0.06) 0%, transparent 50%),
+    linear-gradient(180deg, rgba(2, 8, 23, 0.88) 0%, rgba(2, 8, 23, 0.94) 55%, #020817 100%),
+    url("/background.png");
+  background-size: cover, cover, cover, cover;
+  background-position: center, center, center, center;
+  background-repeat: no-repeat;
+}
+
+.bg-section-gradient {
+  background:
+    radial-gradient(ellipse 80% 40% at 50% 100%, rgba(245, 158, 11, 0.05) 0%, transparent 60%),
+    #0a0f1e;
+}
+
+/* ============================================
+   BUTTON STYLES
+   ============================================ */
+
+.btn-primary {
+  background: linear-gradient(135deg, #f59e0b, #fb923c);
+  color: #020817;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.45);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #94a3b8;
+  font-weight: 600;
+  padding: 11px 27px;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(245, 158, 11, 0.5);
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.05);
+}
+
+/* ============================================
+   TYPOGRAPHY SCALE
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.text-display {
+  font-size: clamp(1.9rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.text-headline {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+/* ============================================
+   ANIMATION UTILITIES
+   ============================================ */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float-delayed { animation: float 6s ease-in-out 2s infinite; }
+
+/* ============================================
+   SECTION SPACING
+   ============================================ */
+
+.section-padding {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+/* ============================================
+   FOCUS STYLES (ACCESSIBILITY)
+   ============================================ */
+
+:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ============================================
+   RESPONSIVE GRID UTILITIES
+   ============================================ */
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-2 { grid-template-columns: 1fr 1fr; }
+  .lg\:grid-cols-footer { grid-template-columns: 280px 1fr; }
+  .lg\:block { display: block; }
+}
+
+@media (max-width: 1023px) {
+  .lg\:block { display: none; }
+}
+
+/* ============================================
+   HIDDEN/SHOW UTILITIES
+   ============================================ */
+
+@media (min-width: 640px) {
+  .hidden.sm\:flex, .sm\:flex { display: flex; }
+}
+
+@media (max-width: 639px) {
+  .hidden { display: none; }
+}
+
+@media (min-width: 768px) {
+  .hidden.md\:flex, .md\:flex { display: flex; }
+  .md\:hidden { display: none; }
+}
+
+@media (max-width: 767px) {
+  .md\:hidden { display: flex; }
+}
+
+/* ============================================
+   APP / CATEGORY PAGE — RESPONSIVE LAYOUTS
+   ============================================ */
+
+.app-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr clamp(260px, 28%, 300px);
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .app-detail-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================
+   INNER PAGES — SECTION PADDING (MOBILE-FIRST)
+   ============================================ */
+
+/* Hero sections on inner pages */
+.inner-hero {
+  padding: 64px 24px 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Standard content sections */
+.inner-section {
+  padding: 64px 24px;
+}
+
+/* Legal page header */
+.legal-header {
+  padding: 56px 24px 48px;
+}
+
+/* Legal page body */
+.legal-body {
+  padding: 56px 24px 80px;
+}
+
+@media (max-width: 640px) {
+  .inner-hero    { padding: 32px 16px 28px; }
+  .inner-section { padding: 36px 16px; }
+  .legal-header  { padding: 32px 16px 28px; }
+  .legal-body    { padding: 32px 16px 48px; }
+}
+
+/* ============================================
+   CTA ROW — STACK FULL-WIDTH ON MOBILE
+   ============================================ */
+
+.cta-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 540px) {
+  .cta-row {
+    flex-direction: column;
+  }
+  .cta-row > a,
+  .cta-row > button {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+/* ============================================
+   SPECS GRID — SINGLE COLUMN ON NARROW SCREENS
+   ============================================ */
+
+.specs-dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+@media (max-width: 480px) {
+  .specs-dl { grid-template-columns: 1fr; }
+}
+
+/* ============================================
+   SIDEBAR — DISABLE STICKY WHEN GRID STACKS
+   ============================================ */
+
+@media (max-width: 900px) {
+  .sidebar-sticky {
+    position: static !important;
+    top: auto !important;
+  }
+}
+
+/* ============================================
+   FOOTER — RESPONSIVE LAYOUT
+   ============================================ */
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: clamp(32px, 5vw, 64px);
+  align-items: start;
+}
+
+.footer-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px 16px;
+  align-items: start;
+}
+
+@media (max-width: 1100px) {
+  .footer-nav-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 24px; }
+}
+
+@media (max-width: 860px) {
+  .footer-top-grid { grid-template-columns: 1fr; gap: 40px; }
+  .footer-nav-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 24px; }
+}
+
+@media (max-width: 480px) {
+  .footer-nav-grid { grid-template-columns: 1fr 1fr; gap: 24px 16px; }
+}
+
+/* ============================================
+   COMPLIANCE / DISCLAIMER STRIP
+   ============================================ */
+
+.disclaimer-strip {
+  background: rgba(245, 158, 11, 0.06);
+  border: 1px solid rgba(245, 158, 11, 0.15);
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: 12px;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+/* ============================================
+   RESPONSIVE SECTIONS & ICONS (MOBILE-FIRST)
+   ============================================ */
+
+/* Homepage main hero */
+.hero-main {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+/* Generic 80px-padded content sections */
+.section-pad {
+  padding: 80px 24px;
+}
+
+/* Network showcase (horizontal padding lives on inner div) */
+.section-network {
+  padding: 80px 0 60px;
+}
+
+/* 2-column game card grid — collapses to 1 col on mobile */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* Blog post card grid — same 2-col, mobile-first pattern as game-grid */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.blog-card-body { padding: 20px; }
+.blog-card-tag { font-size: 11px; padding: 3px 9px; margin-bottom: 12px; }
+.blog-card-title { font-size: 17px; margin-bottom: 8px; }
+.blog-card-excerpt { font-size: 13.5px; margin: 0 0 14px; }
+.blog-card-meta { font-size: 12px; }
+
+@media (max-width: 640px) {
+  .hero-main       { padding-top: 80px; padding-bottom: 52px; }
+  .section-pad     { padding: 40px 16px; }
+  .section-network { padding: 40px 0 28px; }
+  .game-grid       { grid-template-columns: 1fr; gap: 16px; }
+  .blog-grid       { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .blog-card-body    { padding: 12px; }
+  .blog-card-tag     { font-size: 9.5px; padding: 2px 7px; margin-bottom: 8px; }
+  .blog-card-title   { font-size: 13px; margin-bottom: 6px; -webkit-line-clamp: 2; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; }
+  .blog-card-excerpt { font-size: 11.5px; margin: 0 0 8px; }
+  .blog-card-meta    { font-size: 10px; flex-wrap: wrap; }
+}
+
+/* Running banner — scrolling ticker strip under the footer */
+.running-banner {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+  background: rgba(10, 15, 30, 0.96);
+  border-top: 1px solid rgba(245, 158, 11, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.running-banner-track {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  width: max-content;
+  padding-left: 12px;
+  animation: running-banner-scroll 50s linear infinite;
+}
+
+.running-banner-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.running-banner:hover .running-banner-track {
+  animation-play-state: paused;
+}
+
+.running-banner-tag {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.18);
+  border-radius: 999px;
+  padding: 4px 12px;
+  white-space: nowrap;
+}
+
+@keyframes running-banner-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (max-width: 640px) {
+  .running-banner     { height: 34px; }
+  .running-banner-tag { font-size: 11px; padding: 3px 10px; }
+}
+
+/* Promo Codes floating button — short label on narrow screens, full label once there's room */
+.promo-fab-short { display: inline; }
+.promo-fab-full  { display: none; }
+
+@media (min-width: 480px) {
+  .promo-fab-short { display: none; }
+  .promo-fab-full  { display: inline; }
+}
+
+/* Promo Codes nav button — animated running-light border */
+@property --promo-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.promo-nav-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  font-family: inherit;
+  color: #f59e0b;
+  padding: 8px 13px;
+  border-radius: 8px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  background:
+    linear-gradient(rgba(245, 158, 11, 0.08), rgba(245, 158, 11, 0.08)) padding-box,
+    conic-gradient(from var(--promo-angle), #f59e0b, rgba(245, 158, 11, 0) 35%, rgba(245, 158, 11, 0) 65%, #f59e0b) border-box;
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.3);
+  transition: box-shadow 0.2s;
+  animation: promo-border-spin 2.4s linear infinite;
+}
+
+.promo-nav-btn:hover {
+  box-shadow: 0 0 22px rgba(245, 158, 11, 0.5);
+}
+
+@keyframes promo-border-spin {
+  to { --promo-angle: 360deg; }
+}
+
+/* Cookie consent banner */
+.cookie-banner {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1100;
+  max-width: 640px;
+  margin: 0 auto;
+  background: rgba(10, 15, 30, 0.98);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cookie-banner-text {
+  margin: 0;
+  font-size: 13px;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.cookie-banner-text a {
+  color: #f59e0b;
+  text-decoration: underline;
+}
+
+.cookie-banner-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.cookie-btn-decline,
+.cookie-btn-accept {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 9px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cookie-btn-decline {
+  background: transparent;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  color: #94a3b8;
+}
+
+.cookie-btn-accept {
+  background: linear-gradient(135deg, #f59e0b, #fb923c);
+  border: none;
+  color: #020817;
+}
+
+@media (max-width: 480px) {
+  .cookie-banner-actions { justify-content: stretch; }
+  .cookie-btn-decline,
+  .cookie-btn-accept { flex: 1; }
+}
+
+/* Loading spinner — app/loading.tsx */
+.loading-spinner {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 3px solid rgba(245, 158, 11, 0.15);
+  border-top-color: #f59e0b;
+  animation: loading-spin 0.7s linear infinite;
+}
+
+@keyframes loading-spin {
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,169 @@
+{
+  "apps": [
+    {
+      "name": "Rummy Guru",
+      "slug": "rummy-guru",
+      "tagline": "Rummy Guru APK — the leading Android card game app for skill-based Rummy players across all of India.",
+      "description": "Rummy Guru is a popular Android card game app that lets you play classic Rummy variants against real opponents. Sharpen your skills, track your stats, and enjoy smooth gameplay on any Android device.",
+      "downloadUrl": "https://allyonoguru.com/rummy-guru#download",
+      "appVersion": "2.1.0",
+      "packageSize": "38 MB",
+      "minAndroid": "6.0",
+      "iconUrl": "/icons/rummy-guru.webp",
+      "screenshotUrls": [],
+      "targetKeyword": "rummy guru",
+      "secondaryKeyword": "rummy guru apk",
+      "kd": 5,
+      "searchVolume": 4400,
+      "primaryDomain": "allyonoguru",
+      "navOrder": 1,
+      "publishedAt": "2026-06-01T00:00:00.000Z",
+      "seo": {
+        "metaTitle": "Rummy Guru APK — Download & Play Skill-Based Rummy on Android",
+        "metaDescription": "Rummy Guru APK: play classic 13-card Rummy on Android. Free download, no ads, smooth gameplay. 18+ | Some states may restrict access.",
+        "canonicalURL": "https://allyonoguru.com/rummy-guru"
+      },
+      "faq": [
+        {
+          "question": "What is Rummy Guru?",
+          "answer": "Rummy Guru is an Android card game app focused on 13-card skill-based Rummy. It offers multiple table formats and supports offline practice mode."
+        },
+        {
+          "question": "Is Rummy Guru free to download?",
+          "answer": "Yes, the Rummy Guru APK is free to download and install on any Android device running Android 6.0 or higher."
+        },
+        {
+          "question": "Is Rummy a skill-based game?",
+          "answer": "Yes. Indian courts have consistently held that Rummy is a game of skill. Players must use memory, strategy, and probability assessment to succeed."
+        },
+        {
+          "question": "What is the minimum Android version required?",
+          "answer": "Rummy Guru requires Android 6.0 or above and approximately 38 MB of free storage."
+        }
+      ],
+      "compliance": {
+        "showDisclaimer": true,
+        "showAgeGate": true,
+        "stateRestrictionNote": "Some states may restrict access to this app."
+      },
+      "links": []
+    },
+    {
+      "name": "Teen Patti Guru",
+      "slug": "teen-patti-guru",
+      "tagline": "Teen Patti Guru APK — play the classic Indian 3-card skill game with friends on any Android device today.",
+      "description": "Teen Patti Guru brings the classic Indian 3-card game to Android with smooth graphics, multiple variants, and an active player community. Practice offline or go head-to-head in live tables.",
+      "downloadUrl": "https://allyonoguru.com/teen-patti-guru#download",
+      "appVersion": "1.8.3",
+      "packageSize": "42 MB",
+      "minAndroid": "6.0",
+      "iconUrl": "/icons/teen-patti-guru.webp",
+      "screenshotUrls": [],
+      "targetKeyword": "teen patti guru",
+      "secondaryKeyword": "teen patti guru apk",
+      "kd": 4,
+      "searchVolume": 3600,
+      "primaryDomain": "allyonoguru",
+      "navOrder": 2,
+      "publishedAt": "2026-06-01T00:00:00.000Z",
+      "seo": {
+        "metaTitle": "Teen Patti Guru APK — Download 3-Card Skill Game for Android",
+        "metaDescription": "Teen Patti Guru APK: classic 3-card game for Android. Free download, offline & live modes. 18+ | Some states may restrict access.",
+        "canonicalURL": "https://allyonoguru.com/teen-patti-guru"
+      },
+      "faq": [
+        {
+          "question": "What is Teen Patti Guru?",
+          "answer": "Teen Patti Guru is an Android card game app for the classic Indian 3-card game. It includes multiple play variants and both solo and live table modes."
+        },
+        {
+          "question": "Is Teen Patti Guru free?",
+          "answer": "Yes, the Teen Patti Guru APK is completely free to download and install."
+        },
+        {
+          "question": "Can I play Teen Patti Guru offline?",
+          "answer": "Yes, Teen Patti Guru includes an offline practice mode so you can sharpen your skills without an internet connection."
+        },
+        {
+          "question": "What Android version does Teen Patti Guru need?",
+          "answer": "Android 6.0 or higher, with at least 42 MB free storage space."
+        }
+      ],
+      "compliance": {
+        "showDisclaimer": true,
+        "showAgeGate": true,
+        "stateRestrictionNote": "Some states may restrict access to this app."
+      },
+      "links": []
+    }
+  ],
+  "categories": [
+    {
+      "name": "Yono Game Spin",
+      "slug": "yono-game-spin",
+      "description": "A curated directory of spin-style skill game apps available in the Yono game network. This listing is updated as new verified apps are added.",
+      "targetKeyword": "yono game spin",
+      "secondaryKeyword": "yono spin game apk",
+      "kd": 3,
+      "searchVolume": 8200,
+      "primaryDomain": "allyonoguru",
+      "navOrder": 1,
+      "publishedAt": null,
+      "seo": {
+        "metaTitle": "Yono Game Spin — Skill-Based Spin Game Apps Directory",
+        "metaDescription": "Discover spin-style skill game apps in the Yono network. Independent directory. 18+ | Some states may restrict access.",
+        "canonicalURL": "https://allyonoguru.com/yono-game-spin"
+      },
+      "faq": [
+        {
+          "question": "What are Yono Game Spin apps?",
+          "answer": "Yono Game Spin apps are Android games in the Yono network that feature spin-style gameplay mechanics built on skill and strategy."
+        }
+      ],
+      "compliance": {
+        "showDisclaimer": true,
+        "showAgeGate": true,
+        "stateRestrictionNote": "Some states may restrict access to these apps."
+      }
+    },
+    {
+      "name": "Share Slots Yono",
+      "slug": "share-slots-yono",
+      "description": "An independent directory of slot-style skill game apps in the Yono ecosystem. Listed apps are reviewed independently. This page is updated as more apps are verified.",
+      "targetKeyword": "share slots yono",
+      "secondaryKeyword": "yono slots apk",
+      "kd": 0,
+      "searchVolume": 6600,
+      "primaryDomain": "allyonoguru",
+      "navOrder": 2,
+      "publishedAt": null,
+      "seo": {
+        "metaTitle": "Share Slots Yono — Slot-Style Skill Game Apps Directory",
+        "metaDescription": "Independent directory of slot-style skill game apps in the Yono network. 18+ | Some states may restrict access.",
+        "canonicalURL": "https://allyonoguru.com/share-slots-yono"
+      },
+      "faq": [
+        {
+          "question": "What is Share Slots Yono?",
+          "answer": "Share Slots Yono is an independent directory page listing slot-style skill game apps available in the Yono game network."
+        }
+      ],
+      "compliance": {
+        "showDisclaimer": true,
+        "showAgeGate": true,
+        "stateRestrictionNote": "Some states may restrict access to these apps."
+      }
+    }
+  ],
+  "global": {
+    "siteName": "AllYonoGuru.com",
+    "siteTagline": "Yono Game All — Android Skill Game Apps Directory",
+    "siteUrl": "https://allyonoguru.com",
+    "organizationName": "AllYonoGuru.com",
+    "organizationLegalName": "MD Varnav Infotech LLP",
+    "contactEmail": "contact@allyonoguru.com",
+    "disclaimer": "Allyonoguru is not affiliated with, endorsed by, or connected to SBI, YONO by SBI, or any bank.",
+    "ageRestriction": "18+",
+    "stateNote": "Some apps may be restricted in certain states."
+  }
+}
