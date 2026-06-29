@@ -5,26 +5,27 @@ import Navbar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
 import { BlogPostingSchema, BreadcrumbSchema } from "../../components/seo/JsonLd";
 import { ChevronRightIcon, ShieldIcon } from "../../components/icons/Icons";
-import { BLOG_POSTS_STATIC } from "../../lib/static-data";
-import { getBlogPostBySlug } from "../../lib/strapi";
+import { getAllBlogPosts, getBlogPostBySlug } from "../../lib/strapi";
 
 const SITE = "https://allyonoguru.com";
 
 export const revalidate = 60;
 
-export function generateStaticParams() {
-  return BLOG_POSTS_STATIC.map((p) => ({ slug: p.slug }));
+export async function generateStaticParams() {
+  try {
+    const posts = await getAllBlogPosts();
+    return posts.map((p) => ({ slug: p.slug }));
+  } catch {
+    return [];
+  }
 }
 
-// Strapi-first, static-fallback: matches the listing page's behavior.
 async function getPost(slug: string) {
   try {
-    const post = await getBlogPostBySlug(slug);
-    if (post) return post;
+    return await getBlogPostBySlug(slug);
   } catch {
-    // Strapi unavailable — fall through to static data.
+    return null;
   }
-  return BLOG_POSTS_STATIC.find((p) => p.slug === slug) ?? null;
 }
 
 export async function generateMetadata({

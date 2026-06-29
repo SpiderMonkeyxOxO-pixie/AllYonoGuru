@@ -1,4 +1,4 @@
-import type { AppEntry, CategoryEntry, BlogPostEntry } from "./types";
+import type { AppEntry, CategoryEntry } from "./types";
 
 // Fallback static data used when Strapi is unavailable.
 // HARD RULE: avoid win/earn/real-money/bonus/jackpot/hack/withdrawal/profit in user-facing copy.
@@ -2446,74 +2446,3 @@ export const DISCLAIMER_TEXT =
 export const AGE_NOTE = "18+";
 export const STATE_NOTE = "Some apps may be restricted in certain states.";
 
-// Fallback static data used when Strapi is unavailable.
-export const BLOG_POSTS_STATIC: BlogPostEntry[] = [
-  {
-    id: 1,
-    slug: "how-to-play-rummy-rules-and-basic-strategy",
-    title: "How to Play Rummy: Rules and Basic Strategy",
-    excerpt:
-      "A beginner's guide to 13-card Indian Rummy — the basic rules, how sets and sequences work, and a few starting strategies for new players.",
-    author: "AllYonoGuru Team",
-    tag: "Guides",
-    publishedAt: "2026-01-12T00:00:00.000Z",
-    content:
-      "Indian Rummy is one of the most widely played card games on Android, and most apps in the Yono network use the standard 13-card format. Each player is dealt 13 cards, and the goal is to arrange them into valid sets and sequences before anyone else does.\n\nA sequence is three or more consecutive cards of the same suit. A set is three or four cards of the same rank from different suits. To finish a hand, most variants require at least one pure sequence — a run with no joker substituted in.\n\nNew players often start by sorting their hand by suit, which makes it easier to spot near-complete sequences. Holding onto high-value cards for too long is a common beginner mistake, since they add to your score if an opponent finishes first.\n\nRummy is recognised by Indian courts as a game of skill rather than chance, because the outcome depends on memory, sequencing, and decision-making rather than random luck. As with any skill game, practice over time is what improves results — there is no shortcut.\n\nThis guide is for informational purposes only. Always check the rules screen inside the specific app you're using, since minor variations exist between Rummy Guru and other apps in the network.",
-    seo: {
-      metaTitle: "How to Play Rummy: Rules and Basic Strategy | AllYonoGuru",
-      metaDescription:
-        "Learn the basic rules of 13-card Indian Rummy, how sequences and sets work, and simple strategy tips for new players. Independent guide by AllYonoGuru.",
-    },
-  },
-  {
-    id: 2,
-    slug: "teen-patti-variants-explained",
-    title: "Teen Patti Variants Explained",
-    excerpt:
-      "Teen Patti has several popular table variants. Here's a quick overview of the most common ones found in Android Teen Patti apps.",
-    author: "AllYonoGuru Team",
-    tag: "Guides",
-    publishedAt: "2026-02-03T00:00:00.000Z",
-    content:
-      "Teen Patti, sometimes called Indian Poker, is a three-card game with several table variants available across Android apps. Knowing the differences helps you understand what you're playing before you join a table.\n\nClassic Teen Patti uses a standard 52-card deck with no jokers, and hand rankings run from a high card up to a trail (three of a kind), which is the strongest hand. Joker Teen Patti introduces a wild card that can substitute for any card, which changes hand probabilities significantly.\n\nMuflis, or \"Lowball\" Teen Patti, flips the usual ranking so the lowest hand wins instead of the highest — a variant that catches new players off guard if they don't check the table rules first. AK47 designates specific cards (Ace, King, 4, and 7) as wild, adding another layer of strategy.\n\nMost apps display the active variant clearly on the table screen before you sit down. Reading the table rules each time is good practice, since the same app may offer multiple variants in different rooms.\n\nThis article is general information only and does not cover every variant available in every app. Skill, observation, and bankroll discipline matter more than memorising rules alone.",
-    seo: {
-      metaTitle: "Teen Patti Variants Explained | AllYonoGuru",
-      metaDescription:
-        "An overview of common Teen Patti variants — Classic, Joker, Muflis, and AK47 — found across Android Teen Patti apps. Independent guide by AllYonoGuru.",
-    },
-  },
-  {
-    id: 3,
-    slug: "is-rummy-a-game-of-skill-what-indian-courts-say",
-    title: "Is Rummy a Game of Skill? What Indian Courts Say",
-    excerpt:
-      "Indian courts have repeatedly examined whether Rummy is a game of skill or chance. Here's a summary of the legal position and why it matters.",
-    author: "AllYonoGuru Team",
-    tag: "Legal",
-    publishedAt: "2026-03-18T00:00:00.000Z",
-    content:
-      "The legal status of card games in India often comes down to one question: is the game based on skill or chance? Courts have addressed this question for Rummy specifically on multiple occasions.\n\nIn a landmark 1968 ruling, the Supreme Court of India held that Rummy requires considerable skill in memorising cards, tracking discards, and building sequences, distinguishing it from games of pure chance. This precedent has been cited in subsequent cases, including rulings related to online formats of the game.\n\nBecause Rummy is treated as a skill-based game, it is generally permitted to be played for recreational purposes in most Indian states, subject to each state's own gaming laws. However, a handful of states have specific restrictions, and the legal position can change.\n\nThis distinction matters for app directories like AllYonoGuru, which is why every listing carries a disclaimer and an age restriction notice. We are not a legal authority, and this article does not constitute legal advice.\n\nIf you're unsure whether an app or game format is permitted where you live, check your state's current regulations directly rather than relying on general guides like this one.",
-    seo: {
-      metaTitle: "Is Rummy a Game of Skill? What Indian Courts Say | AllYonoGuru",
-      metaDescription:
-        "A summary of how Indian courts have classified Rummy as a game of skill, and what that means for players. Independent editorial, not legal advice.",
-    },
-  },
-  {
-    id: 4,
-    slug: "android-game-app-safety-what-to-check-before-you-download",
-    title: "Android Game App Safety: What to Check Before You Download",
-    excerpt:
-      "A short checklist for evaluating any Android game app before installing it — permissions, source, and basic due diligence.",
-    author: "AllYonoGuru Team",
-    tag: "Safety",
-    publishedAt: "2026-04-22T00:00:00.000Z",
-    content:
-      "Installing apps from outside the Play Store, often called sideloading, is common for game apps in the Yono network. It's worth taking a few precautions before installing any APK, regardless of where it comes from.\n\nFirst, check the permissions an app requests during installation. A card game app generally doesn't need access to your contacts or SMS messages — if it asks for permissions unrelated to its function, that's worth questioning.\n\nSecond, only download from the official link provided by the app's own listing or developer, rather than a third-party mirror. AllYonoGuru links directly to each app's primary download source for this reason.\n\nThird, keep your device's Play Protect or equivalent security scanning enabled even when sideloading, since it can still flag known malicious patterns in an APK file.\n\nFinally, remember that all apps listed on AllYonoGuru are intended for users aged 18 and above, and some apps may be restricted in certain states. This article is general safety guidance and not a substitute for your own judgment.",
-    seo: {
-      metaTitle: "Android Game App Safety: What to Check Before You Download | AllYonoGuru",
-      metaDescription:
-        "A short safety checklist for evaluating Android game apps before installation — permissions, official sources, and basic precautions.",
-    },
-  },
-];

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
-import { APPS_STATIC, BLOG_POSTS_STATIC } from "@/app/lib/static-data";
-import { getAllApps } from "@/app/lib/strapi";
-import type { AppEntry } from "@/app/lib/types";
+import { APPS_STATIC, CATEGORIES_STATIC } from "@/app/lib/static-data";
+import { getAllApps, getAllBlogPosts } from "@/app/lib/strapi";
+import type { AppEntry, BlogPostEntry } from "@/app/lib/types";
 
 const BASE = "https://allyonoguru.com";
 
@@ -15,6 +15,15 @@ async function getPublishedApps(): Promise<AppEntry[]> {
     // Strapi unavailable — fall through to static data.
   }
   return APPS_STATIC.filter((a) => a.publishedAt !== null);
+}
+
+// Strapi-only — no fake fallback content belongs in a sitemap.
+async function getPublishedBlogPosts(): Promise<BlogPostEntry[]> {
+  try {
+    return await getAllBlogPosts();
+  } catch {
+    return [];
+  }
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -37,8 +46,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     }));
 
-  const blogPages: MetadataRoute.Sitemap = BLOG_POSTS_STATIC
-    .filter((post) => post.publishedAt !== null)
+  const publishedBlogPosts = await getPublishedBlogPosts();
+  const blogPages: MetadataRoute.Sitemap = publishedBlogPosts
     .map((post) => ({
       url: `${BASE}/blog/${post.slug}`,
       lastModified: new Date(post.publishedAt!),
@@ -46,5 +55,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.5,
     }));
 
-  return [...staticPages, ...appPages, ...blogPages];
+  // Categories are still static-data-driven (not yet migrated to Strapi);
+  // only include ones that are actually published (non-draft).
+  const categoryPages: MetadataRoute.Sitemap = CATEGORIES_STATIC
+    .filter((cat) => cat.publishedAt !== null)
+    .map((cat) => ({
+      url: `${BASE}/${cat.slug}`,
+      lastModified: new Date(cat.publishedAt!),
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    }));
+
+  return [...staticPages, ...appPages, ...blogPages, ...categoryPages];
 }

@@ -5,19 +5,14 @@ import Footer from "../components/layout/Footer";
 import BlogPostCard from "../components/sections/BlogPostCard";
 import { BlogPageSchema, BreadcrumbSchema } from "../components/seo/JsonLd";
 import { ChevronRightIcon, ShieldIcon } from "../components/icons/Icons";
-import { BLOG_POSTS_STATIC } from "../lib/static-data";
 import { getAllBlogPosts } from "../lib/strapi";
 
-// Strapi-first, static-fallback: if Strapi is unreachable or has no
-// published posts yet, fall back to the bundled static demo content.
 async function getBlogPosts() {
   try {
-    const posts = await getAllBlogPosts();
-    if (posts.length > 0) return posts;
+    return await getAllBlogPosts();
   } catch {
-    // Strapi unavailable — fall through to static data.
+    return [];
   }
-  return BLOG_POSTS_STATIC.filter((p) => p.publishedAt !== null);
 }
 
 const SITE = "https://allyonoguru.com";

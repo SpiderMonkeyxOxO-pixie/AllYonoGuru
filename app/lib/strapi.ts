@@ -89,6 +89,7 @@ export async function getAllBlogPosts(): Promise<BlogPostEntry[]> {
     "populate[coverImage]": "true",
     "filters[publishedAt][$notNull]": "true",
     "sort": "publishedAt:desc",
+    "pagination[pageSize]": "200",
   });
   return posts.map(resolveCoverImage);
 }
