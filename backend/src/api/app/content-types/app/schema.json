@@ -81,6 +81,10 @@
       "type": "integer",
       "default": 99
     },
+    "networkCategory": {
+      "type": "enumeration",
+      "enum": ["rummy", "teen-patti", "spin", "slots"]
+    },
     "seo": {
       "type": "component",
       "repeatable": false,

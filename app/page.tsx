@@ -12,6 +12,8 @@ import {
   FAQPageSchema,
 } from "./components/seo/JsonLd";
 import { APPS_STATIC, CATEGORIES_STATIC, NETWORK_APPS } from "./lib/static-data";
+import { getAllApps } from "./lib/strapi";
+import type { AppEntry } from "./lib/types";
 
 // ─── Hard rules enforced ──────────────────────────────────────────────────────
 // • Homepage IS the "yono game all" hub (Rule 6 — no /yono-game-all page).
@@ -19,6 +21,20 @@ import { APPS_STATIC, CATEGORIES_STATIC, NETWORK_APPS } from "./lib/static-data"
 // • JSON-LD: WebSite + CollectionPage + ItemList + FAQPage (Rule 9).
 // • No aggregateRating (Rule 8).
 // ─────────────────────────────────────────────────────────────────────────────
+
+export const revalidate = 60;
+
+// Strapi-first, static-fallback: if Strapi is unreachable or has no
+// published apps yet, fall back to the bundled static catalog.
+async function getPublishedApps(): Promise<AppEntry[]> {
+  try {
+    const apps = await getAllApps();
+    if (apps.length > 0) return apps;
+  } catch {
+    // Strapi unavailable — fall through to static data.
+  }
+  return APPS_STATIC.filter((a) => a.publishedAt !== null);
+}
 
 export const metadata: Metadata = {
   title: {
@@ -86,8 +102,8 @@ const HOMEPAGE_FAQ = [
   },
 ];
 
-export default function HomePage() {
-  const publishedApps = APPS_STATIC.filter((a) => a.publishedAt !== null);
+export default async function HomePage() {
+  const publishedApps = await getPublishedApps();
 
   return (
     <>

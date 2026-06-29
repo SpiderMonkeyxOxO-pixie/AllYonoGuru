@@ -1,9 +1,23 @@
 import type { MetadataRoute } from "next";
 import { APPS_STATIC, BLOG_POSTS_STATIC } from "@/app/lib/static-data";
+import { getAllApps } from "@/app/lib/strapi";
+import type { AppEntry } from "@/app/lib/types";
 
 const BASE = "https://allyonoguru.com";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+// Strapi-first, static-fallback: if Strapi is unreachable or has no
+// published apps yet, fall back to the bundled static catalog.
+async function getPublishedApps(): Promise<AppEntry[]> {
+  try {
+    const apps = await getAllApps();
+    if (apps.length > 0) return apps;
+  } catch {
+    // Strapi unavailable — fall through to static data.
+  }
+  return APPS_STATIC.filter((a) => a.publishedAt !== null);
+}
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE, lastModified: new Date(), changeFrequency: "daily",   priority: 1.0 },
     { url: `${BASE}/blog`,           lastModified: new Date(), changeFrequency: "weekly",  priority: 0.6 },
@@ -13,10 +27,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/contact`,        lastModified: new Date(), changeFrequency: "monthly", priority: 0.3 },
   ];
 
-  // Only include PUBLISHED apps (publishedAt non-null).
   // DRAFT categories (publishedAt null) are intentionally excluded.
-  const appPages: MetadataRoute.Sitemap = APPS_STATIC
-    .filter((app) => app.publishedAt !== null)
+  const publishedApps = await getPublishedApps();
+  const appPages: MetadataRoute.Sitemap = publishedApps
     .map((app) => ({
       url: `${BASE}/${app.slug}`,
       lastModified: new Date(app.publishedAt!),

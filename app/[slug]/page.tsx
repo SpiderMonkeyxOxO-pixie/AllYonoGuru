@@ -11,6 +11,8 @@ import {
   CategoryPageSchemas,
 } from "../components/seo/JsonLd";
 import { APPS_STATIC, CATEGORIES_STATIC, NETWORK_APPS } from "../lib/static-data";
+import { getAppBySlug } from "../lib/strapi";
+import type { AppEntry } from "../lib/types";
 
 // Hard rules enforced:
 // • Self-canonical on every page (Rule 10).
@@ -39,6 +41,20 @@ export function generateStaticParams() {
   return [...appParams, ...catParams];
 }
 
+export const revalidate = 60;
+
+// Strapi-first, static-fallback: if Strapi is unreachable or has no
+// matching app yet, fall back to the bundled static catalog.
+async function getApp(slug: string): Promise<AppEntry | null> {
+  try {
+    const app = await getAppBySlug(slug);
+    if (app) return app;
+  } catch {
+    // Strapi unavailable — fall through to static data.
+  }
+  return APPS_STATIC.find((a) => a.slug === slug) ?? null;
+}
+
 // ── Metadata ──────────────────────────────────────────────────────────────────
 
 export async function generateMetadata({
@@ -49,7 +65,7 @@ export async function generateMetadata({
   const { slug } = await params;
 
   // ── App ──
-  const app = APPS_STATIC.find((a) => a.slug === slug);
+  const app = await getApp(slug);
   if (app) {
     const isOwned = app.primaryDomain === "allyonoguru";
     const canonical = isOwned
@@ -120,7 +136,7 @@ export default async function SlugPage({
   const { slug } = await params;
 
   // ── App page ──
-  const app = APPS_STATIC.find((a) => a.slug === slug);
+  const app = await getApp(slug);
   if (app) {
     const breadcrumbs = [
       { name: "Home", item: SITE },
