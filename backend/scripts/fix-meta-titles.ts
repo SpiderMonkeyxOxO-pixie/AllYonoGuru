@@ -33,7 +33,7 @@ async function fetchAll(endpoint: string): Promise<any[]> {
   const url = `${STRAPI_URL}/api/${endpoint}?populate[seo]=true&pagination[pageSize]=200`;
   const res = await fetch(url, { headers: { Authorization: `Bearer ${TOKEN}` } });
   if (!res.ok) throw new Error(`GET ${url} failed: ${res.status}`);
-  const json = await res.json();
+  const json = await res.json() as { data: any[] };
   return json.data ?? [];
 }
 
