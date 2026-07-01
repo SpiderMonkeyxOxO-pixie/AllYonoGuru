@@ -24,28 +24,78 @@ async function getPost(slug: string) {
   }
 }
 
-// Minimal inline-link support for blog content: [label](url) becomes a
-// real clickable Link. No other markdown syntax is supported by design —
-// keep article content as plain prose, only links need to render specially.
-function renderParagraph(text: string): React.ReactNode[] {
-  const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
+// Renders inline markdown: **[label](url)** | **bold** | [label](url)
+function renderInline(text: string): React.ReactNode[] {
+  const pattern = /\*\*\[([^\]]+)\]\(([^)]+)\)\*\*|\*\*([^*]+)\*\*|\[([^\]]+)\]\(([^)]+)\)/g;
   const parts: React.ReactNode[] = [];
   let lastIndex = 0;
   let match: RegExpExecArray | null;
   let key = 0;
 
-  while ((match = linkPattern.exec(text)) !== null) {
+  while ((match = pattern.exec(text)) !== null) {
     if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
-    const [, label, href] = match;
-    parts.push(
-      <Link key={key++} href={href} style={{ color: "#f59e0b", textDecoration: "underline" }}>
-        {label}
-      </Link>
-    );
+
+    if (match[1] !== undefined) {
+      // **[label](url)** — bold link
+      parts.push(
+        <strong key={key++}>
+          <Link href={match[2]} style={{ color: "#f59e0b", textDecoration: "underline" }}>{match[1]}</Link>
+        </strong>
+      );
+    } else if (match[3] !== undefined) {
+      // **bold**
+      parts.push(<strong key={key++} style={{ color: "#e2e8f0" }}>{match[3]}</strong>);
+    } else {
+      // [label](url)
+      parts.push(
+        <Link key={key++} href={match[5]} style={{ color: "#f59e0b", textDecoration: "underline" }}>{match[4]}</Link>
+      );
+    }
     lastIndex = match.index + match[0].length;
   }
   if (lastIndex < text.length) parts.push(text.slice(lastIndex));
   return parts;
+}
+
+// Renders a full post body: splits by blank lines, then detects headings,
+// bullet lists, horizontal rules, and plain paragraphs.
+function renderContent(content: string): React.ReactNode[] {
+  return content.split("\n\n").filter(Boolean).map((block, i) => {
+    if (block.startsWith("## ")) {
+      return (
+        <h2 key={i} style={{ fontSize: "1.35rem", fontWeight: "700", color: "#f1f5f9", margin: "40px 0 14px", letterSpacing: "-0.02em" }}>
+          {block.slice(3)}
+        </h2>
+      );
+    }
+    if (block.startsWith("### ")) {
+      return (
+        <h3 key={i} style={{ fontSize: "1.1rem", fontWeight: "700", color: "#e2e8f0", margin: "28px 0 10px" }}>
+          {block.slice(4)}
+        </h3>
+      );
+    }
+    if (block.trim() === "---") {
+      return <hr key={i} style={{ border: "none", borderTop: "1px solid rgba(255,255,255,0.08)", margin: "40px 0" }} />;
+    }
+    const lines = block.split("\n");
+    if (lines.every(l => l.startsWith("- ") || l.startsWith("* "))) {
+      return (
+        <ul key={i} style={{ margin: "0 0 24px", paddingLeft: "20px" }}>
+          {lines.map((line, j) => (
+            <li key={j} style={{ fontSize: "15px", color: "#94a3b8", lineHeight: "1.8", marginBottom: "6px" }}>
+              {renderInline(line.slice(2))}
+            </li>
+          ))}
+        </ul>
+      );
+    }
+    return (
+      <p key={i} style={{ fontSize: "15px", color: "#94a3b8", lineHeight: "1.8", marginBottom: "24px" }}>
+        {renderInline(block)}
+      </p>
+    );
+  });
 }
 
 export async function generateMetadata({
@@ -96,8 +146,6 @@ export default async function BlogPostPage({
     { name: "Blog", item: `${SITE}/blog` },
     { name: post.title, item: `${SITE}/blog/${post.slug}` },
   ];
-
-  const paragraphs = post.content.split("\n\n").filter(Boolean);
 
   return (
     <>
@@ -176,11 +224,7 @@ export default async function BlogPostPage({
 
         <section className="inner-section" style={{ background: "#0a0f1e" }}>
           <div style={{ maxWidth: "760px", margin: "0 auto" }}>
-            {paragraphs.map((para, i) => (
-              <p key={i} style={{ fontSize: "15px", color: "#94a3b8", lineHeight: "1.8", marginBottom: "24px" }}>
-                {renderParagraph(para)}
-              </p>
-            ))}
+            {renderContent(post.content)}
 
             <Link
               href="/blog"
