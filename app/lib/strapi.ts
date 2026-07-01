@@ -87,7 +87,6 @@ export async function getAllBlogPosts(): Promise<BlogPostEntry[]> {
   const posts = await fetchAPI<BlogPostEntry[]>("/blog-posts", {
     "populate[seo]": "true",
     "populate[coverImage]": "true",
-    "status": "published",
     "sort": "publishedAt:desc",
     "pagination[pageSize]": "200",
   });
