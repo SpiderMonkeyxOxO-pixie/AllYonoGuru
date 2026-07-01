@@ -15,7 +15,7 @@ async function fetchAPI<T>(
       "Content-Type": "application/json",
       ...(STRAPI_TOKEN ? { Authorization: `Bearer ${STRAPI_TOKEN}` } : {}),
     },
-    next: { revalidate: 60 },
+    cache: "no-store",
   });
 
   if (!res.ok) {
@@ -87,7 +87,7 @@ export async function getAllBlogPosts(): Promise<BlogPostEntry[]> {
   const posts = await fetchAPI<BlogPostEntry[]>("/blog-posts", {
     "populate[seo]": "true",
     "populate[coverImage]": "true",
-    "filters[publishedAt][$notNull]": "true",
+    "status": "published",
     "sort": "publishedAt:desc",
     "pagination[pageSize]": "200",
   });
