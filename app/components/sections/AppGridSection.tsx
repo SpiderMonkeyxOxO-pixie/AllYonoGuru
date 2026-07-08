@@ -287,6 +287,16 @@ export default function AppGridSection({ apps }: AppGridSectionProps) {
                       }}>
                         {app.name}
                       </h3>
+                      {app.tag && (
+                        <span style={{
+                          fontSize: "10px", fontWeight: "700", color: "#020817",
+                          background: "linear-gradient(135deg, #34d399, #22c55e)",
+                          borderRadius: "4px", padding: "2px 6px",
+                          letterSpacing: "0.03em",
+                        }}>
+                          {app.tag}
+                        </span>
+                      )}
                       {!isOwned && (
                         <span style={{
                           fontSize: "10px", color: "#64748b",

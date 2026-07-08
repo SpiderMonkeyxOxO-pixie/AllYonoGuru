@@ -98,6 +98,15 @@ export default function AppDetailClient({ app, relatedApps }: Props) {
 
                 {/* Meta badges */}
                 <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", marginBottom: "16px" }}>
+                  {app.tag && (
+                    <span style={{
+                      fontSize: "12px", fontWeight: "700", color: "#020817",
+                      background: "linear-gradient(135deg, #34d399, #22c55e)",
+                      borderRadius: "6px", padding: "3px 9px",
+                    }}>
+                      {app.tag}
+                    </span>
+                  )}
                   {[
                     { label: `v${app.appVersion}` },
                     { label: app.packageSize },

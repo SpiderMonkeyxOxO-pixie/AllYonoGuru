@@ -49,6 +49,7 @@ export interface AppEntry {
   navOrder: number;
   publishedAt: string | null;
   networkCategory?: "rummy" | "teen-patti" | "spin" | "slots";
+  tag?: string;
   seo: SeoMeta;
   faq: FaqItem[];
   compliance: ComplianceData;

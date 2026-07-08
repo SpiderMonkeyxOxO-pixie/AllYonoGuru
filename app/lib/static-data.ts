@@ -128,6 +128,64 @@ export const APPS_STATIC: AppEntry[] = [
     },
     links: [],
   },
+  {
+    id: 60,
+    slug: "max-rummy",
+    name: "Max Rummy",
+    tagline:
+      "Max Rummy brings all three 13-card table formats into one app, with fast matchmaking, a hand-strength meter, and adjustable practice stakes.",
+    description:
+      "Max Rummy is built around the same core discipline as any 13-card Rummy variant: arrange your hand into valid sequences and sets faster than the player across the table. A declaration needs at least two sequences, with one pure sequence — consecutive same-suit cards without a joker — and the rest of the hand completed through sets of three or more matching-rank cards or additional sequences. Where Max Rummy differs is the in-game hand-strength meter, a running indicator that estimates how close your current hand is to a clean declaration based on unmelded card count and sequence completion, so you get real-time feedback on a decision instead of counting cards manually after every draw.\n\nThe app runs all three standard table formats — Points Rummy for single-deal rounds, Pool Rummy for extended play until players cross the 101 or 201 point ceiling, and Deals Rummy for a fixed number of rounds decided on total chip count — with matchmaking tuned to seat you at a table within seconds rather than waiting through a lobby. A practice mode lets you set your own table stakes before joining live play, so you can rehearse a format at a pace that matches your comfort level before moving to a standard table.",
+    downloadUrl: "#",
+    appVersion: "1.0.0",
+    packageSize: "34 MB",
+    minAndroid: "6.0",
+    iconUrl: "/logos/max-rummy.webp",
+    screenshotUrls: [],
+    targetKeyword: "max rummy",
+    secondaryKeyword: "max rummy apk",
+    kd: 2,
+    searchVolume: 30,
+    primaryDomain: "allyonoguru",
+    navOrder: 3,
+    publishedAt: "2026-07-08T00:00:00.000Z",
+    networkCategory: "rummy",
+    tag: "NEW",
+    seo: {
+      metaTitle: "Max Rummy APK — 13-Card Skill Rummy for Android (Free Download)",
+      metaDescription:
+        "Max Rummy: Points, Pool & Deals Rummy on Android with fast matchmaking and a hand-strength meter. Free APK. 18+ | State restrictions may apply.",
+      canonicalURL: "https://allyonoguru.com/max-rummy",
+    },
+    faq: [
+      {
+        question: "How does the hand-strength meter work in Max Rummy?",
+        answer:
+          "The meter reads your current hand after every draw and discard, estimating how close you are to a valid declaration based on how many cards remain unmelded and whether a pure sequence is already formed. It updates in real time so you can judge a drop-or-continue decision without manually recounting your hand.",
+      },
+      {
+        question: "What is the difference between Points, Pool, and Deals Rummy?",
+        answer:
+          "Points Rummy ends after a single deal, with the loser's unmelded cards counted as points against them. Pool Rummy continues across multiple deals until a player crosses the 101 or 201 point limit and is eliminated. Deals Rummy runs a fixed number of rounds, and the highest chip count at the end decides the outcome.",
+      },
+      {
+        question: "Can I set my own stakes in practice mode?",
+        answer:
+          "Yes. Practice mode lets you choose table stakes before joining, which is useful for rehearsing a specific format — such as a longer Pool Rummy session — at a pace that matches your experience level before playing a standard table.",
+      },
+      {
+        question: "What are the device requirements to install Max Rummy?",
+        answer:
+          "The app runs on Android 6.0 and above and needs approximately 34 MB of free storage space.",
+      },
+    ],
+    compliance: {
+      showDisclaimer: true,
+      showAgeGate: true,
+      stateRestrictionNote: "Some states may restrict access to this app.",
+    },
+    links: [],
+  },
 
   // Network apps — individual directory pages
   {
