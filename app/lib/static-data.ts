@@ -136,7 +136,7 @@ export const APPS_STATIC: AppEntry[] = [
       "Max Rummy brings all three 13-card table formats into one app, with fast matchmaking, a hand-strength meter, and adjustable practice stakes.",
     description:
       "Max Rummy is built around the same core discipline as any 13-card Rummy variant: arrange your hand into valid sequences and sets faster than the player across the table. A declaration needs at least two sequences, with one pure sequence — consecutive same-suit cards without a joker — and the rest of the hand completed through sets of three or more matching-rank cards or additional sequences. Where Max Rummy differs is the in-game hand-strength meter, a running indicator that estimates how close your current hand is to a clean declaration based on unmelded card count and sequence completion, so you get real-time feedback on a decision instead of counting cards manually after every draw.\n\nThe app runs all three standard table formats — Points Rummy for single-deal rounds, Pool Rummy for extended play until players cross the 101 or 201 point ceiling, and Deals Rummy for a fixed number of rounds decided on total chip count — with matchmaking tuned to seat you at a table within seconds rather than waiting through a lobby. A practice mode lets you set your own table stakes before joining live play, so you can rehearse a format at a pace that matches your comfort level before moving to a standard table.",
-    downloadUrl: "#",
+    downloadUrl: "https://www.maxrummy99.com/?code=QUMV1MBQR7L&t=1783566019",
     appVersion: "1.0.0",
     packageSize: "34 MB",
     minAndroid: "6.0",
