@@ -9,8 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           "/api/",
           "/_next/",
-          "/yono-game-spin",
-          "/share-slots-yono",
         ],
       },
     ],

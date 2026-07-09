@@ -2370,7 +2370,7 @@ export const CATEGORIES_STATIC: CategoryEntry[] = [
     searchVolume: 8200,
     primaryDomain: "allyonoguru",
     navOrder: 1,
-    publishedAt: null,
+    publishedAt: "2026-07-09T00:00:00.000Z",
     apps: [],
     seo: {
       metaTitle: "Yono Game Spin — Skill-Based Spin Game Apps Directory",
@@ -2403,7 +2403,7 @@ export const CATEGORIES_STATIC: CategoryEntry[] = [
     searchVolume: 6600,
     primaryDomain: "allyonoguru",
     navOrder: 2,
-    publishedAt: null,
+    publishedAt: "2026-07-09T00:00:00.000Z",
     apps: [],
     seo: {
       metaTitle: "Share Slots Yono — Slot-Style Skill Game Apps Directory",
