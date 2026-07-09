@@ -143,6 +143,14 @@ export default function PromoCodesModal({ isOpen, onClose, entries }: Props) {
               <p style={{ margin: "12px 0 0", fontSize: "11.5px", color: "#475569" }}>
                 {releasedCount} of {entries.length} apps have a {slot} code right now.
               </p>
+
+              <Link
+                href="/all-yono-games-promocode"
+                onClick={onClose}
+                style={{ display: "inline-block", marginTop: "10px", fontSize: "12px", color: "#f59e0b", textDecoration: "none" }}
+              >
+                View full page →
+              </Link>
             </div>
 
             {/* List */}

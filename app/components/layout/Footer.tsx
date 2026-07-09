@@ -36,6 +36,7 @@ const FOOTER_LINKS = [
   {
     heading: "Info",
     links: [
+      { label: "Promo Code",       href: "/all-yono-games-promocode" },
       { label: "Blog",             href: "/blog" },
       { label: "About",            href: "/about" },
       { label: "Disclaimer",       href: "/disclaimer" },
