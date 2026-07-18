@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { DownloadIcon, ExternalLinkIcon, ShieldIcon, ChevronDownIcon } from "../icons/Icons";
 import SearchInput from "./SearchInput";
+import ComingSoonCard from "./ComingSoonCard";
 import type { AppEntry } from "@/app/lib/types";
 
 // Hard rule: if primaryDomain !== "allyonoguru", CTA points to the sibling domain.
@@ -54,10 +55,15 @@ export default function AppGridSection({ apps }: AppGridSectionProps) {
   const [activeCategory, setActiveCategory] = useState<typeof CATEGORY_TABS[number]["id"]>("all");
   const [sortBy, setSortBy] = useState<SortMode>("default");
 
+  // Coming-soon apps aren't downloadable/searchable yet — pinned separately,
+  // ahead of the regular grid, and only in the default unfiltered view.
+  const comingSoonApps = useMemo(() => apps.filter((a) => a.comingSoon), [apps]);
+  const regularApps = useMemo(() => apps.filter((a) => !a.comingSoon), [apps]);
+
   const filteredApps = useMemo(() => {
     const q = query.trim().toLowerCase();
 
-    const matched = apps.filter((app) => {
+    const matched = regularApps.filter((app) => {
       if (activeCategory !== "all" && getCategory(app) !== activeCategory) return false;
       if (!q) return true;
       return (
@@ -74,9 +80,10 @@ export default function AppGridSection({ apps }: AppGridSectionProps) {
       return [...matched].sort((a, b) => b.searchVolume - a.searchVolume);
     }
     return matched;
-  }, [apps, query, activeCategory, sortBy]);
+  }, [regularApps, query, activeCategory, sortBy]);
 
   const isFiltered = query.trim() !== "" || activeCategory !== "all";
+  const showComingSoon = comingSoonApps.length > 0 && !isFiltered;
 
   function clearFilters() {
     setQuery("");
@@ -215,7 +222,7 @@ export default function AppGridSection({ apps }: AppGridSectionProps) {
           {/* Results count */}
           {isFiltered && (
             <p style={{ fontSize: "12.5px", color: "#475569", marginTop: "14px", marginBottom: 0 }}>
-              Showing {filteredApps.length} of {apps.length} apps
+              Showing {filteredApps.length} of {regularApps.length} apps
             </p>
           )}
         </motion.div>
@@ -249,6 +256,10 @@ export default function AppGridSection({ apps }: AppGridSectionProps) {
 
         {/* App cards grid */}
         <div className="game-grid">
+          {showComingSoon && comingSoonApps.map((app) => (
+            <ComingSoonCard key={app.slug} app={app} />
+          ))}
+
           {filteredApps.map((app, i) => {
             const { url: dlUrl, isExternal } = getDownloadUrl(app);
             const isOwned = app.primaryDomain === "allyonoguru";

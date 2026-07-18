@@ -4,6 +4,7 @@ import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import AppDetailClient from "./AppDetailClient";
 import CategoryDetailClient from "./CategoryDetailClient";
+import ComingSoonCard from "../components/sections/ComingSoonCard";
 import {
   BreadcrumbSchema,
   SoftwareAppSchema,
@@ -71,6 +72,8 @@ export async function generateMetadata({
       title: app.seo.metaTitle,
       description: app.seo.metaDescription,
       keywords: `${app.targetKeyword}, ${app.secondaryKeyword}`,
+      // Coming-soon apps have no reviewable content yet — noindex until release.
+      ...(app.comingSoon && { robots: { index: false, follow: false } }),
       alternates: { canonical },
       openGraph: {
         title: app.seo.metaTitle,
@@ -137,6 +140,24 @@ export default async function SlugPage({
       { name: "Home", item: SITE },
       { name: app.name, item: `${SITE}/${app.slug}` },
     ];
+
+    // Coming-soon apps don't have reviewable details/download links yet —
+    // show the same announcement card as the homepage grid instead of the
+    // full (currently placeholder) detail page.
+    if (app.comingSoon) {
+      return (
+        <>
+          <BreadcrumbSchema items={breadcrumbs} />
+          <Navbar />
+          <main id="main-content" role="main" style={{ paddingTop: "108px", paddingBottom: "80px" }}>
+            <div style={{ maxWidth: "420px", margin: "0 auto", padding: "0 24px" }}>
+              <ComingSoonCard app={app} />
+            </div>
+          </main>
+          <Footer />
+        </>
+      );
+    }
 
     return (
       <>

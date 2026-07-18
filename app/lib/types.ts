@@ -50,6 +50,9 @@ export interface AppEntry {
   publishedAt: string | null;
   networkCategory?: "rummy" | "teen-patti" | "spin" | "slots";
   tag?: string;
+  comingSoon?: boolean;
+  releaseDate?: string | null;
+  launchUpdatesUrl?: string | null;
   seo: SeoMeta;
   faq: FaqItem[];
   compliance: ComplianceData;

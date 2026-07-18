@@ -84,6 +84,16 @@
     "tag": {
       "type": "string"
     },
+    "comingSoon": {
+      "type": "boolean",
+      "default": false
+    },
+    "releaseDate": {
+      "type": "datetime"
+    },
+    "launchUpdatesUrl": {
+      "type": "string"
+    },
     "networkCategory": {
       "type": "enumeration",
       "enum": ["rummy", "teen-patti", "spin", "slots"]

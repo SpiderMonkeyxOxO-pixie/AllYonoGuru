@@ -186,6 +186,44 @@ export const APPS_STATIC: AppEntry[] = [
     },
     links: [],
   },
+  {
+    id: 61,
+    slug: "dhangame",
+    name: "DhanGame",
+    tagline:
+      "DhanGame is scheduled to join the Yono game network on 23 July 2026. Category, formats, and safety details will be added once it is available for review.",
+    description:
+      "DhanGame is an upcoming addition to the AllYonoGuru directory, expected to launch between 8:00 and 9:00 AM IST on 23 July 2026. As with every app in this directory, DhanGame's category, table formats, and safety information will only be published once the app is available and can be independently reviewed — nothing here is confirmed until then.",
+    downloadUrl: "#",
+    appVersion: "",
+    packageSize: "",
+    minAndroid: "",
+    iconUrl: "/logos/dhangame.webp",
+    screenshotUrls: [],
+    targetKeyword: "dhan game",
+    secondaryKeyword: "dhangame apk",
+    kd: 2,
+    searchVolume: 100,
+    primaryDomain: "allyonoguru",
+    navOrder: -1,
+    publishedAt: "2026-07-18T00:00:00.000Z",
+    comingSoon: true,
+    releaseDate: "2026-07-23T08:00:00+05:30",
+    launchUpdatesUrl: null,
+    seo: {
+      metaTitle: "DhanGame — Coming Soon to AllYonoGuru (23 July 2026)",
+      metaDescription:
+        "DhanGame is joining the Yono game network on 23 July 2026. Full details, category, and safety information will follow an independent review.",
+      canonicalURL: "https://allyonoguru.com/dhangame",
+    },
+    faq: [],
+    compliance: {
+      showDisclaimer: true,
+      showAgeGate: true,
+      stateRestrictionNote: "Some states may restrict access to this app.",
+    },
+    links: [],
+  },
 
   // Network apps — individual directory pages
   {

@@ -38,8 +38,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   // DRAFT categories (publishedAt null) are intentionally excluded.
+  // Coming-soon apps have no reviewable content yet — excluded until release.
   const publishedApps = await getPublishedApps();
   const appPages: MetadataRoute.Sitemap = publishedApps
+    .filter((app) => !app.comingSoon)
     .map((app) => ({
       url: `${BASE}/${app.slug}`,
       lastModified: new Date(app.publishedAt!),
