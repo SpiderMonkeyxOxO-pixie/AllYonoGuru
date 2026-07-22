@@ -42,8 +42,8 @@ async function findBySlug(slug: string): Promise<AppRow | null> {
     headers: { Authorization: `Bearer ${TOKEN}` },
   });
   if (!res.ok) throw new Error(`GET failed (${res.status})`);
-  const json = await res.json();
-  return (json.data?.[0] as AppRow) ?? null;
+  const json = (await res.json()) as { data: AppRow[] };
+  return json.data?.[0] ?? null;
 }
 
 async function updateApp(documentId: string, data: Record<string, unknown>): Promise<void> {
