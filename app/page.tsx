@@ -33,7 +33,9 @@ async function getPublishedApps(): Promise<AppEntry[]> {
   } catch {
     // Strapi unavailable — fall through to static data.
   }
-  return APPS_STATIC.filter((a) => a.publishedAt !== null);
+  return APPS_STATIC
+    .filter((a) => a.publishedAt !== null)
+    .sort((a, b) => a.navOrder - b.navOrder);
 }
 
 export const metadata: Metadata = {

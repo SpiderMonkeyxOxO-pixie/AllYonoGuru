@@ -25,7 +25,7 @@ export const APPS_STATIC: AppEntry[] = [
     kd: 5,
     searchVolume: 4400,
     primaryDomain: "allyonoguru",
-    navOrder: 1,
+    navOrder: 6,
     publishedAt: "2026-06-01T00:00:00.000Z",
     seo: {
       metaTitle: "Rummy Guru APK — 13-Card Skill Rummy for Android (Free Download)",
@@ -86,7 +86,7 @@ export const APPS_STATIC: AppEntry[] = [
     kd: 4,
     searchVolume: 3600,
     primaryDomain: "allyonoguru",
-    navOrder: 2,
+    navOrder: 7,
     publishedAt: "2026-06-01T00:00:00.000Z",
     seo: {
       metaTitle: "Teen Patti Guru APK — Classic & Variant 3-Card Game for Android",
@@ -147,7 +147,7 @@ export const APPS_STATIC: AppEntry[] = [
     kd: 2,
     searchVolume: 30,
     primaryDomain: "allyonoguru",
-    navOrder: 0,
+    navOrder: 1,
     publishedAt: "2026-07-08T00:00:00.000Z",
     networkCategory: "rummy",
     tag: "NEW",
@@ -191,9 +191,9 @@ export const APPS_STATIC: AppEntry[] = [
     slug: "dhangame",
     name: "DhanGame",
     tagline:
-      "DhanGame is scheduled to join the Yono game network on 23 July 2026. Category, formats, and safety details will be added once it is available for review.",
+      "DhanGame is scheduled to join the Yono game network at 8:00 AM IST on 23 July 2026. Category, formats, and safety details will be added once it is available for review.",
     description:
-      "DhanGame is an upcoming addition to the AllYonoGuru directory, expected to launch between 8:00 and 9:00 AM IST on 23 July 2026. As with every app in this directory, DhanGame's category, table formats, and safety information will only be published once the app is available and can be independently reviewed — nothing here is confirmed until then.",
+      "DhanGame is an upcoming addition to the AllYonoGuru directory, expected to launch at 8:00 AM IST on 23 July 2026. As with every app in this directory, DhanGame's category, table formats, and safety information will only be published once the app is available and can be independently reviewed — nothing here is confirmed until then.",
     downloadUrl: "#",
     appVersion: "",
     packageSize: "",
@@ -281,7 +281,7 @@ export const APPS_STATIC: AppEntry[] = [
       kd: 3,
       searchVolume: 22000,
       primaryDomain: "allyonoguru",
-      navOrder: 99,
+      navOrder: 2,
       publishedAt: "2026-06-01T00:00:00.000Z",
       networkCategory: "rummy",
       seo: {
@@ -1080,7 +1080,7 @@ export const APPS_STATIC: AppEntry[] = [
       kd: 2,
       searchVolume: 7800,
       primaryDomain: "allyonoguru",
-      navOrder: 99,
+      navOrder: 5,
       publishedAt: "2026-06-01T00:00:00.000Z",
       networkCategory: "teen-patti",
       seo: {
@@ -1118,7 +1118,7 @@ export const APPS_STATIC: AppEntry[] = [
       kd: 3,
       searchVolume: 14000,
       primaryDomain: "allyonoguru",
-      navOrder: 99,
+      navOrder: 3,
       publishedAt: "2026-06-01T00:00:00.000Z",
       networkCategory: "teen-patti",
       seo: {
@@ -2334,7 +2334,7 @@ export const APPS_STATIC: AppEntry[] = [
       kd: 3,
       searchVolume: 13500,
       primaryDomain: "allyonoguru",
-      navOrder: 99,
+      navOrder: 4,
       publishedAt: "2026-06-01T00:00:00.000Z",
       networkCategory: "slots",
       seo: {
