@@ -35,6 +35,10 @@ export default function AppDetailClient({ app, relatedApps }: Props) {
     ? `#download`
     : `${siblingUrl}/${app.slug}`;
 
+  // Placeholder downloadUrl ("#" or empty) means the real link hasn't been
+  // set yet — flag it instead of publishing a dead download button.
+  const hasRealDownload = Boolean(app.downloadUrl && app.downloadUrl.trim() !== "#");
+
   return (
     <div style={{ paddingTop: "68px" }}>
 
@@ -143,7 +147,7 @@ export default function AppDetailClient({ app, relatedApps }: Props) {
 
                 {/* Download CTA */}
                 <div id="download" className="cta-row">
-                  {isOwned ? (
+                  {isOwned && hasRealDownload ? (
                     <motion.a
                       href={app.downloadUrl}
                       title={`Download ${app.name} APK — Free`}
@@ -164,6 +168,23 @@ export default function AppDetailClient({ app, relatedApps }: Props) {
                       <DownloadIcon size={16} />
                       Download {app.name} APK
                     </motion.a>
+                  ) : isOwned ? (
+                    <span
+                      title="Download link not yet available"
+                      aria-disabled="true"
+                      style={{
+                        display: "inline-flex", alignItems: "center", gap: "8px",
+                        background: "rgba(100,116,139,0.10)",
+                        border: "1px solid rgba(100,116,139,0.2)",
+                        color: "#64748b", fontWeight: "700",
+                        fontSize: "15px", padding: "13px 28px",
+                        borderRadius: "10px", letterSpacing: "-0.01em",
+                        cursor: "not-allowed",
+                      }}
+                    >
+                      <DownloadIcon size={16} />
+                      Link Pending
+                    </span>
                   ) : (
                     <motion.a
                       href={downloadUrl}
@@ -326,7 +347,7 @@ export default function AppDetailClient({ app, relatedApps }: Props) {
                   {app.packageSize} · Android {app.minAndroid}+ · Free
                 </p>
 
-                {isOwned ? (
+                {isOwned && hasRealDownload ? (
                   <a
                     href={app.downloadUrl}
                     title={`Download ${app.name} APK`}
@@ -346,6 +367,24 @@ export default function AppDetailClient({ app, relatedApps }: Props) {
                     <DownloadIcon size={15} />
                     Download APK
                   </a>
+                ) : isOwned ? (
+                  <span
+                    title="Download link not yet available"
+                    aria-disabled="true"
+                    style={{
+                      display: "flex", alignItems: "center", justifyContent: "center",
+                      gap: "8px", width: "100%",
+                      background: "rgba(100,116,139,0.10)",
+                      border: "1px solid rgba(100,116,139,0.2)",
+                      color: "#64748b", fontWeight: "700",
+                      fontSize: "14px", padding: "13px",
+                      borderRadius: "10px", marginBottom: "12px",
+                      cursor: "not-allowed",
+                    }}
+                  >
+                    <DownloadIcon size={15} />
+                    Link Pending
+                  </span>
                 ) : (
                   <a
                     href={downloadUrl}

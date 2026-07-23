@@ -351,8 +351,10 @@ export default function AppGridSection({ apps }: AppGridSectionProps) {
 
                 {/* CTA buttons */}
                 <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-                  {/* Primary CTA — if not owned, points to sibling with rel=nofollow */}
-                  {isOwned ? (
+                  {/* Primary CTA — if not owned, points to sibling with rel=nofollow.
+                      Placeholder downloadUrl ("#"/empty) is flagged instead of
+                      publishing a dead button. */}
+                  {isOwned && app.downloadUrl && app.downloadUrl.trim() !== "#" ? (
                     <Link
                       href={dlUrl}
                       title={`Download ${app.name} APK`}
@@ -369,6 +371,23 @@ export default function AppGridSection({ apps }: AppGridSectionProps) {
                       <DownloadIcon size={14} />
                       Download APK
                     </Link>
+                  ) : isOwned ? (
+                    <span
+                      title="Download link not yet available"
+                      aria-disabled="true"
+                      style={{
+                        display: "inline-flex", alignItems: "center", gap: "7px",
+                        background: "rgba(100,116,139,0.10)",
+                        border: "1px solid rgba(100,116,139,0.2)",
+                        color: "#64748b", fontWeight: "600",
+                        fontSize: "13px", padding: "10px 18px",
+                        borderRadius: "9px", flex: 1,
+                        justifyContent: "center", cursor: "not-allowed",
+                      }}
+                    >
+                      <DownloadIcon size={14} />
+                      Link Pending
+                    </span>
                   ) : (
                     <a
                       href={dlUrl}

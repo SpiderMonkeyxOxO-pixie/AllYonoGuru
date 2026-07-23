@@ -191,13 +191,13 @@ export const APPS_STATIC: AppEntry[] = [
     slug: "dhangame",
     name: "DhanGame",
     tagline:
-      "DhanGame is scheduled to join the Yono game network at 8:00 AM IST on 23 July 2026. Category, formats, and safety details will be added once it is available for review.",
+      "DhanGame runs 13-card Rummy with a post-round hand review that breaks down exactly where a declaration was won or lost, across all three table formats.",
     description:
-      "DhanGame is an upcoming addition to the AllYonoGuru directory, expected to launch at 8:00 AM IST on 23 July 2026. As with every app in this directory, DhanGame's category, table formats, and safety information will only be published once the app is available and can be independently reviewed — nothing here is confirmed until then.",
-    downloadUrl: "#",
-    appVersion: "",
-    packageSize: "",
-    minAndroid: "",
+      "DhanGame follows the same 13-card Rummy foundation as any serious rummy app: build at least two sequences, with one pure sequence — consecutive same-suit cards without a joker — before declaring, and complete the remaining cards through sets or additional sequences. Where DhanGame stands out is what happens after each hand ends. A post-round breakdown shows exactly which cards were sitting unmelded at declaration, whether a pure sequence was missed, and how the final points tally was reached — turning every finished hand into a short lesson rather than just a result.\n\nThe app runs all three standard formats — Points Rummy for quick single-deal rounds, Pool Rummy for extended play up to the 101 or 201 point ceiling, and Deals Rummy for a fixed number of rounds decided on chip count — with the hand review available after every format, not just as a one-off tutorial. Tables are organised by entry-fee tier, so players can move between casual and higher-stakes tables without leaving the lobby to search.",
+    downloadUrl: "https://dhanwinplay.com/?code=L2VRQRRF2UK&t=1784778249",
+    appVersion: "1.0.0",
+    packageSize: "36 MB",
+    minAndroid: "6.0",
     iconUrl: "/logos/dhangame.webp",
     screenshotUrls: [],
     targetKeyword: "dhan game",
@@ -205,18 +205,40 @@ export const APPS_STATIC: AppEntry[] = [
     kd: 2,
     searchVolume: 100,
     primaryDomain: "allyonoguru",
-    navOrder: -1,
+    navOrder: 0,
     publishedAt: "2026-07-18T00:00:00.000Z",
-    comingSoon: true,
+    networkCategory: "rummy",
+    comingSoon: false,
     releaseDate: "2026-07-23T08:00:00+05:30",
     launchUpdatesUrl: null,
     seo: {
-      metaTitle: "DhanGame — Coming Soon to AllYonoGuru (23 July 2026)",
+      metaTitle: "DhanGame APK — 13-Card Skill Rummy for Android (Free Download)",
       metaDescription:
-        "DhanGame is joining the Yono game network on 23 July 2026. Full details, category, and safety information will follow an independent review.",
+        "DhanGame: Points, Pool & Deals Rummy on Android with a post-round hand review. Free APK. 18+ | State restrictions may apply.",
       canonicalURL: "https://allyonoguru.com/dhangame",
     },
-    faq: [],
+    faq: [
+      {
+        question: "How does DhanGame's post-round hand review work?",
+        answer:
+          "After every hand, DhanGame shows which cards were still unmelded when the round ended, whether a pure sequence had been formed, and how your final points total was calculated — so a loss comes with a specific reason rather than just a score.",
+      },
+      {
+        question: "What is the difference between Points, Pool, and Deals Rummy?",
+        answer:
+          "Points Rummy ends after a single deal, with the loser's unmelded cards counted as points against them. Pool Rummy continues across multiple deals until a player crosses the 101 or 201 point limit and is eliminated. Deals Rummy runs a fixed number of rounds, and the highest chip count at the end decides the outcome.",
+      },
+      {
+        question: "How are DhanGame's tables organised?",
+        answer:
+          "Tables are grouped by entry-fee tier within the lobby, so you can move between casual and higher-stakes tables directly rather than searching for one manually.",
+      },
+      {
+        question: "What are the device requirements to install DhanGame?",
+        answer:
+          "DhanGame runs on Android 6.0 and above and needs approximately 36 MB of free storage space.",
+      },
+    ],
     compliance: {
       showDisclaimer: true,
       showAgeGate: true,
