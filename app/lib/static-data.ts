@@ -246,6 +246,44 @@ export const APPS_STATIC: AppEntry[] = [
     },
     links: [],
   },
+  {
+    id: 62,
+    slug: "win-rummy",
+    name: "Win Rummy",
+    tagline:
+      "Win Rummy is scheduled to join the Yono game network at 8:00 AM IST on 29 July 2026. Category, formats, and safety details will be added once it is available for review.",
+    description:
+      "Win Rummy is an upcoming addition to the AllYonoGuru directory, expected to launch at 8:00 AM IST on 29 July 2026. As with every app in this directory, Win Rummy's category, table formats, and safety information will only be published once the app is available and can be independently reviewed — nothing here is confirmed until then.",
+    downloadUrl: "#",
+    appVersion: "",
+    packageSize: "",
+    minAndroid: "",
+    iconUrl: "/logos/win-rummy.webp",
+    screenshotUrls: [],
+    targetKeyword: "win rummy",
+    secondaryKeyword: "win rummy apk",
+    kd: 2,
+    searchVolume: 100,
+    primaryDomain: "allyonoguru",
+    navOrder: -1,
+    publishedAt: "2026-07-25T00:00:00.000Z",
+    comingSoon: true,
+    releaseDate: "2026-07-29T08:00:00+05:30",
+    launchUpdatesUrl: null,
+    seo: {
+      metaTitle: "Win Rummy — Coming Soon to AllYonoGuru (29 July 2026)",
+      metaDescription:
+        "Win Rummy is joining the Yono game network on 29 July 2026. Full details, category, and safety information will follow an independent review.",
+      canonicalURL: "https://allyonoguru.com/win-rummy",
+    },
+    faq: [],
+    compliance: {
+      showDisclaimer: true,
+      showAgeGate: true,
+      stateRestrictionNote: "Some states may restrict access to this app.",
+    },
+    links: [],
+  },
 
   // Network apps — individual directory pages
   {
