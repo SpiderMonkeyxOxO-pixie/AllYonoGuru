@@ -79,6 +79,52 @@ function renderContent(content: string): React.ReactNode[] {
       return <hr key={i} style={{ border: "none", borderTop: "1px solid rgba(255,255,255,0.08)", margin: "40px 0" }} />;
     }
     const lines = block.split("\n");
+
+    // GFM-style pipe table: header row, a separator row (---/:--/--: only),
+    // then data rows — all pipe-delimited.
+    if (
+      lines.length >= 2 &&
+      /^\|.*\|$/.test(lines[0]) &&
+      /^\|[\s|:-]+\|$/.test(lines[1])
+    ) {
+      const parseRow = (line: string) => line.trim().slice(1, -1).split("|").map(c => c.trim());
+      const header = parseRow(lines[0]);
+      const rows = lines.slice(2).map(parseRow);
+      return (
+        <div key={i} style={{ overflowX: "auto", marginBottom: "24px" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "14px" }}>
+            <thead>
+              <tr>
+                {header.map((cell, c) => (
+                  <th key={c} style={{
+                    textAlign: "left", padding: "10px 14px", color: "#f1f5f9",
+                    fontWeight: "700", borderBottom: "1px solid rgba(255,255,255,0.12)",
+                    whiteSpace: "nowrap",
+                  }}>
+                    {renderInline(cell)}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((row, r) => (
+                <tr key={r}>
+                  {row.map((cell, c) => (
+                    <td key={c} style={{
+                      padding: "10px 14px", color: "#94a3b8", lineHeight: "1.6",
+                      borderBottom: "1px solid rgba(255,255,255,0.06)",
+                    }}>
+                      {renderInline(cell)}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+    }
+
     if (lines.every(l => l.startsWith("- ") || l.startsWith("* "))) {
       return (
         <ul key={i} style={{ margin: "0 0 24px", paddingLeft: "20px" }}>
