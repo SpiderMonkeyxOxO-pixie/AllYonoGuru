@@ -25,7 +25,7 @@ export const APPS_STATIC: AppEntry[] = [
     kd: 5,
     searchVolume: 4400,
     primaryDomain: "allyonoguru",
-    navOrder: 6,
+    navOrder: 7,
     publishedAt: "2026-06-01T00:00:00.000Z",
     seo: {
       metaTitle: "Rummy Guru APK — 13-Card Skill Rummy for Android (Free Download)",
@@ -86,7 +86,7 @@ export const APPS_STATIC: AppEntry[] = [
     kd: 4,
     searchVolume: 3600,
     primaryDomain: "allyonoguru",
-    navOrder: 7,
+    navOrder: 8,
     publishedAt: "2026-06-01T00:00:00.000Z",
     seo: {
       metaTitle: "Teen Patti Guru APK — Classic & Variant 3-Card Game for Android",
@@ -147,7 +147,7 @@ export const APPS_STATIC: AppEntry[] = [
     kd: 2,
     searchVolume: 30,
     primaryDomain: "allyonoguru",
-    navOrder: 1,
+    navOrder: 2,
     publishedAt: "2026-07-08T00:00:00.000Z",
     networkCategory: "rummy",
     tag: "NEW",
@@ -205,7 +205,7 @@ export const APPS_STATIC: AppEntry[] = [
     kd: 2,
     searchVolume: 100,
     primaryDomain: "allyonoguru",
-    navOrder: 0,
+    navOrder: 1,
     publishedAt: "2026-07-18T00:00:00.000Z",
     networkCategory: "rummy",
     comingSoon: false,
@@ -251,13 +251,13 @@ export const APPS_STATIC: AppEntry[] = [
     slug: "win-rummy",
     name: "Win Rummy",
     tagline:
-      "Win Rummy is scheduled to join the Yono game network at 8:00 AM IST on 29 July 2026. Category and safety details follow once it's available for review.",
+      "Win Rummy checks your hand for a valid declaration before you commit, flagging a missing pure sequence so you avoid a wrong-declaration penalty.",
     description:
-      "Win Rummy is an upcoming addition to the AllYonoGuru directory, expected to launch at 8:00 AM IST on 29 July 2026. As with every app in this directory, Win Rummy's category, table formats, and safety information will only be published once the app is available and can be independently reviewed — nothing here is confirmed until then.",
-    downloadUrl: "#",
-    appVersion: "",
-    packageSize: "",
-    minAndroid: "",
+      "Win Rummy follows the same 13-card Rummy foundation as any format of the game — arrange your hand into valid sets and sequences, with at least one pure sequence (consecutive same-suit cards without a joker), before declaring. Where Win Rummy differs is a check that runs the moment before you tap Declare: if your hand doesn't yet meet a valid declaration — a missing pure sequence, or cards still sitting unmelded — the app flags it first, so a rushed tap doesn't turn into a wrong-declaration penalty.\n\nThe app runs all three standard formats — Points Rummy for single-deal rounds, Pool Rummy for extended play up to the 101 or 201 point ceiling, and Deals Rummy for a fixed number of rounds decided on chip count — with the same pre-declaration check available at every table regardless of format.",
+    downloadUrl: "https://www.winrummy10.com/?code=8JT9D83WCC3&t=1785293043",
+    appVersion: "1.0.0",
+    packageSize: "35 MB",
+    minAndroid: "6.0",
     iconUrl: "/logos/win-rummy.webp",
     screenshotUrls: [],
     targetKeyword: "win rummy",
@@ -265,18 +265,41 @@ export const APPS_STATIC: AppEntry[] = [
     kd: 2,
     searchVolume: 100,
     primaryDomain: "allyonoguru",
-    navOrder: -1,
+    navOrder: 0,
+    tag: "NEW",
     publishedAt: "2026-07-25T00:00:00.000Z",
-    comingSoon: true,
+    networkCategory: "rummy",
+    comingSoon: false,
     releaseDate: "2026-07-29T08:00:00+05:30",
     launchUpdatesUrl: null,
     seo: {
-      metaTitle: "Win Rummy — Coming Soon to AllYonoGuru (29 July 2026)",
+      metaTitle: "Win Rummy APK — 13-Card Skill Rummy for Android (Free Download)",
       metaDescription:
-        "Win Rummy is joining the Yono game network on 29 July 2026. Full details, category, and safety information will follow an independent review.",
+        "Win Rummy: Points, Pool & Deals Rummy on Android with a pre-declaration check. Free APK. 18+ | State restrictions may apply.",
       canonicalURL: "https://allyonoguru.com/win-rummy",
     },
-    faq: [],
+    faq: [
+      {
+        question: "How does Win Rummy's pre-declaration check work?",
+        answer:
+          "Before your Declare tap is finalised, Win Rummy checks whether your hand actually meets the requirements — at least two sequences with one pure sequence, and no cards left unmelded. If it doesn't, the app flags the issue before the declaration is submitted, rather than penalising you after the fact.",
+      },
+      {
+        question: "What is the difference between Points, Pool, and Deals Rummy?",
+        answer:
+          "Points Rummy ends after a single deal, with the loser's unmelded cards counted as points against them. Pool Rummy continues across multiple deals until a player crosses the 101 or 201 point limit and is eliminated. Deals Rummy runs a fixed number of rounds, and the highest chip count at the end decides the outcome.",
+      },
+      {
+        question: "Does the pre-declaration check slow down play?",
+        answer:
+          "No. The check runs instantly against your current hand and only surfaces a warning if the declaration would actually be invalid — it doesn't add any extra steps to a valid declaration.",
+      },
+      {
+        question: "What are the device requirements to install Win Rummy?",
+        answer:
+          "Win Rummy runs on Android 6.0 and above and needs approximately 35 MB of free storage space.",
+      },
+    ],
     compliance: {
       showDisclaimer: true,
       showAgeGate: true,
@@ -341,7 +364,7 @@ export const APPS_STATIC: AppEntry[] = [
       kd: 3,
       searchVolume: 22000,
       primaryDomain: "allyonoguru",
-      navOrder: 2,
+      navOrder: 3,
       publishedAt: "2026-06-01T00:00:00.000Z",
       networkCategory: "rummy",
       seo: {
@@ -1140,7 +1163,7 @@ export const APPS_STATIC: AppEntry[] = [
       kd: 2,
       searchVolume: 7800,
       primaryDomain: "allyonoguru",
-      navOrder: 5,
+      navOrder: 6,
       publishedAt: "2026-06-01T00:00:00.000Z",
       networkCategory: "teen-patti",
       seo: {
@@ -1178,7 +1201,7 @@ export const APPS_STATIC: AppEntry[] = [
       kd: 3,
       searchVolume: 14000,
       primaryDomain: "allyonoguru",
-      navOrder: 3,
+      navOrder: 4,
       publishedAt: "2026-06-01T00:00:00.000Z",
       networkCategory: "teen-patti",
       seo: {
@@ -2394,7 +2417,7 @@ export const APPS_STATIC: AppEntry[] = [
       kd: 3,
       searchVolume: 13500,
       primaryDomain: "allyonoguru",
-      navOrder: 4,
+      navOrder: 5,
       publishedAt: "2026-06-01T00:00:00.000Z",
       networkCategory: "slots",
       seo: {
