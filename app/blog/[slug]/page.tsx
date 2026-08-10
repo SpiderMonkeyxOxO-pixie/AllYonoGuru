@@ -9,6 +9,36 @@ import { getBlogPostBySlug } from "../../lib/strapi";
 
 const SITE = "https://allyonoguru.com";
 
+/**
+ * PHASE 3 WAVE 1 (see phase3/ALLYONOGURU_COM_WAVE1_IMPLEMENTATION.md): editorial
+ * cross-links from this domain's 5 Teen-Patti-specific posts to AllYonoPatti.com's
+ * Teen Patti category guides. Added per phase2/PORTFOLIO_WIDE_FINAL_DISPOSITION.md
+ * §10.1 — evidence showed these 5 posts hold real GSC equity (8 clicks/25 impressions
+ * combined) while AllYonoPatti's own guide hub had zero, so migration was explicitly
+ * NOT recommended; cross-linking while both stay independently live was the
+ * recommended non-destructive alternative. Both URL sets remain live and unchanged.
+ */
+const TEEN_PATTI_CROSS_LINKS: Record<string, { href: string; label: string }[]> = {
+  "3-patti-rules-complete-guide": [
+    { href: "https://allyonopatti.com/guides/teen-patti-rules", label: "Teen Patti Rules — full rules breakdown on AllYonoPatti.com" },
+    { href: "https://allyonopatti.com/guides/teen-patti-hand-rankings", label: "Teen Patti Hand Rankings on AllYonoPatti.com" },
+  ],
+  "teen-patti-hand-ranking-and-sequence-order": [
+    { href: "https://allyonopatti.com/guides/teen-patti-hand-rankings", label: "Teen Patti Hand Rankings on AllYonoPatti.com" },
+    { href: "https://allyonopatti.com/guides/teen-patti-sequence-guide", label: "Teen Patti Sequence Guide on AllYonoPatti.com" },
+  ],
+  "ak47-teen-patti-rules": [
+    { href: "https://allyonopatti.com/guides/common-teen-patti-variations", label: "Common Teen Patti Variations on AllYonoPatti.com" },
+  ],
+  "muflis-teen-patti-rules": [
+    { href: "https://allyonopatti.com/guides/common-teen-patti-variations", label: "Common Teen Patti Variations on AllYonoPatti.com" },
+  ],
+  "how-to-win-at-teen-patti": [
+    { href: "https://allyonopatti.com/guides/teen-patti-rules", label: "Teen Patti Rules — full rules breakdown on AllYonoPatti.com" },
+    { href: "https://allyonopatti.com/guides/what-is-teen-patti", label: "What Is Teen Patti? on AllYonoPatti.com" },
+  ],
+};
+
 // Forced dynamic (no ISR): this route relies on notFound() to 404 for
 // unknown slugs. Combining generateStaticParams + ISR caching with
 // notFound() causes Next.js to cache the not-found render as a 200
@@ -271,6 +301,29 @@ export default async function BlogPostPage({
         <section className="inner-section" style={{ background: "#0a0f1e" }}>
           <div style={{ maxWidth: "760px", margin: "0 auto" }}>
             {renderContent(post.content)}
+
+            {TEEN_PATTI_CROSS_LINKS[post.slug] && (
+              <div
+                style={{
+                  margin: "0 0 28px", padding: "16px 18px",
+                  background: "rgba(245,158,11,0.06)", border: "1px solid rgba(245,158,11,0.15)",
+                  borderRadius: "10px",
+                }}
+              >
+                <p style={{ margin: "0 0 8px", fontSize: "12.5px", fontWeight: 700, color: "#f59e0b", letterSpacing: "0.02em" }}>
+                  Go deeper on Teen Patti
+                </p>
+                <ul style={{ margin: 0, paddingLeft: "18px" }}>
+                  {TEEN_PATTI_CROSS_LINKS[post.slug].map((link) => (
+                    <li key={link.href} style={{ fontSize: "13.5px", lineHeight: "1.8" }}>
+                      <a href={link.href} style={{ color: "#f59e0b", textDecoration: "underline" }}>
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             <Link
               href="/blog"
