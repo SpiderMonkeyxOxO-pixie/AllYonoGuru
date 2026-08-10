@@ -5,7 +5,7 @@ import Footer from "../components/layout/Footer";
 import BlogPostCard from "../components/sections/BlogPostCard";
 import { BlogPageSchema, BreadcrumbSchema } from "../components/seo/JsonLd";
 import { ChevronRightIcon, ShieldIcon } from "../components/icons/Icons";
-import { getAllBlogPosts } from "../lib/strapi";
+import { getAllBlogPosts } from "../lib/blog";
 
 async function getBlogPosts() {
   try {

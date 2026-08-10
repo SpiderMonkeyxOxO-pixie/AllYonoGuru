@@ -5,7 +5,7 @@ import Navbar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
 import { BlogPostingSchema, BreadcrumbSchema } from "../../components/seo/JsonLd";
 import { ChevronRightIcon, ShieldIcon } from "../../components/icons/Icons";
-import { getBlogPostBySlug } from "../../lib/strapi";
+import { getBlogPostBySlug } from "../../lib/blog";
 
 const SITE = "https://allyonoguru.com";
 

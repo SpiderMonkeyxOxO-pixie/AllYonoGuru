@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { APPS_STATIC, CATEGORIES_STATIC } from "@/app/lib/static-data";
-import { getAllApps, getAllBlogPosts } from "@/app/lib/strapi";
+import { getAllApps } from "@/app/lib/strapi";
+import { getAllBlogPosts } from "@/app/lib/blog";
 import type { AppEntry, BlogPostEntry } from "@/app/lib/types";
 
 const BASE = "https://allyonoguru.com";
@@ -17,7 +18,9 @@ async function getPublishedApps(): Promise<AppEntry[]> {
   return APPS_STATIC.filter((a) => a.publishedAt !== null);
 }
 
-// Strapi-only — no fake fallback content belongs in a sitemap.
+// Reads from repository content (see app/lib/blog.ts) — no fake fallback
+// content belongs in a sitemap, so an unexpected read failure still
+// resolves to an empty list rather than throwing.
 async function getPublishedBlogPosts(): Promise<BlogPostEntry[]> {
   try {
     return await getAllBlogPosts();
@@ -49,11 +52,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     }));
 
+  // Most migrated posts have no genuine publishedAt (none was recoverable
+  // from the available local source — see
+  // phase3/ALLYONOGURU_STRAPI_TO_REPOSITORY_MIGRATION.md). Per the
+  // portfolio's data-integrity rule, omit lastModified rather than
+  // fabricate one via new Date(null) (which would silently report every
+  // post as modified on 1970-01-01).
   const publishedBlogPosts = await getPublishedBlogPosts();
   const blogPages: MetadataRoute.Sitemap = publishedBlogPosts
     .map((post) => ({
       url: `${BASE}/blog/${post.slug}`,
-      lastModified: new Date(post.publishedAt!),
+      ...(post.publishedAt ? { lastModified: new Date(post.publishedAt) } : {}),
       changeFrequency: "monthly" as const,
       priority: 0.5,
     }));
