@@ -58,14 +58,42 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // portfolio's data-integrity rule, omit lastModified rather than
   // fabricate one via new Date(null) (which would silently report every
   // post as modified on 1970-01-01).
+  //
+  // all-rummy-games-list-android is excluded here even though
+  // getAllBlogPosts() sometimes includes it (its own narrow, best-effort
+  // Strapi fallback in app/lib/blog.ts) — that inclusion is conditional on
+  // Strapi being reachable at request time, which would make this one URL
+  // flicker in and out of the sitemap. It gets its own fixed entry below
+  // instead, so the sitemap is deterministic regardless of Strapi's
+  // momentary availability.
   const publishedBlogPosts = await getPublishedBlogPosts();
   const blogPages: MetadataRoute.Sitemap = publishedBlogPosts
+    .filter((post) => post.slug !== "all-rummy-games-list-android")
     .map((post) => ({
       url: `${BASE}/blog/${post.slug}`,
       ...(post.publishedAt ? { lastModified: new Date(post.publishedAt) } : {}),
       changeFrequency: "monthly" as const,
       priority: 0.5,
     }));
+
+  // Deferred article (see phase3/ALLYONOGURU_STRAPI_TO_REPOSITORY_MIGRATION.md
+  // "Addendum"): all-rummy-games-list-android has no recoverable source
+  // content anywhere and was deliberately not migrated into content/blog/
+  // — it stays live via a narrow, isolated Strapi fallback in
+  // app/lib/blog.ts, per an explicit owner decision. The live URL remains
+  // canonical and indexable, so it must not disappear from the sitemap
+  // just because its content source is temporarily Strapi. Hardcoded here
+  // (not fetched from Strapi) so sitemap generation itself stays fully
+  // Strapi-independent. The date is genuine, not invented — read directly
+  // from this post's own live production JSON-LD datePublished.
+  const deferredBlogPages: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE}/blog/all-rummy-games-list-android`,
+      lastModified: new Date("2026-07-01T11:27:02.213Z"),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+  ];
 
   // Categories are still static-data-driven (not yet migrated to Strapi);
   // only include ones that are actually published (non-draft).
@@ -78,5 +106,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     }));
 
-  return [...staticPages, ...appPages, ...blogPages, ...categoryPages];
+  return [...staticPages, ...appPages, ...blogPages, ...deferredBlogPages, ...categoryPages];
 }
