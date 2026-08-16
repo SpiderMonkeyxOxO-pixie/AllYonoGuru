@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import HeroSection from "./components/sections/HeroSection";
+import GuideHighlightsSection from "./components/sections/GuideHighlightsSection";
 import AppGridSection from "./components/sections/AppGridSection";
 import CategoryTeaserSection from "./components/sections/CategoryTeaserSection";
 import FAQSection from "./components/sections/FAQSection";
@@ -13,6 +14,8 @@ import {
 } from "./components/seo/JsonLd";
 import { APPS_STATIC, CATEGORIES_STATIC, NETWORK_APPS } from "./lib/static-data";
 import { getAllApps } from "./lib/strapi";
+import { getAllBlogPosts } from "./lib/blog";
+import { getFeaturedGuidePosts } from "./lib/guide-taxonomy";
 import type { AppEntry } from "./lib/types";
 
 // ─── Hard rules enforced ──────────────────────────────────────────────────────
@@ -36,6 +39,18 @@ async function getPublishedApps(): Promise<AppEntry[]> {
   return APPS_STATIC
     .filter((a) => a.publishedAt !== null)
     .sort((a, b) => a.navOrder - b.navOrder);
+}
+
+// Blog posts read from the local repository content (see app/lib/blog.ts) —
+// if that read somehow fails, the homepage guide section simply omits
+// itself rather than rendering broken cards.
+async function getHomepageGuidePosts() {
+  try {
+    const posts = await getAllBlogPosts();
+    return getFeaturedGuidePosts(posts, 4);
+  } catch {
+    return [];
+  }
 }
 
 export const metadata: Metadata = {
@@ -106,6 +121,7 @@ const HOMEPAGE_FAQ = [
 
 export default async function HomePage() {
   const publishedApps = await getPublishedApps();
+  const guidePosts = await getHomepageGuidePosts();
 
   return (
     <>
@@ -122,16 +138,32 @@ export default async function HomePage() {
         {/* 1. Hero — "yono game all" hub, disclaimer in hero */}
         <HeroSection appCount={publishedApps.length} />
 
-        {/* 2. App grid — published apps only */}
+        {/*
+          2. Guide highlights — additive section only (Phase 1 repositioning).
+          Placed ahead of the app directory/promo content per
+          YONO_SEO_POSITIONING_MASTER_SPEC.md §13 and the reconciliation
+          doc's AllYonoGuru block: the homepage should not primarily lead
+          with directory/download content. The Hero's own <title>, meta
+          description, and H1 are intentionally left untouched here — the
+          master spec's AllYonoGuru block lists "GSC review of the current
+          homepage's rankings" as a data dependency specifically for that
+          change, and that data was not obtainable this session (Ahrefs
+          Site Explorer calls returned "API units limit reached" — see the
+          Phase 1 report). Section reordering/addition below carries no
+          equivalent ranking risk and is not gated the same way.
+        */}
+        <GuideHighlightsSection posts={guidePosts} />
+
+        {/* 3. App grid — published apps only */}
         <AppGridSection apps={publishedApps} />
 
-        {/* 3. Category teasers — DRAFT categories */}
+        {/* 4. Category teasers — DRAFT categories */}
         <CategoryTeaserSection categories={CATEGORIES_STATIC} />
 
-        {/* 4. Full network logo showcase — all 57 Yono network apps */}
+        {/* 5. Full network logo showcase — all 57 Yono network apps */}
         <NetworkShowcaseSection apps={NETWORK_APPS} />
 
-        {/* 5. FAQ — homepage FAQ targeting "yono game all" */}
+        {/* 6. FAQ — homepage FAQ targeting "yono game all" */}
         <FAQSection items={HOMEPAGE_FAQ} heading="Yono Game All — FAQs" />
       </main>
 

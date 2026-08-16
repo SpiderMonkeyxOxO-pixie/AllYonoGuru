@@ -32,6 +32,15 @@ async function getPublishedBlogPosts(): Promise<BlogPostEntry[]> {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE, lastModified: new Date(), changeFrequency: "daily",   priority: 1.0 },
+    // No lastModified: this route has no genuine, stable source-content
+    // modification date of its own (it's a generated hub grouping already-
+    // published blog posts by app/lib/guide-taxonomy.ts, not a stored
+    // content record with its own timestamp). Per master spec data-
+    // integrity rules, omit rather than fabricate a date via new Date() —
+    // that would report the current build time as a content change on
+    // every build, which is exactly the pattern the spec prohibits
+    // elsewhere (AllYonoUpdate.com's sitemap `lastmod` issue, §14).
+    { url: `${BASE}/guides`,         changeFrequency: "weekly",  priority: 0.8 },
     { url: `${BASE}/blog`,           lastModified: new Date(), changeFrequency: "weekly",  priority: 0.6 },
     { url: `${BASE}/all-yono-games-promocode`, lastModified: new Date(), changeFrequency: "daily", priority: 0.7 },
     { url: `${BASE}/about`,          lastModified: new Date(), changeFrequency: "monthly", priority: 0.4 },

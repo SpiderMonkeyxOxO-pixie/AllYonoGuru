@@ -166,7 +166,7 @@ export const APPS_STATIC: AppEntry[] = [
       {
         question: "What is the difference between Points, Pool, and Deals Rummy?",
         answer:
-          "Points Rummy ends after a single deal, with the loser's unmelded cards counted as points against them. Pool Rummy continues across multiple deals until a player crosses the 101 or 201 point limit and is eliminated. Deals Rummy runs a fixed number of rounds, and the highest chip count at the end decides the outcome.",
+          "Points Rummy is a single-deal format — you lose points equal to whatever's still unmelded when the hand ends, which is exactly when the hand-strength meter is most useful, since there's only one shot at the declaration. Pool Rummy runs across repeated deals until a player's accumulated points cross the 101 or 201 ceiling and they're knocked out. Deals Rummy fixes the number of rounds up front, and whoever holds the most chips when the last round ends wins the table.",
       },
       {
         question: "Can I set my own stakes in practice mode?",
@@ -186,6 +186,10 @@ export const APPS_STATIC: AppEntry[] = [
     },
     links: [],
   },
+  // ENTITY-SPECIALIST CONFLICT (documented, not resolved — see PrimaryDomain
+  // comment in lib/types.ts): DhanGame is assigned to DhanGame.co in the
+  // master spec. Hosted here with a live download CTA pending Phase 2/3
+  // evidence-gated disposition.
   {
     id: 61,
     slug: "dhangame",
@@ -226,7 +230,7 @@ export const APPS_STATIC: AppEntry[] = [
       {
         question: "What is the difference between Points, Pool, and Deals Rummy?",
         answer:
-          "Points Rummy ends after a single deal, with the loser's unmelded cards counted as points against them. Pool Rummy continues across multiple deals until a player crosses the 101 or 201 point limit and is eliminated. Deals Rummy runs a fixed number of rounds, and the highest chip count at the end decides the outcome.",
+          "Points Rummy settles in a single deal, and the post-round breakdown shows exactly which cards cost you if you didn't declare. Pool Rummy keeps players at the table across multiple deals until their running point total passes 101 or 201, at which point they're eliminated. Deals Rummy plays a fixed number of rounds regardless of score, and the highest chip count when the rounds run out takes the table.",
       },
       {
         question: "How are DhanGame's tables organised?",
@@ -246,6 +250,10 @@ export const APPS_STATIC: AppEntry[] = [
     },
     links: [],
   },
+  // ENTITY-SPECIALIST CONFLICT (documented, not resolved — see PrimaryDomain
+  // comment in lib/types.ts): Win Rummy is assigned to WinRummyIndia.com in
+  // the master spec. Hosted here with a live download CTA pending Phase 2/3
+  // evidence-gated disposition.
   {
     id: 62,
     slug: "win-rummy",
@@ -287,7 +295,7 @@ export const APPS_STATIC: AppEntry[] = [
       {
         question: "What is the difference between Points, Pool, and Deals Rummy?",
         answer:
-          "Points Rummy ends after a single deal, with the loser's unmelded cards counted as points against them. Pool Rummy continues across multiple deals until a player crosses the 101 or 201 point limit and is eliminated. Deals Rummy runs a fixed number of rounds, and the highest chip count at the end decides the outcome.",
+          "Points Rummy is decided in a single deal, so the pre-declaration check matters most here — there's no second hand to recover from an unmelded penalty. Pool Rummy continues over successive deals until a player's cumulative points go past the 101 or 201 limit and they drop out. Deals Rummy locks in a set number of rounds up front, with the largest chip stack at the final round declared the winner.",
       },
       {
         question: "Does the pre-declaration check slow down play?",
@@ -1146,6 +1154,10 @@ export const APPS_STATIC: AppEntry[] = [
       },
       links: []
     },
+    // ENTITY-SPECIALIST CONFLICT (documented, not resolved — see
+    // PrimaryDomain comment in lib/types.ts): Yono Arcade is assigned to
+    // AllYonoArcade.com in the master spec. Hosted here with a live
+    // download CTA pending Phase 2/3 evidence-gated disposition.
     {
       id: 25,
       slug: "yono-arcade",

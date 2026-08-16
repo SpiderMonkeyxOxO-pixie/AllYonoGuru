@@ -24,12 +24,18 @@ const GURU_APPS = [
   { label: "Teen Patti Guru", href: "/teen-patti-guru", keyword: "teen patti guru apk" },
 ];
 
+// Promoted to the first nav position (Phase 1 homepage/nav repositioning,
+// see YONO_SEO_POSITIONING_MASTER_SPEC.md §13). A plain link, not a
+// dropdown — /guides is a curated hub, not another listing to browse.
+const GUIDES_LINK = { label: "Guides", href: "/guides" };
+
 const YONO_GAMES = [
   { label: "Yono Game Spin",  href: "/yono-game-spin" },
   { label: "Share Slots Yono",href: "/share-slots-yono" },
 ];
 
 const TOP_LINKS = [
+  { label: "Apps",        href: "/#apps" },
   { label: "Blog",        href: "/blog" },
   { label: "About",       href: "/about" },
   { label: "Disclaimer",  href: "/disclaimer" },
@@ -136,6 +142,37 @@ export default function Navbar() {
             className="hidden md:flex"
             style={{ alignItems: "center", gap: "2px", listStyle: "none", margin: 0, padding: 0 }}
           >
+
+            {/* ── Guides (promoted, plain link) ── */}
+            <li>
+              <Link
+                href={GUIDES_LINK.href}
+                title="Yono game guides — rules, strategy & safety education"
+                style={{
+                  display: "block",
+                  color: pathname === GUIDES_LINK.href ? "#f59e0b" : "#e2e8f0",
+                  fontSize: "13.5px", fontWeight: "600",
+                  padding: "8px 13px", borderRadius: "8px",
+                  textDecoration: "none",
+                  background: pathname === GUIDES_LINK.href ? "rgba(245,158,11,0.08)" : "transparent",
+                  transition: "color 0.2s, background 0.2s",
+                }}
+                onMouseEnter={(e) => {
+                  if (pathname !== GUIDES_LINK.href) {
+                    (e.currentTarget as HTMLAnchorElement).style.color = "#f59e0b";
+                    (e.currentTarget as HTMLAnchorElement).style.background = "rgba(245,158,11,0.06)";
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (pathname !== GUIDES_LINK.href) {
+                    (e.currentTarget as HTMLAnchorElement).style.color = "#e2e8f0";
+                    (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
+                  }
+                }}
+              >
+                {GUIDES_LINK.label}
+              </Link>
+            </li>
 
             {/* ── Guru Apps dropdown ── */}
             <li ref={guruRef} style={{ position: "relative" }}>
@@ -353,8 +390,8 @@ export default function Navbar() {
           <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
             <motion.div className="hidden sm:flex" whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
               <Link
-                href="/#apps"
-                title="Browse all Yono game apps"
+                href="/guides"
+                title="Browse Yono game guides"
                 style={{
                   display: "flex", alignItems: "center", gap: "7px",
                   background: "linear-gradient(135deg, #f59e0b, #fb923c)",
@@ -367,7 +404,7 @@ export default function Navbar() {
                 }}
               >
                 <GridIcon size={14} />
-                Browse Apps
+                Guides
               </Link>
             </motion.div>
 
@@ -443,6 +480,27 @@ export default function Navbar() {
             }}
           >
             <ul role="list" style={{ listStyle: "none", margin: 0, padding: "0 20px" }}>
+
+              {/* Guides — promoted, first item */}
+              <motion.li
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+              >
+                <Link
+                  href={GUIDES_LINK.href}
+                  title={GUIDES_LINK.label}
+                  onClick={() => setIsMobileOpen(false)}
+                  style={{
+                    display: "flex", alignItems: "center", justifyContent: "space-between",
+                    color: "#f59e0b", fontSize: "16px", fontWeight: "600",
+                    padding: "15px 4px", textDecoration: "none",
+                    borderBottom: "1px solid rgba(255,255,255,0.05)",
+                  }}
+                >
+                  <span>{GUIDES_LINK.label}</span>
+                  <ChevronRightIcon size={16} />
+                </Link>
+              </motion.li>
 
               {/* Guru Apps accordion */}
               <li>
@@ -611,8 +669,8 @@ export default function Navbar() {
               style={{ padding: "0 20px" }}
             >
               <Link
-                href="/#apps"
-                title="Browse all Yono game apps"
+                href="/guides"
+                title="Browse Yono game guides"
                 onClick={() => setIsMobileOpen(false)}
                 style={{
                   display: "flex", alignItems: "center", justifyContent: "center",
@@ -626,7 +684,7 @@ export default function Navbar() {
                 }}
               >
                 <GridIcon size={18} />
-                Browse All Apps
+                Browse Guides
               </Link>
             </motion.div>
           </motion.div>

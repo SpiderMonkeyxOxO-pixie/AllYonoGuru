@@ -214,6 +214,38 @@ export function BlogPageSchema({ posts }: { posts: BlogPostEntry[] }) {
   );
 }
 
+export function GuidesPageSchema({ posts }: { posts: BlogPostEntry[] }) {
+  const collectionPage = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "AllYonoGuru Guides — Rules, Strategy, Safety & Comparison Education",
+    url: `${SITE_URL}/guides`,
+    description:
+      "Generic educational guides from AllYonoGuru: rules and mechanics, strategy, APK and Android safety, and neutral comparison methodology.",
+    inLanguage: "en-IN",
+  };
+
+  const itemList = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "AllYonoGuru Guides",
+    url: `${SITE_URL}/guides`,
+    itemListElement: posts.map((post, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: post.title,
+      url: `${SITE_URL}/blog/${post.slug}`,
+    })),
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPage) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
+    </>
+  );
+}
+
 export function BlogPostingSchema({ post }: { post: BlogPostEntry }) {
   const schema = {
     "@context": "https://schema.org",
