@@ -188,17 +188,17 @@ export const APPS_STATIC: AppEntry[] = [
   },
   // ENTITY-SPECIALIST CONFLICT (documented, not resolved — see PrimaryDomain
   // comment in lib/types.ts): Gold Rummy is assigned to GoldRummyIndia.com in
-  // the master spec. Hosted here as a coming-soon entry pending Phase 2/3
+  // the master spec. Hosted here with a live download CTA pending Phase 2/3
   // evidence-gated disposition.
   {
     id: 63,
     slug: "gold-rummy",
     name: "Gold Rummy",
     tagline:
-      "Gold Rummy is scheduled to join the Yono game network at 8:00 AM IST on 19 August 2026. Category, formats, and safety details will be added once it is available for review.",
+      "Gold Rummy has launched — a newly available rummy platform with a live download link. No welcome bonus or promo code has been announced yet.",
     description:
-      "Gold Rummy is an upcoming addition to the AllYonoGuru directory, expected to launch at 8:00 AM IST on 19 August 2026. As with every app in this directory, Gold Rummy's category, table formats, and safety information will only be published once the app is available and can be independently reviewed — nothing here is confirmed until then.",
-    downloadUrl: "#",
+      "Gold Rummy has launched and joined the AllYonoGuru directory with a working download link. As a newly launched app, its category specifics, table formats, and promo-code schedule have not yet been independently reviewed — this listing will be updated as those details are confirmed.",
+    downloadUrl: "https://goldrummy20.com/?code=JLX7LRP2YTG&t=1787111858",
     appVersion: "",
     packageSize: "",
     minAndroid: "",
@@ -209,15 +209,16 @@ export const APPS_STATIC: AppEntry[] = [
     kd: 2,
     searchVolume: 100,
     primaryDomain: "allyonoguru",
-    navOrder: -1,
+    navOrder: 0,
+    tag: "NEW",
     publishedAt: "2026-08-18T00:00:00.000Z",
-    comingSoon: true,
+    comingSoon: false,
     releaseDate: "2026-08-19T08:00:00+05:30",
     launchUpdatesUrl: null,
     seo: {
-      metaTitle: "Gold Rummy — Coming Soon to AllYonoGuru (19 August 2026)",
+      metaTitle: "Gold Rummy APK — Download & Latest Version | AllYonoGuru",
       metaDescription:
-        "Gold Rummy is joining the Yono game network on 19 August 2026. Full details, category, and safety information will follow an independent review.",
+        "Gold Rummy has launched. Download the app and check back for verified category, promo-code, and safety details as they're confirmed.",
       canonicalURL: "https://allyonoguru.com/gold-rummy",
     },
     faq: [],
@@ -315,8 +316,7 @@ export const APPS_STATIC: AppEntry[] = [
     kd: 2,
     searchVolume: 100,
     primaryDomain: "allyonoguru",
-    navOrder: 0,
-    tag: "NEW",
+    navOrder: 1,
     publishedAt: "2026-07-25T00:00:00.000Z",
     networkCategory: "rummy",
     comingSoon: false,
