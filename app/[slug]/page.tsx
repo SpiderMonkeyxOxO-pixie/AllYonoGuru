@@ -68,16 +68,21 @@ export async function generateMetadata({
       ? `${SITE}/${app.slug}`
       : `${SIBLING_URLS[app.primaryDomain] ?? SITE}/${app.slug}`;
 
+    // Strapi's SEO component is optional — fall back to tagline/description
+    // so a not-yet-filled-in entry can't take down the whole page.
+    const metaTitle = app.seo?.metaTitle ?? `${app.name} — AllYonoGuru`;
+    const metaDescription = app.seo?.metaDescription ?? app.tagline ?? app.description ?? "";
+
     return {
-      title: app.seo.metaTitle,
-      description: app.seo.metaDescription,
+      title: metaTitle,
+      description: metaDescription,
       keywords: `${app.targetKeyword}, ${app.secondaryKeyword}`,
       // Coming-soon apps have no reviewable content yet — noindex until release.
       ...(app.comingSoon && { robots: { index: false, follow: false } }),
       alternates: { canonical },
       openGraph: {
-        title: app.seo.metaTitle,
-        description: app.seo.metaDescription,
+        title: metaTitle,
+        description: metaDescription,
         url: `${SITE}/${app.slug}`,
         images: [
           {
@@ -90,8 +95,8 @@ export async function generateMetadata({
       },
       twitter: {
         card: "summary_large_image",
-        title: app.seo.metaTitle,
-        description: app.seo.metaDescription,
+        title: metaTitle,
+        description: metaDescription,
         images: [`${SITE}/og-image.png`],
       },
     };
