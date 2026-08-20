@@ -1,0 +1,19 @@
+{
+  "id": null,
+  "slug": "500-rummy-rules-and-scoring",
+  "title": "500 Rummy: Rules and Scoring Explained",
+  "excerpt": "500 Rummy is a distinct card-game format from standard 13-card Indian Rummy — play continues to a 500-point target, and cards can be laid off onto existing melds. Here's how it actually works.",
+  "content": "500 Rummy (sometimes written Rummy 500) is a different format from the 13-card Indian Rummy most apps in this category default to. It shares the same broad family — melding cards into sets and sequences — but the scoring target, the deal, and one specific mechanic (laying off) set it apart.\n\n## The basic goal\n\nUnlike a single-hand or elimination-threshold format, 500 Rummy is played across multiple hands until one player's cumulative score reaches the target of 500 points. Points accumulate for successfully melded cards rather than only being lost for what's left in hand at the end of a round.\n\n## Melding and \"laying off\"\n\nThe rule that most distinguishes 500 Rummy from standard Indian Rummy formats is laying off: once a player has put down a valid meld (a set or a sequence), other players can add matching cards to that same meld on their own turn, rather than only building their own separate melds. This is not a feature of standard 13-card Indian Rummy, where melds belong exclusively to the player who declared them.\n\n## Scoring\n\nPoints are typically scored per card based on rank — face cards and aces carry higher point values, number cards score at face value — and are earned for cards successfully melded (including cards laid off onto another player's meld), while cards remaining in hand at the end of a round count against the player holding them. Exact point values can vary slightly between rule sets, so check the specific table or app's stated scoring before assuming a fixed value per card.\n\n## How this differs from what most Rummy apps in this category offer\n\nMost Rummy platforms covered elsewhere on this site run Points, Pool, or Deals formats — see our [Pool Rummy rules guide](/blog/pool-rummy-rules-points-pool-deals) — which are single-hand or elimination-based rather than cumulative-to-500. If you're used to those formats, the biggest adjustment in 500 Rummy is that melds stay \"open\" for other players to add to, which changes both your own strategy and how much you can infer from what an opponent has already put down.\n\nNot every app offers 500 Rummy specifically — it's less commonly available on real-money Indian Rummy platforms than the standard 13-card formats. Check the specific platform's table list before assuming it's an option.",
+  "author": "AllYonoGuru Team",
+  "tag": "Guides",
+  "coverImage": "",
+  "publishedAt": "2026-08-21T00:00:00.000Z",
+  "seo": {
+    "metaTitle": "500 Rummy: Rules and Scoring Explained",
+    "metaDescription": "500 Rummy is a distinct format from standard 13-card Indian Rummy — cumulative scoring to 500 points, plus a unique 'laying off' mechanic. Here's how it works.",
+    "canonicalURL": "https://allyonoguru.com/blog/500-rummy-rules-and-scoring",
+    "keywords": "500 rummy rules, rummy 500, rummy 500 scoring, rummy variants"
+  },
+  "_sourceFile": "",
+  "_imageStatus": "NOT_SET"
+}
