@@ -229,6 +229,48 @@ export const APPS_STATIC: AppEntry[] = [
     },
     links: [],
   },
+  // Reported to be the 57th platform on the Yono network (per MoneyRummy.site,
+  // an independent third-party tracking site not part of this portfolio).
+  // No specialist domain for Money Rummy exists in this network, so no
+  // ENTITY-SPECIALIST CONFLICT applies here.
+  {
+    id: 64,
+    slug: "money-rummy",
+    name: "Money Rummy",
+    tagline:
+      "Money Rummy is reported to join the Yono game network at 8:00 AM IST on 9 September 2026. Category, formats, and safety details will be added once it is available for review.",
+    description:
+      "Money Rummy is an upcoming addition to the AllYonoGuru directory, reported to launch at 8:00 AM IST on 9 September 2026. As with every app in this directory, Money Rummy's category, table formats, and safety information will only be published once the app is available and can be independently reviewed — nothing here is confirmed until then.",
+    downloadUrl: "#",
+    appVersion: "",
+    packageSize: "",
+    minAndroid: "",
+    iconUrl: "/logos/money-rummy.jpg",
+    screenshotUrls: [],
+    targetKeyword: "money rummy",
+    secondaryKeyword: "money rummy apk",
+    kd: 2,
+    searchVolume: 100,
+    primaryDomain: "allyonoguru",
+    navOrder: -1,
+    publishedAt: "2026-09-08T00:00:00.000Z",
+    comingSoon: true,
+    releaseDate: "2026-09-09T08:00:00+05:30",
+    launchUpdatesUrl: null,
+    seo: {
+      metaTitle: "Money Rummy — Coming Soon to AllYonoGuru (9 September 2026)",
+      metaDescription:
+        "Money Rummy is reported to join the Yono game network on 9 September 2026. Full details, category, and safety information will follow an independent review.",
+      canonicalURL: "https://allyonoguru.com/money-rummy",
+    },
+    faq: [],
+    compliance: {
+      showDisclaimer: true,
+      showAgeGate: true,
+      stateRestrictionNote: "Some states may restrict access to this app.",
+    },
+    links: [],
+  },
   // ENTITY-SPECIALIST CONFLICT (documented, not resolved — see PrimaryDomain
   // comment in lib/types.ts): DhanGame is assigned to DhanGame.co in the
   // master spec. Hosted here with a live download CTA pending Phase 2/3
