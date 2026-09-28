@@ -118,10 +118,10 @@ export default function AppGridSection({ apps }: AppGridSectionProps) {
             className="text-headline"
             style={{ color: "#f1f5f9", marginBottom: "12px" }}
           >
-            Skill-Based Game Apps
+            Yono Game Apps
           </h2>
           <p style={{ color: "#64748b", fontSize: "15px", maxWidth: "500px", margin: "0 auto" }}>
-            All apps listed are free to download and play. Skill-based games for Android. 18+.
+            Independent listing of third-party Android game apps. 18+. Some download links are referral links.
           </p>
         </motion.div>
 
@@ -392,7 +392,7 @@ export default function AppGridSection({ apps }: AppGridSectionProps) {
                     <a
                       href={dlUrl}
                       title={`Download ${app.name} APK — ${app.primaryDomain}`}
-                      rel="nofollow noopener noreferrer"
+                      rel="sponsored nofollow noopener noreferrer"
                       target="_blank"
                       style={{
                         display: "inline-flex", alignItems: "center", gap: "7px",
@@ -434,7 +434,7 @@ export default function AppGridSection({ apps }: AppGridSectionProps) {
                   display: "flex", alignItems: "center", gap: "5px",
                 }}>
                   <ShieldIcon size={11} />
-                  18+ · Skill-based game · {app.compliance?.stateRestrictionNote}
+                  18+ · Third-party app · {app.compliance?.stateRestrictionNote}
                 </p>
               </motion.article>
             );

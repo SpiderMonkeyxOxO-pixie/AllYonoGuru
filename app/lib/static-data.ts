@@ -50,9 +50,9 @@ export const APPS_STATIC: AppEntry[] = [
           "Yes. The offline mode runs against simulated opponents and is designed for building hand-management instincts — particularly useful for practicing pure sequence identification, joker placement, and deciding when to drop versus continue a round.",
       },
       {
-        question: "Why is Rummy classified as a skill-based game under Indian law?",
+        question: "Is online rummy for money legal in India?",
         answer:
-          "Indian courts, including the Supreme Court, have consistently held that Rummy requires substantial skill — specifically memory (tracking discards), probability assessment (estimating which cards remain in the deck), and strategic decision-making in each draw and discard. This legal classification distinguishes it from games of pure chance.",
+          "No. Since 1 May 2026, the Promotion and Regulation of Online Gaming Act, 2025 prohibits online money games in India, whether based on skill, chance, or both. Courts have historically described rummy as a game of skill, but that no longer makes online rummy for money permitted. Rummy played for free, with no money or stakes, is not an online money game.",
       },
       {
         question: "What are the device requirements to install Rummy Guru?",
@@ -63,7 +63,7 @@ export const APPS_STATIC: AppEntry[] = [
     compliance: {
       showDisclaimer: true,
       showAgeGate: true,
-      stateRestrictionNote: "Some states may restrict access to this app.",
+      stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025.",
     },
     links: [],
   },
@@ -72,7 +72,7 @@ export const APPS_STATIC: AppEntry[] = [
     slug: "teen-patti-guru",
     name: "Teen Patti Guru",
     tagline:
-      "3-card Indian skill game on Android — Classic, AK47, Muflis, and Joker variants with offline and live table modes.",
+      "3-card Indian game on Android — Classic, AK47, Muflis, and Joker variants with offline and live table modes.",
     description:
       "Teen Patti is played with three cards and a betting progression, but the decisions that matter happen before and between bets — not just with the cards themselves. Each round you choose whether to play blind (acting without seeing your hand) or to look and play seen. Playing blind costs less per round but removes hand information. Staying blind when opponents are seen and overbetting is a viable tactical position, especially in early rounds when pot sizes are modest. Reading bet patterns, managing pot odds, and timing when to fold rather than continue are the skills that separate consistent play from relying on card distribution alone.\n\nTeen Patti Guru covers four variants that each shift the underlying probability structure. Classic format uses standard hand rankings: Trail (three of a kind) at the top, followed by Pure Sequence (straight flush), Sequence, Color (flush), Pair, and High Card. AK47 designates Aces, Kings, Fours, and Sevens as wild cards — the abundance of wilds significantly increases the frequency of strong hands, which changes how aggressively you should read opponent confidence. Muflis inverts the entire ranking system so the weakest hand by Classic rules becomes the strongest, which forces a complete reset of your evaluation instincts. Joker introduces a randomly selected wild card each round, varying the threshold for competitive hands deal by deal.",
     downloadUrl: "https://youonogamesgift.com/?code=GK1EVT15SS7&t=1782476329",
@@ -124,7 +124,7 @@ export const APPS_STATIC: AppEntry[] = [
     compliance: {
       showDisclaimer: true,
       showAgeGate: true,
-      stateRestrictionNote: "Some states may restrict access to this app.",
+      stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025.",
     },
     links: [],
   },
@@ -182,7 +182,7 @@ export const APPS_STATIC: AppEntry[] = [
     compliance: {
       showDisclaimer: true,
       showAgeGate: true,
-      stateRestrictionNote: "Some states may restrict access to this app.",
+      stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025.",
     },
     links: [],
   },
@@ -225,7 +225,7 @@ export const APPS_STATIC: AppEntry[] = [
     compliance: {
       showDisclaimer: true,
       showAgeGate: true,
-      stateRestrictionNote: "Some states may restrict access to this app.",
+      stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025.",
     },
     links: [],
   },
@@ -268,7 +268,7 @@ export const APPS_STATIC: AppEntry[] = [
     compliance: {
       showDisclaimer: true,
       showAgeGate: true,
-      stateRestrictionNote: "Some states may restrict access to this app.",
+      stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025.",
     },
     links: [],
   },
@@ -332,7 +332,7 @@ export const APPS_STATIC: AppEntry[] = [
     compliance: {
       showDisclaimer: true,
       showAgeGate: true,
-      stateRestrictionNote: "Some states may restrict access to this app.",
+      stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025.",
     },
     links: [],
   },
@@ -396,7 +396,7 @@ export const APPS_STATIC: AppEntry[] = [
     compliance: {
       showDisclaimer: true,
       showAgeGate: true,
-      stateRestrictionNote: "Some states may restrict access to this app.",
+      stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025.",
     },
     links: [],
   },
@@ -436,7 +436,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -474,7 +474,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -513,7 +513,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -551,7 +551,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -589,7 +589,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -627,7 +627,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -665,7 +665,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -703,7 +703,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -741,7 +741,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -779,7 +779,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -817,7 +817,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -855,7 +855,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -893,7 +893,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -931,7 +931,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -969,7 +969,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1007,7 +1007,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1045,7 +1045,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1083,7 +1083,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1121,7 +1121,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1159,7 +1159,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1197,7 +1197,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1235,7 +1235,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1277,7 +1277,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1315,7 +1315,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1353,7 +1353,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1379,7 +1379,7 @@ export const APPS_STATIC: AppEntry[] = [
       networkCategory: "teen-patti",
       seo: {
         metaTitle: "Bingo 101 Download - Pattern Strategy Bingo Android",
-        metaDescription: "Bingo 101 adds pattern selection and mid-round target switching to traditional Bingo with skill-based card decisions on Android phones.",
+        metaDescription: "Bingo 101 adds pattern selection and mid-round target switching to traditional Bingo on Android phones.",
         canonicalURL: "https://allyonoguru.com/bingo-101"
       },
       faq: [
@@ -1391,7 +1391,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1429,7 +1429,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1467,7 +1467,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1505,7 +1505,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1513,7 +1513,7 @@ export const APPS_STATIC: AppEntry[] = [
       id: 32,
       slug: "maha-games",
       name: "Maha Games",
-      tagline: "Maha Games covers an unusually wide variety of Indian skill games under one platform with deep regional format support.",
+      tagline: "Maha Games covers an unusually wide variety of Indian games under one platform with deep regional format support.",
       description: "Maha Games positions itself as a comprehensive collection of Indian skill formats. The catalogue spans card games, board games, prediction-style formats and a handful of dexterity-based mini-games, with regional variants represented where they exist. The breadth makes the app useful for players who want to explore the wider landscape of Indian skill formats rather than committing to one specialty.\n\nDiscovery within the catalogue is supported by a category-and-region filter so you can browse, for example, only North Indian card games or only board games of a particular style. The shared profile carries achievement progress across every title, which gives a long-term sense of progression through the collection. Players who treat the platform as a tour through Indian skill gaming traditions get a lot of mileage from a single install.",
       downloadUrl: "https://yono-mahagames.com/?code=J245RQFLS2L&t=1782367067",
       appVersion: "2.1.6",
@@ -1530,7 +1530,7 @@ export const APPS_STATIC: AppEntry[] = [
       publishedAt: "2026-06-01T00:00:00.000Z",
       networkCategory: "teen-patti",
       seo: {
-        metaTitle: "Maha Games Download - Indian Skill Games Platform",
+        metaTitle: "Maha Games Download - Indian Games Platform",
         metaDescription: "Maha Games offers a wide catalogue of Indian card, board, prediction and dexterity formats with regional filters and shared progression on Android.",
         canonicalURL: "https://allyonoguru.com/maha-games"
       },
@@ -1543,7 +1543,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1581,7 +1581,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1619,7 +1619,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1657,7 +1657,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1695,7 +1695,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1733,7 +1733,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1771,7 +1771,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1809,7 +1809,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1847,7 +1847,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1885,7 +1885,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1923,7 +1923,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1961,7 +1961,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -1999,7 +1999,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -2037,7 +2037,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -2075,7 +2075,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -2113,7 +2113,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -2151,7 +2151,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -2189,7 +2189,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -2227,7 +2227,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -2265,7 +2265,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -2303,7 +2303,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -2341,7 +2341,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -2379,7 +2379,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -2417,7 +2417,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -2455,7 +2455,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -2493,7 +2493,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -2531,7 +2531,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     },
@@ -2569,7 +2569,7 @@ export const APPS_STATIC: AppEntry[] = [
       compliance: {
         showDisclaimer: true,
         showAgeGate: true,
-        stateRestrictionNote: "Some states may restrict access to this app."
+        stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025."
       },
       links: []
     }
@@ -2581,7 +2581,7 @@ export const CATEGORIES_STATIC: CategoryEntry[] = [
     slug: "yono-game-spin",
     name: "Yono Game Spin",
     description:
-      "A curated directory of spin-style skill game apps available in the Yono game network. This listing is updated as new verified apps are added.",
+      "A curated directory of spin-style game apps available in the Yono game network. This listing is updated as new verified apps are added.",
     targetKeyword: "yono game spin",
     secondaryKeyword: "yono spin game apk",
     kd: 3,
@@ -2591,9 +2591,9 @@ export const CATEGORIES_STATIC: CategoryEntry[] = [
     publishedAt: "2026-07-09T00:00:00.000Z",
     apps: [],
     seo: {
-      metaTitle: "Yono Game Spin — Skill-Based Spin Game Apps Directory",
+      metaTitle: "Yono Game Spin — Spin Game Apps Directory",
       metaDescription:
-        "Discover spin-style skill game apps in the Yono network. Independent directory. 18+ | Some states may restrict access.",
+        "Discover spin-style game apps in the Yono network. Independent directory. 18+.",
       canonicalURL: "https://allyonoguru.com/yono-game-spin",
     },
     faq: [
@@ -2606,7 +2606,7 @@ export const CATEGORIES_STATIC: CategoryEntry[] = [
     compliance: {
       showDisclaimer: true,
       showAgeGate: true,
-      stateRestrictionNote: "Some states may restrict access to these apps.",
+      stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025.",
     },
   },
   {
@@ -2614,7 +2614,7 @@ export const CATEGORIES_STATIC: CategoryEntry[] = [
     slug: "share-slots-yono",
     name: "Share Slots Yono",
     description:
-      "An independent directory of slot-style skill game apps in the Yono ecosystem. Listed apps are reviewed independently. This page is updated as more apps are verified.",
+      "An independent directory of slot-style game apps in the Yono ecosystem. Listed apps are reviewed independently. This page is updated as more apps are verified.",
     targetKeyword: "share slots yono",
     secondaryKeyword: "yono slots apk",
     kd: 0,
@@ -2624,22 +2624,22 @@ export const CATEGORIES_STATIC: CategoryEntry[] = [
     publishedAt: "2026-07-09T00:00:00.000Z",
     apps: [],
     seo: {
-      metaTitle: "Share Slots Yono — Slot-Style Skill Game Apps Directory",
+      metaTitle: "Share Slots Yono — Slot-Style Game Apps Directory",
       metaDescription:
-        "Independent directory of slot-style skill game apps in the Yono network. 18+ | Some states may restrict access.",
+        "Independent directory of slot-style game apps in the Yono network. 18+.",
       canonicalURL: "https://allyonoguru.com/share-slots-yono",
     },
     faq: [
       {
         question: "What is Share Slots Yono?",
         answer:
-          "Share Slots Yono is an independent directory page listing slot-style skill game apps available in the Yono game network.",
+          "Share Slots Yono is an independent directory page listing slot-style game apps available in the Yono game network.",
       },
     ],
     compliance: {
       showDisclaimer: true,
       showAgeGate: true,
-      stateRestrictionNote: "Some states may restrict access to these apps.",
+      stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025.",
     },
   },
 ];
@@ -2655,70 +2655,70 @@ export type NetworkApp = {
 export const NETWORK_APPS: NetworkApp[] = [
   // ── Rummy (18) ─────────────────────────────────────────────────────────────
   { name: "Jaiho Rummy",   logo: "/logos/jaiho-rummy.webp",    category: "rummy",      description: "Classic 13-card Rummy with multiple table formats and offline practice mode for Android.",        downloadUrl: "https://jaihorummy.vip/?code=3NPSEJRCPZW&t=1782363623" },
-  { name: "Yono Rummy",    logo: "/logos/yono-rummy.webp",     category: "rummy",      description: "Skill-based Rummy on Android with fast matchmaking, multiple variants, and clean gameplay.",        downloadUrl: "https://yonorummy042.com/?code=VIP3Z76MJCF&t=1782478473" },
+  { name: "Yono Rummy",    logo: "/logos/yono-rummy.webp",     category: "rummy",      description: "Rummy on Android with fast matchmaking, multiple variants, and clean gameplay.",        downloadUrl: "https://yonorummy042.com/?code=VIP3Z76MJCF&t=1782478473" },
   { name: "ABC Rummy",     logo: "/logos/abc-rummy.webp",      category: "rummy",      description: "Beginner-friendly Rummy app for Android supporting all popular Indian Rummy formats.",              downloadUrl: "https://www.11abcrummy.com/?code=6X44DU7CVLN&t=1782033658" },
   { name: "Boss Rummy",    logo: "/logos/boss-rummy.webp",     category: "rummy",      description: "Competitive 13-card Rummy tables for Android with daily practice and multi-format support.",        downloadUrl: "https://www.bossrummyr.com/?code=9HFJ28QUSPR&t=1782038197" },
   { name: "Game Rummy",    logo: "/logos/game-rummy.webp",     category: "rummy",      description: "Classic Indian Rummy with smooth animations and multi-table support on Android.",                   downloadUrl: "https://gamesrummy.club/?code=GAFDVUWWYBV&t=1782039543" },
   { name: "Gogo Rummy",    logo: "/logos/gogo-rummy.webp",     category: "rummy",      description: "Fast-paced Rummy with Points, Pool, and Deals variants on Android.",                               downloadUrl: "https://www.gospin.bet/?code=V4U6SUHF9FZ&t=1782040515" },
   { name: "Hi Rummy",      logo: "/logos/hi-rummy.webp",       category: "rummy",      description: "Lightweight Rummy app for Android with clean card graphics and quick game setup.",                  downloadUrl: "https://joinhirummy.top/?code=RX33WPMEYAX&t=1782361457" },
-  { name: "Ind Rummy",     logo: "/logos/ind-rummy.webp",      category: "rummy",      description: "Classic Indian 13-card Rummy skill gameplay with reliable Android performance.",                    downloadUrl: "https://indrummyvip30.com/?code=R9ADC3HL1U6&t=1782361952" },
+  { name: "Ind Rummy",     logo: "/logos/ind-rummy.webp",      category: "rummy",      description: "Classic Indian 13-card Rummy gameplay with reliable Android performance.",                    downloadUrl: "https://indrummyvip30.com/?code=R9ADC3HL1U6&t=1782361952" },
   { name: "INR Rummy",     logo: "/logos/inr-rummy.webp",      category: "rummy",      description: "Multiple Indian Rummy table formats on Android with smooth card handling.",                         downloadUrl: "https://inrrummy.club/?code=JMQ6RYF5BT6&t=1782361577" },
   { name: "Joy Rummy",     logo: "/logos/joy-rummy.webp",      category: "rummy",      description: "Enjoyable Rummy experience on Android with beginner and advanced table options.",                   downloadUrl: "https://www.joyrummyon.com/?code=J5KYGYLKSDD&t=1782365855" },
   { name: "Love Rummy",    logo: "/logos/love-rummy.webp",     category: "rummy",      description: "Smooth Rummy gameplay with a welcoming interface for all skill levels on Android.",                 downloadUrl: "https://www.loverummy7.com/?code=R6KUXVMQEB1&t=1782366602" },
-  { name: "OkRummy",       logo: "/logos/ok-rummy.webp",       category: "rummy",      description: "Skill-based card game app offering multiple Rummy formats for Android users.",                      downloadUrl: "https://www.okrummy42.com/?code=H2G24LRWC8L&t=1782450801" },
+  { name: "OkRummy",       logo: "/logos/ok-rummy.webp",       category: "rummy",      description: "Card game app offering multiple Rummy formats for Android users.",                      downloadUrl: "https://www.okrummy42.com/?code=H2G24LRWC8L&t=1782450801" },
   { name: "Rumble Rummy",  logo: "/logos/rumble-rummy.webp",   category: "rummy",      description: "Competitive Rummy tables on Android with tournament-style play options.",                           downloadUrl: "https://www.rumblerummy888.net/?code=82M21AWEVEV&t=1782451748" },
-  { name: "Rummy 91",      logo: "/logos/rummy-91.webp",       category: "rummy",      description: "91-style skill-based Rummy on Android with fast rounds and clean interface.",                       downloadUrl: "https://rummy91g.com/?code=UXT3ZZWQHX8&t=1782456098" },
-  { name: "Rummy 77",      logo: "/logos/rummy77.webp",        category: "rummy",      description: "Popular 77-card variant of skill-based Rummy on Android devices.",                                  downloadUrl: "https://rummy77r.net/?code=F3VZY2CL5KV&t=1782648996" },
+  { name: "Rummy 91",      logo: "/logos/rummy-91.webp",       category: "rummy",      description: "91-style Rummy on Android with fast rounds and clean interface.",                       downloadUrl: "https://rummy91g.com/?code=UXT3ZZWQHX8&t=1782456098" },
+  { name: "Rummy 77",      logo: "/logos/rummy77.webp",        category: "rummy",      description: "Popular 77-card variant of Rummy on Android devices.",                                  downloadUrl: "https://rummy77r.net/?code=F3VZY2CL5KV&t=1782648996" },
   { name: "Rummy 888",     logo: "/logos/rummy888.webp",       category: "rummy",      description: "Smooth 13-card Rummy gameplay across multiple table formats on Android.",                           downloadUrl: "https://rummy888vip31.com/?code=TPUK4VF51V9&t=1782456619" },
-  { name: "Rummy Ludo",    logo: "/logos/rummy-ludo.webp",     category: "rummy",      description: "Classic Rummy and Ludo skill games combined in a single Android app.",                             downloadUrl: "https://ludorummy.win/?code=UWPKN64A3KD&t=1782648889" },
+  { name: "Rummy Ludo",    logo: "/logos/rummy-ludo.webp",     category: "rummy",      description: "Classic Rummy and Ludo games combined in a single Android app.",                             downloadUrl: "https://ludorummy.win/?code=UWPKN64A3KD&t=1782648889" },
   { name: "Top Rummy",     logo: "/logos/top-rummy.webp",      category: "rummy",      description: "Premium Indian Rummy with high-performance tables and offline practice mode.",                      downloadUrl: "https://www.toprummy.cc/?code=M4G2WX7PAUF&t=1782475234" },
   // ── Teen Patti / Arcade (15) ───────────────────────────────────────────────
-  { name: "Jaiho Arcade",  logo: "/logos/jaiho-arcade.webp",   category: "teen-patti", description: "Multiple skill-based mini-games in one app for Android users.",                                     downloadUrl: "https://www.jaihoarcade39.com/?code=74S26KHLRJD&t=1782363337" },
-  { name: "Jaiho Arcade+", logo: "/logos/jaiho-arcade-2.webp", category: "teen-patti", description: "Expanded Jaiho Arcade with more skill game modes and improved Android performance.",                downloadUrl: "#download" },
-  { name: "Jaiho Win",     logo: "/logos/jaiho-win.webp",      category: "teen-patti", description: "Skill-based card and board games optimised for Android phones and tablets.",                        downloadUrl: "https://www.jaihowin11.com/?code=XZDTYJ1RY1Z&t=1782364383" },
+  { name: "Jaiho Arcade",  logo: "/logos/jaiho-arcade.webp",   category: "teen-patti", description: "Multiple mini-games in one app for Android users.",                                     downloadUrl: "https://www.jaihoarcade39.com/?code=74S26KHLRJD&t=1782363337" },
+  { name: "Jaiho Arcade+", logo: "/logos/jaiho-arcade-2.webp", category: "teen-patti", description: "Expanded Jaiho Arcade with more game modes and improved Android performance.",                downloadUrl: "#download" },
+  { name: "Jaiho Win",     logo: "/logos/jaiho-win.webp",      category: "teen-patti", description: "Card and board games optimised for Android phones and tablets.",                        downloadUrl: "https://www.jaihowin11.com/?code=XZDTYJ1RY1Z&t=1782364383" },
   { name: "Jaiho 91",      logo: "/logos/jaiho91.webp",        category: "teen-patti", description: "Popular Indian skill card games with a 91-style gameplay focus for Android.",                       downloadUrl: "https://91jaihoapp.com/?code=C4238P5H5G8&t=1782362450" },
-  { name: "Yono Arcade",   logo: "/logos/yono-arcade.webp",    category: "teen-patti", description: "Skill-based mini-games for Android with a clean, fast-loading interface.",                          downloadUrl: "https://yonoofficial2.com/?code=96LUT957MWS&t=1782476174" },
-  { name: "Yono Games",    logo: "/logos/yono-games.webp",     category: "teen-patti", description: "Multi-game platform featuring skill-based Android card and board games.",                            downloadUrl: "https://youonogamesgift.com/?code=GK1EVT15SS7&t=1782476329" },
-  { name: "Bet 213",       logo: "/logos/bet-213.webp",        category: "teen-patti", description: "Skill-based prediction and strategy game app for Android with multiple rounds.",                    downloadUrl: "https://www.bet213.cc/?code=2QT8E6SY5R3&t=1782033957" },
-  { name: "Bingo 101",     logo: "/logos/bingo-101.webp",      category: "teen-patti", description: "Classic skill-based Bingo for Android with fast rounds and simple controls.",                       downloadUrl: "https://bingo101.buzz/?code=3WFSBEZLPYL&t=1782037952" },
-  { name: "Club INR",      logo: "/logos/club-inr.webp",       category: "teen-patti", description: "Skill-based card game platform for Android with multiple game formats.",                            downloadUrl: "https://clubinrvip1.one/?code=WZJMGMZ4U1K&t=1782038302" },
-  { name: "Ind Bingo",     logo: "/logos/ind-bingo.webp",      category: "teen-patti", description: "Indian-style Bingo skill gameplay with quick rounds on Android.",                                   downloadUrl: "#download" },
-  { name: "Ind Club",      logo: "/logos/ind-club.webp",       category: "teen-patti", description: "Multi-game Android app featuring Indian card and board skill games.",                               downloadUrl: "https://indclub40.com/?code=W23E2SHD7PY&t=1782361758" },
-  { name: "Maha Games",    logo: "/logos/maha-games.webp",     category: "teen-patti", description: "Variety of Indian skill-based games on Android in one platform.",                                   downloadUrl: "https://yono-mahagames.com/?code=J245RQFLS2L&t=1782367067" },
-  { name: "MBM Bet",       logo: "/logos/mbm-bet.webp",        category: "teen-patti", description: "Skill-based prediction and strategy game app for Android.",                                         downloadUrl: "https://www.mbmbet14.com/?code=UPHMK55JNJ6&t=1782367306" },
-  { name: "Neta VIP",      logo: "/logos/neta-vip.webp",       category: "teen-patti", description: "Skill-based card and strategy games with a VIP experience on Android.",                             downloadUrl: "https://www.neta1.vip/?code=DR0D36UVVZX&t=1782371532" },
-  { name: "Yono VIP",      logo: "/logos/yono-vip.webp",       category: "teen-patti", description: "Premium skill game platform for Android featuring exclusive game modes.",                           downloadUrl: "https://yonovipindia.vip/?code=9U8WLAJJSM5&t=1782481304" },
+  { name: "Yono Arcade",   logo: "/logos/yono-arcade.webp",    category: "teen-patti", description: "Mini-games for Android with a clean, fast-loading interface.",                          downloadUrl: "https://yonoofficial2.com/?code=96LUT957MWS&t=1782476174" },
+  { name: "Yono Games",    logo: "/logos/yono-games.webp",     category: "teen-patti", description: "Multi-game platform featuring Android card and board games.",                            downloadUrl: "https://youonogamesgift.com/?code=GK1EVT15SS7&t=1782476329" },
+  { name: "Bet 213",       logo: "/logos/bet-213.webp",        category: "teen-patti", description: "Prediction and strategy game app for Android with multiple rounds.",                    downloadUrl: "https://www.bet213.cc/?code=2QT8E6SY5R3&t=1782033957" },
+  { name: "Bingo 101",     logo: "/logos/bingo-101.webp",      category: "teen-patti", description: "Classic Bingo for Android with fast rounds and simple controls.",                       downloadUrl: "https://bingo101.buzz/?code=3WFSBEZLPYL&t=1782037952" },
+  { name: "Club INR",      logo: "/logos/club-inr.webp",       category: "teen-patti", description: "Card game platform for Android with multiple game formats.",                            downloadUrl: "https://clubinrvip1.one/?code=WZJMGMZ4U1K&t=1782038302" },
+  { name: "Ind Bingo",     logo: "/logos/ind-bingo.webp",      category: "teen-patti", description: "Indian-style Bingo gameplay with quick rounds on Android.",                                   downloadUrl: "#download" },
+  { name: "Ind Club",      logo: "/logos/ind-club.webp",       category: "teen-patti", description: "Multi-game Android app featuring Indian card and board games.",                               downloadUrl: "https://indclub40.com/?code=W23E2SHD7PY&t=1782361758" },
+  { name: "Maha Games",    logo: "/logos/maha-games.webp",     category: "teen-patti", description: "Variety of Indian games on Android in one platform.",                                   downloadUrl: "https://yono-mahagames.com/?code=J245RQFLS2L&t=1782367067" },
+  { name: "MBM Bet",       logo: "/logos/mbm-bet.webp",        category: "teen-patti", description: "Prediction and strategy game app for Android.",                                         downloadUrl: "https://www.mbmbet14.com/?code=UPHMK55JNJ6&t=1782367306" },
+  { name: "Neta VIP",      logo: "/logos/neta-vip.webp",       category: "teen-patti", description: "Card and strategy games with a VIP experience on Android.",                             downloadUrl: "https://www.neta1.vip/?code=DR0D36UVVZX&t=1782371532" },
+  { name: "Yono VIP",      logo: "/logos/yono-vip.webp",       category: "teen-patti", description: "Premium game platform for Android featuring exclusive game modes.",                           downloadUrl: "https://yonovipindia.vip/?code=9U8WLAJJSM5&t=1782481304" },
   // ── Spin (10) ──────────────────────────────────────────────────────────────
-  { name: "Jaiho Spin",    logo: "/logos/jaiho-spin.webp",     category: "spin",        description: "Skill-based spinning games with fast Android gameplay and multiple game modes.",                    downloadUrl: "https://18jaihospingames.com/?code=416GL765W3A&t=1782364119" },
-  { name: "Spin 101",      logo: "/logos/spin-101.webp",       category: "spin",        description: "Skill-based spin game mechanics on Android with simple controls and smooth performance.",           downloadUrl: "https://spin101-e.org/?code=Z9BR1AXYMH3&t=1782473000" },
-  { name: "Spin 777",      logo: "/logos/spin-777.webp",       category: "spin",        description: "777-style skill-based spin gameplay on Android with multiple pattern formats.",                     downloadUrl: "https://spin777-t.com/?code=YLWAEF9UZ9W&t=1782473441" },
-  { name: "Spin Crush",    logo: "/logos/spin-crush.webp",     category: "spin",        description: "Fast-paced skill game on Android featuring spin mechanics and strategy elements.",                  downloadUrl: "#download" },
-  { name: "Spin Gold",     logo: "/logos/spin-gold.webp",      category: "spin",        description: "Skill-based spinning gameplay on Android with a clean, high-performance interface.",               downloadUrl: "https://spingoldvipagent.net/?code=S9VFE5T8JDS&t=1782473990" },
-  { name: "Spin Lucky",    logo: "/logos/spin-lucky.webp",     category: "spin",        description: "Skill-based spin game formats optimised for all Android devices.",                                  downloadUrl: "#download" },
-  { name: "Spin Winner",   logo: "/logos/spin-winner.webp",    category: "spin",        description: "Skill-based spinning and strategy gameplay for Android users.",                                     downloadUrl: "https://spinwinner-y.com/?code=QVT2P3HKTUZ&t=1782474125" },
+  { name: "Jaiho Spin",    logo: "/logos/jaiho-spin.webp",     category: "spin",        description: "Spinning games with fast Android gameplay and multiple game modes.",                    downloadUrl: "https://18jaihospingames.com/?code=416GL765W3A&t=1782364119" },
+  { name: "Spin 101",      logo: "/logos/spin-101.webp",       category: "spin",        description: "Spin game mechanics on Android with simple controls and smooth performance.",           downloadUrl: "https://spin101-e.org/?code=Z9BR1AXYMH3&t=1782473000" },
+  { name: "Spin 777",      logo: "/logos/spin-777.webp",       category: "spin",        description: "777-style spin gameplay on Android with multiple pattern formats.",                     downloadUrl: "https://spin777-t.com/?code=YLWAEF9UZ9W&t=1782473441" },
+  { name: "Spin Crush",    logo: "/logos/spin-crush.webp",     category: "spin",        description: "Fast-paced game on Android featuring spin mechanics and strategy elements.",                  downloadUrl: "#download" },
+  { name: "Spin Gold",     logo: "/logos/spin-gold.webp",      category: "spin",        description: "Spinning gameplay on Android with a clean, high-performance interface.",               downloadUrl: "https://spingoldvipagent.net/?code=S9VFE5T8JDS&t=1782473990" },
+  { name: "Spin Lucky",    logo: "/logos/spin-lucky.webp",     category: "spin",        description: "Spin game formats optimised for all Android devices.",                                  downloadUrl: "#download" },
+  { name: "Spin Winner",   logo: "/logos/spin-winner.webp",    category: "spin",        description: "Spinning and strategy gameplay for Android users.",                                     downloadUrl: "https://spinwinner-y.com/?code=QVT2P3HKTUZ&t=1782474125" },
   { name: "Yes Spin",      logo: "/logos/yes-spin.webp",       category: "spin",        description: "Lightweight skill spin game app for Android with intuitive controls.",                             downloadUrl: "https://www.yesspinmotion.com/?code=47TMD53C9SA&t=1782475635" },
-  { name: "Slot Spin",     logo: "/logos/slot-spin.webp",      category: "spin",        description: "Skill-based slot-spin mechanics for Android with smooth animations.",                              downloadUrl: "https://www.slotsspinj.com/?code=C1A5F6PQW4M&t=1782470064" },
-  { name: "101z",          logo: "/logos/101z.webp",           category: "spin",        description: "101-style skill-based Android game with fast rounds and multiple formats.",                        downloadUrl: "https://101zvip2.com/?code=398LS183AB2&t=1782032243" },
+  { name: "Slot Spin",     logo: "/logos/slot-spin.webp",      category: "spin",        description: "Slot-spin mechanics for Android with smooth animations.",                              downloadUrl: "https://www.slotsspinj.com/?code=C1A5F6PQW4M&t=1782470064" },
+  { name: "101z",          logo: "/logos/101z.webp",           category: "spin",        description: "101-style Android game with fast rounds and multiple formats.",                        downloadUrl: "https://101zvip2.com/?code=398LS183AB2&t=1782032243" },
   // ── Slots (14) ─────────────────────────────────────────────────────────────
-  { name: "Share Slots",   logo: "/logos/share-slots.webp",    category: "slots",       description: "Flagship slot-style skill game in the Yono network, available on Android.",                        downloadUrl: "https://share0022.com/?code=YAZRMEX5W98&t=1782459612" },
-  { name: "567 Slots",     logo: "/logos/567-slots.webp",      category: "slots",       description: "Skill-based slot gameplay on Android with multiple line configurations.",                           downloadUrl: "https://join567slots.com/?code=9UX4YQ28P28&t=1782032755" },
-  { name: "777 Game",      logo: "/logos/777game.webp",        category: "slots",       description: "Classic 777-style skill gameplay on Android with clean graphics.",                                 downloadUrl: "https://www.777game0.com/?code=H53SKREANMZ&t=1782649361" },
-  { name: "789 Jackpot",   logo: "/logos/789-jackpot.webp",    category: "slots",       description: "789-pattern skill game mechanics on Android with multiple round formats.",                         downloadUrl: "https://join789jackpots1.com/?code=VJJGANTLPWB&t=1782033375" },
-  { name: "Hindi 777",     logo: "/logos/hindi777.webp",       category: "slots",       description: "777-style skill games designed for the Indian Android market.",                                    downloadUrl: "https://www.hindi777agent5.com/?code=7LF62XGS8GT&t=1782361149" },
-  { name: "Ind Slots",     logo: "/logos/ind-slots.webp",      category: "slots",       description: "Skill-based slot game for Android featuring Indian-themed graphics.",                              downloadUrl: "https://www.indslotsreferral.com/?code=T2QSBUR7LT4&t=1782362370" },
-  { name: "Jaiho Slot",    logo: "/logos/jaiho-slot.webp",     category: "slots",       description: "Smooth skill-based slot gameplay on Android from the Jaiho game network.",                        downloadUrl: "https://www.jaihoslots23.com/?code=QJSJQQDZDDM&t=1782363832" },
+  { name: "Share Slots",   logo: "/logos/share-slots.webp",    category: "slots",       description: "Flagship slot-style game in the Yono network, available on Android.",                        downloadUrl: "https://share0022.com/?code=YAZRMEX5W98&t=1782459612" },
+  { name: "567 Slots",     logo: "/logos/567-slots.webp",      category: "slots",       description: "Slot gameplay on Android with multiple line configurations.",                           downloadUrl: "https://join567slots.com/?code=9UX4YQ28P28&t=1782032755" },
+  { name: "777 Game",      logo: "/logos/777game.webp",        category: "slots",       description: "Classic 777-style gameplay on Android with clean graphics.",                                 downloadUrl: "https://www.777game0.com/?code=H53SKREANMZ&t=1782649361" },
+  { name: "789 Jackpot",   logo: "/logos/789-jackpot.webp",    category: "slots",       description: "789-pattern game mechanics on Android with multiple round formats.",                         downloadUrl: "https://join789jackpots1.com/?code=VJJGANTLPWB&t=1782033375" },
+  { name: "Hindi 777",     logo: "/logos/hindi777.webp",       category: "slots",       description: "777-style games designed for the Indian Android market.",                                    downloadUrl: "https://www.hindi777agent5.com/?code=7LF62XGS8GT&t=1782361149" },
+  { name: "Ind Slots",     logo: "/logos/ind-slots.webp",      category: "slots",       description: "Slot game for Android featuring Indian-themed graphics.",                              downloadUrl: "https://www.indslotsreferral.com/?code=T2QSBUR7LT4&t=1782362370" },
+  { name: "Jaiho Slot",    logo: "/logos/jaiho-slot.webp",     category: "slots",       description: "Smooth slot gameplay on Android from the Jaiho game network.",                        downloadUrl: "https://www.jaihoslots23.com/?code=QJSJQQDZDDM&t=1782363832" },
   { name: "Jahio 777",     logo: "/logos/jahio-777.webp",      category: "slots",       description: "777-style skill slot gameplay for Android with multiple pattern options.",                         downloadUrl: "#download" },
-  { name: "Jaiho 777",     logo: "/logos/jaiho-777-main.webp", category: "slots",       description: "Flagship skill game in the Jaiho network featuring 777-style Android gameplay.",                  downloadUrl: "https://jaiho77790.com/?code=RZPNPWJBVJQ&t=1782362904" },
-  { name: "Saga Slots",    logo: "/logos/saga-slots.webp",     category: "slots",       description: "Skill-based slot gameplay on Android with multiple game formats.",                                 downloadUrl: "https://www.sagaslots77.com/?code=0QH9UVHARQU&t=1782458248" },
-  { name: "Slots Winner",  logo: "/logos/slots-winner.webp",   category: "slots",       description: "Skill-based slot game app for Android with multiple format options.",                             downloadUrl: "https://slotswinneragents.com/?code=PGVWTWRNB6F&t=1782470385" },
-  { name: "Yn 777",        logo: "/logos/yn-777.webp",         category: "slots",       description: "777-style skill gameplay for Android with smooth slot mechanics.",                                 downloadUrl: "https://www.y754.com/?code=4SWBALCES8G&t=1782476034" },
-  { name: "Yono 777",      logo: "/logos/yono-777.webp",       category: "slots",       description: "Classic Yono 777-style skill game experience on Android.",                                        downloadUrl: "https://yonomain777.one/?code=ZMRZ6SUQQZ2&t=1782213370" },
-  { name: "Yono Slots",    logo: "/logos/yono-slots.webp",     category: "slots",       description: "Dedicated slot-style skill game platform in the Yono network for Android.",                       downloadUrl: "https://www.uonoslot.icu/?code=59YBLQ1756L&t=1782478570" },
+  { name: "Jaiho 777",     logo: "/logos/jaiho-777-main.webp", category: "slots",       description: "Flagship game in the Jaiho network featuring 777-style Android gameplay.",                  downloadUrl: "https://jaiho77790.com/?code=RZPNPWJBVJQ&t=1782362904" },
+  { name: "Saga Slots",    logo: "/logos/saga-slots.webp",     category: "slots",       description: "Slot gameplay on Android with multiple game formats.",                                 downloadUrl: "https://www.sagaslots77.com/?code=0QH9UVHARQU&t=1782458248" },
+  { name: "Slots Winner",  logo: "/logos/slots-winner.webp",   category: "slots",       description: "Slot game app for Android with multiple format options.",                             downloadUrl: "https://slotswinneragents.com/?code=PGVWTWRNB6F&t=1782470385" },
+  { name: "Yn 777",        logo: "/logos/yn-777.webp",         category: "slots",       description: "777-style gameplay for Android with smooth slot mechanics.",                                 downloadUrl: "https://www.y754.com/?code=4SWBALCES8G&t=1782476034" },
+  { name: "Yono 777",      logo: "/logos/yono-777.webp",       category: "slots",       description: "Classic Yono 777-style game experience on Android.",                                        downloadUrl: "https://yonomain777.one/?code=ZMRZ6SUQQZ2&t=1782213370" },
+  { name: "Yono Slots",    logo: "/logos/yono-slots.webp",     category: "slots",       description: "Dedicated slot-style game platform in the Yono network for Android.",                       downloadUrl: "https://www.uonoslot.icu/?code=59YBLQ1756L&t=1782478570" },
 ];
 
 export const DISCLAIMER_TEXT =
   "Allyonoguru is not affiliated with, endorsed by, or connected to SBI, YONO by SBI, or any bank.";
 
 export const AGE_NOTE = "18+";
-export const STATE_NOTE = "Some apps may be restricted in certain states.";
+export const STATE_NOTE = "Online money games are prohibited in India under the Online Gaming Act, 2025.";
 

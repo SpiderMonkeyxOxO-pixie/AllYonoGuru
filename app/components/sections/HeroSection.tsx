@@ -48,18 +48,16 @@ export default function HeroSection({ appCount }: HeroSectionProps) {
         </motion.div>
 
         {/* H1 — target keyword: "yono game all" */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.08 }}
+        {/* No entrance animation: the H1 is the LCP element and must paint with the HTML */}
+        <h1
           className="text-display"
           style={{ textAlign: "center", marginBottom: "20px", color: "#f1f5f9" }}
         >
           Yono Game All —{" "}
-          <span className="gradient-text">Android Skill </span>
+          <span className="gradient-text">Android Game </span>
           <br aria-hidden="true" />
-          Game Apps Directory
-        </motion.h1>
+          Apps Directory
+        </h1>
 
         {/* Subtitle */}
         <motion.p
@@ -72,7 +70,7 @@ export default function HeroSection({ appCount }: HeroSectionProps) {
             maxWidth: "600px", margin: "0 auto 36px",
           }}
         >
-          AllYonoGuru is an independent directory of skill-based Android game apps
+          AllYonoGuru is an independent directory of Android game apps
           in the Yono game network. Find, compare, and download safely.
         </motion.p>
 
@@ -132,7 +130,7 @@ export default function HeroSection({ appCount }: HeroSectionProps) {
                 </p>
                 <p style={{ margin: 0, fontSize: "11.5px", color: "#64748b" }}>
                   <strong style={{ color: "#f59e0b" }}>18+</strong>
-                  {" "}· Some apps may be restricted in certain states.
+                  {" "}· Online money games are prohibited in India under the Online Gaming Act, 2025.
                 </p>
               </div>
             </div>

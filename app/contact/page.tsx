@@ -94,10 +94,10 @@ export default function ContactPage() {
 
       <h2 style={h2Style}>App Listing Requests</h2>
       <p style={prose}>
-        If you would like an Android skill-based game app to be considered for listing
+        If you would like an Android game app to be considered for listing
         on AllYonoGuru, please email us with the app name, APK download link, and a
         brief description. We review all submissions but cannot guarantee inclusion.
-        All listed apps must be skill-based Android games and must comply with our
+        All listed apps must be Android apps that comply with our
         editorial standards.
       </p>
 

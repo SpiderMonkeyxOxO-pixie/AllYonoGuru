@@ -104,7 +104,7 @@ export default function DisclaimerPage() {
             border: "1px solid rgba(100,116,139,0.15)",
             borderRadius: "6px", padding: "4px 12px",
           }}>
-            Some apps may be restricted in certain states.
+            Online money games are prohibited in India under the Online Gaming Act, 2025.
           </span>
         </div>
       </div>

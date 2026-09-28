@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | AllYonoGuru.com",
   },
   description:
-    "AllYonoGuru is an independent directory of Android skill-based game apps. Find, compare, and download Yono game apps — Rummy Guru, Teen Patti Guru, and more.",
+    "AllYonoGuru is an independent directory of Yono-network Android game apps. Find, compare, and download Yono game apps — Rummy Guru, Teen Patti Guru, and more.",
   authors: [{ name: "AllYonoGuru.com", url: "https://allyonoguru.com" }],
   creator: "AllYonoGuru.com",
   publisher: "AllYonoGuru.com",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     siteName: "AllYonoGuru.com",
     title: "AllYonoGuru — Yono Game All Apps Directory",
     description:
-      "Independent directory of Android skill-based game apps. Find Yono game apps — Rummy Guru, Teen Patti Guru, and more.",
+      "Independent directory of Yono-network Android game apps. Find Yono game apps — Rummy Guru, Teen Patti Guru, and more.",
     images: [
       {
         url: "https://allyonoguru.com/og-image.png",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AllYonoGuru — Yono Game All Apps Directory",
     description:
-      "Independent directory of Android skill-based game apps. Find, compare, and download Yono game apps.",
+      "Independent directory of Yono-network Android game apps. Find, compare, and download Yono game apps.",
     images: ["https://allyonoguru.com/og-image.png"],
   },
   category: "technology",

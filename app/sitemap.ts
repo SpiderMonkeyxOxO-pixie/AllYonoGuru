@@ -6,16 +6,26 @@ import type { AppEntry, BlogPostEntry } from "@/app/lib/types";
 
 const BASE = "https://allyonoguru.com";
 
+// Rendered per request so scheduled blog posts (future publishedAt) appear
+// in the sitemap on their publish date without a rebuild.
+export const dynamic = "force-dynamic";
+
 // Strapi-first, static-fallback: if Strapi is unreachable or has no
 // published apps yet, fall back to the bundled static catalog.
 async function getPublishedApps(): Promise<AppEntry[]> {
+  const staticApps = APPS_STATIC.filter((a) => a.publishedAt !== null);
   try {
     const apps = await getAllApps();
-    if (apps.length > 0) return apps;
+    // Union by slug: apps added only to the bundled catalog (e.g. money-rummy)
+    // must still appear even when Strapi is reachable.
+    if (apps.length > 0) {
+      const seen = new Set(apps.map((a) => a.slug));
+      return [...apps, ...staticApps.filter((a) => !seen.has(a.slug))];
+    }
   } catch {
     // Strapi unavailable — fall through to static data.
   }
-  return APPS_STATIC.filter((a) => a.publishedAt !== null);
+  return staticApps;
 }
 
 // Reads from repository content (see app/lib/blog.ts) — no fake fallback
@@ -47,6 +57,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/disclaimer`,     lastModified: new Date(), changeFrequency: "monthly", priority: 0.4 },
     { url: `${BASE}/privacy-policy`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.4 },
     { url: `${BASE}/contact`,        lastModified: new Date(), changeFrequency: "monthly", priority: 0.3 },
+    { url: `${BASE}/editorial-policy`,   lastModified: new Date("2026-09-28"), changeFrequency: "monthly", priority: 0.4 },
+    { url: `${BASE}/responsible-gaming`, lastModified: new Date("2026-09-28"), changeFrequency: "monthly", priority: 0.4 },
   ];
 
   // DRAFT categories (publishedAt null) are intentionally excluded.

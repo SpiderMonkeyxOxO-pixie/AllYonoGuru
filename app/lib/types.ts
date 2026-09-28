@@ -106,6 +106,7 @@ export interface BlogPostEntry {
   author: string;
   tag?: string;
   publishedAt: string | null;
+  updatedAt?: string | null;
   seo: SeoMeta;
 }
 

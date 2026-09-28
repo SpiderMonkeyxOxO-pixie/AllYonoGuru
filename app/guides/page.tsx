@@ -120,7 +120,7 @@ export default async function GuidesPage() {
                   </p>
                   <p style={{ margin: 0, fontSize: "11px", color: "#64748b" }}>
                     <strong style={{ color: "#f59e0b" }}>18+</strong>
-                    {" "}· Some apps may be restricted in certain states.
+                    {" "}· Online money games are prohibited in India under the Online Gaming Act, 2025.
                   </p>
                 </div>
               </div>

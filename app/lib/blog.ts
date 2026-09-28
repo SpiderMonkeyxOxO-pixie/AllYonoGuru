@@ -46,6 +46,7 @@ function loadLocalPosts(): BlogPostEntry[] {
       author: record.author,
       tag: record.tag ?? undefined,
       publishedAt: record.publishedAt ?? null,
+      updatedAt: record.updatedAt ?? null,
       seo: record.seo,
     }));
 
@@ -53,8 +54,16 @@ function loadLocalPosts(): BlogPostEntry[] {
   return posts;
 }
 
+// Scheduled publishing: a post whose publishedAt is in the future is invisible
+// everywhere (index, guides, sitemap, its own URL 404s) until that moment.
+// Every route that lists posts renders per request or revalidates within a
+// minute, so a post goes live on time with no rebuild or cron job.
+function isLive(post: BlogPostEntry): boolean {
+  return !post.publishedAt || new Date(post.publishedAt).getTime() <= Date.now();
+}
+
 export async function getAllBlogPosts(): Promise<BlogPostEntry[]> {
-  const localPosts = loadLocalPosts();
+  const localPosts = loadLocalPosts().filter(isLive);
 
   // Best-effort: include the one unmigrated post if the Strapi backend
   // happens to be reachable. If it isn't, the other 27 posts still render
@@ -72,7 +81,7 @@ export async function getAllBlogPosts(): Promise<BlogPostEntry[]> {
 }
 
 export async function getBlogPostBySlug(slug: string): Promise<BlogPostEntry | null> {
-  const localPosts = loadLocalPosts();
+  const localPosts = loadLocalPosts().filter(isLive);
   const local = localPosts.find((p) => p.slug === slug);
   if (local) return local;
 

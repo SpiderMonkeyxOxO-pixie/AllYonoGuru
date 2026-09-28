@@ -75,7 +75,7 @@ export default function NetworkGameCard({ app }: Props) {
       <a
         href={app.downloadUrl}
         title={`Download ${app.name} APK`}
-        rel="nofollow noopener noreferrer"
+        rel="sponsored nofollow noopener noreferrer"
         target="_blank"
         style={{
           display: "flex",
@@ -106,7 +106,7 @@ export default function NetworkGameCard({ app }: Props) {
           lineHeight: "1.5",
         }}
       >
-        18+ · Skill-based game · Some apps may be restricted.
+        18+ · Third-party app · Online money games are prohibited in India.
       </p>
     </article>
   );

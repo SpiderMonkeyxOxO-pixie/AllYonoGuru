@@ -4,14 +4,14 @@ import LegalPageWrapper from "../components/layout/LegalPageWrapper";
 export const metadata: Metadata = {
   title: "About AllYonoGuru — Independent Yono Game Apps Directory",
   description:
-    "AllYonoGuru is an independent, privately owned directory of skill-based Android game apps. Not affiliated with SBI or YONO by SBI.",
+    "AllYonoGuru is an independent, privately owned directory of Yono-network Android game apps. Not affiliated with SBI or YONO by SBI.",
   alternates: {
     canonical: "https://allyonoguru.com/about",
   },
   openGraph: {
     title: "About AllYonoGuru — Independent Yono Game Apps Directory",
     description:
-      "Independent directory of skill-based Android game apps. Not affiliated with SBI or YONO by SBI.",
+      "Independent directory of Yono-network Android game apps. Not affiliated with SBI or YONO by SBI.",
     url: "https://allyonoguru.com/about",
     images: [
       {
@@ -49,7 +49,7 @@ export default function AboutPage() {
     >
       <p style={prose}>
         <strong style={{ color: "#f1f5f9" }}>AllYonoGuru.com</strong> is an independent
-        online directory of skill-based Android game apps available in the Yono game
+        online directory of Android game apps available in the Yono game
         network. We are not a game platform, marketplace, or operator — we list, describe,
         and link to apps so users can find and compare them in one place.
       </p>
@@ -68,13 +68,22 @@ export default function AboutPage() {
         APK files. We do not operate any of the apps listed on this site.
       </p>
 
-      <h2 style={h2Style}>Skill-Based Games</h2>
+      <h2 style={h2Style}>Legal Position in India</h2>
       <p style={prose}>
-        All apps listed on AllYonoGuru are skill-based games. Indian courts have
-        consistently held that games such as Rummy require skill, strategy, and knowledge
-        and are therefore distinct from games of chance. Users are responsible for
-        verifying applicable laws in their state of residence before downloading or
-        playing any app.
+        Since 1 May 2026, the Promotion and Regulation of Online Gaming Act, 2025 and the
+        Online Gaming Rules, 2026 prohibit online money games in India, whether they are
+        based on skill, chance, or both. Older court decisions describing rummy as a game of
+        skill do not make online play for money permitted. Many apps listed here are
+        real-money apps; listing an app is not approval or encouragement to play. Read our{" "}
+        <a href="/disclaimer" style={{ color: "#f59e0b" }}>Disclaimer</a> for details.
+      </p>
+
+      <h2 style={h2Style}>How This Site Makes Money</h2>
+      <p style={prose}>
+        Some download links on AllYonoGuru are referral links, and the site may earn a
+        commission when they are used. Referral links are marked as sponsored in the page
+        code. AllYonoGuru does not operate any listed app and does not handle deposits,
+        withdrawals, or accounts.
       </p>
 
       <h2 style={h2Style}>Age Requirement</h2>
@@ -118,9 +127,9 @@ export default function AboutPage() {
           Important Notice
         </strong>
         Allyonoguru is not affiliated with, endorsed by, or connected to SBI, YONO by SBI,
-        or any bank. All apps listed are skill-based games intended for entertainment
+        or any bank. Apps are listed for information
         purposes. Play responsibly. <strong style={{ color: "#f59e0b" }}>18+</strong>.
-        Some apps may be restricted in certain states.
+        Online money games are prohibited in India under the Online Gaming Act, 2025.
       </div>
     </LegalPageWrapper>
   );

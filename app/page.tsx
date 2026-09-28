@@ -55,18 +55,18 @@ async function getHomepageGuidePosts() {
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Yono Game All — Skill Game Apps Directory | AllYonoGuru",
+    absolute: "Yono Game All Apps Directory, Rummy & Teen Patti Guides | AllYonoGuru",
   },
   description:
-    "AllYonoGuru is an independent directory of Yono game all apps — skill-based Android card games including Rummy Guru and Teen Patti Guru. Free to download. 18+.",
-  keywords: "yono game all, yono game apps, rummy guru apk, teen patti guru apk, yono game spin, android skill games india",
+    "Independent directory of Yono game all apps, plus rummy and Teen Patti rules guides and Rummy Guru / Teen Patti Guru identity checks. 18+.",
+  keywords: "yono game all, yono game apps, rummy guru, teen patti guru, rummy rules, teen patti rules",
   alternates: {
     canonical: "https://allyonoguru.com",
   },
   openGraph: {
-    title: "Yono Game All — Android Skill Game Apps Directory | AllYonoGuru",
+    title: "Yono Game All Apps Directory | AllYonoGuru",
     description:
-      "Independent directory of Yono game all apps — Rummy Guru, Teen Patti Guru, and more skill-based Android games. Free to download. 18+.",
+      "Independent directory of Yono game all apps, with rummy and Teen Patti rules guides. 18+.",
     url: "https://allyonoguru.com",
     images: [
       {
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yono Game All — Android Skill Game Apps Directory | AllYonoGuru",
+    title: "Yono Game All Apps Directory | AllYonoGuru",
     description:
       "Independent directory of Yono game all apps — Rummy Guru, Teen Patti Guru, and more. Free to download.",
     images: ["https://allyonoguru.com/og-image.png"],
@@ -90,12 +90,12 @@ const HOMEPAGE_FAQ = [
   {
     question: "What is Yono Game All?",
     answer:
-      "\"Yono Game All\" refers to the full collection of skill-based Android game apps in the Yono game network. AllYonoGuru is an independent directory that lists, describes, and links to these apps in one place.",
+      "\"Yono Game All\" refers to the full collection of Android game apps in the Yono game network. AllYonoGuru is an independent directory that lists, describes, and links to these apps in one place.",
   },
   {
     question: "What apps are listed on AllYonoGuru?",
     answer:
-      "AllYonoGuru currently lists Rummy Guru and Teen Patti Guru — both free-to-download Android card games. New apps are added as they are verified by our editorial team.",
+      "AllYonoGuru lists Yono-network Android game apps, including Rummy Guru and Teen Patti Guru, alongside rummy and Teen Patti rules guides. Each app page shows its category and current download source.",
   },
   {
     question: "Are Yono game apps free to download?",
@@ -108,14 +108,14 @@ const HOMEPAGE_FAQ = [
       "No. AllYonoGuru is not affiliated with, endorsed by, or connected to SBI, YONO by SBI, or any bank. AllYonoGuru is an independent, privately owned third-party directory.",
   },
   {
-    question: "Are these games skill-based?",
+    question: "Is online rummy or Teen Patti for money legal in India?",
     answer:
-      "Yes. All apps listed on AllYonoGuru are skill-based games. Indian courts have consistently held that games like Rummy require skill, strategy, and knowledge — they are not games of chance.",
+      "No. Since 1 May 2026, the Promotion and Regulation of Online Gaming Act, 2025 prohibits online money games in India, whether based on skill, chance, or both. Many apps listed here are real-money apps; listing an app is not approval or encouragement to play. Free games with no money or stakes are not online money games.",
   },
   {
     question: "What is the age requirement?",
     answer:
-      "Users must be 18 years or older to download and use the apps listed on AllYonoGuru. Additionally, some apps may not be available in certain states — please check your local regulations.",
+      "This site is for adults aged 18 and over. Real-money games carry financial risk, and online money games are prohibited in India under the Online Gaming Act, 2025.",
   },
 ];
 

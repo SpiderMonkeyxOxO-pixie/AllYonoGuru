@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "AllYonoGuru — Yono Game All Apps Directory",
     short_name: "AllYonoGuru",
     description:
-      "Independent directory of Android skill-based game apps in the Yono game network.",
+      "Independent directory of Yono-network Android game apps.",
     start_url: "/",
     display: "standalone",
     background_color: "#020817",

@@ -1,22 +1,47 @@
 # AllYonoGuru
 
-> AllYonoGuru is an independent directory of Android skill-based card game apps (Rummy, Teen Patti, and related table games). We list app details, download links, and FAQs for each game, and publish guides on rules, strategy, app safety, and Indian gaming regulations.
+> AllYonoGuru (allyonoguru.com) is an independent directory of Yono-network Android game apps, including Rummy Guru and Teen Patti Guru, and a library of general rules guides for rummy and Teen Patti. App pages list each app's category and current download source; the guides explain rules, scoring and strategy and are not tied to any app.
 
-AllYonoGuru is not affiliated with, endorsed by, or connected to SBI, YONO by SBI, or any bank. Listings are independent and do not constitute legal or financial advice. Some apps may be restricted in certain states; all games are intended for users 18+.
+AllYonoGuru is not affiliated with, endorsed by, or connected to SBI, YONO by SBI, or any bank, and does not operate any listed app. Content is for adults (18+). Online money games are prohibited in India under the Promotion and Regulation of Online Gaming Act, 2025, in force since 1 May 2026; see the laws guide below for official sources. Some download links are referral links and are disclosed on each app page. Nothing on the site is legal or financial advice.
 
-## Categories
+## Rummy Rules Guides
 
-- [Rummy Guru](https://allyonoguru.com/rummy-guru): Directory of Rummy apps, with download links, version info, and feature comparisons.
-- [Teen Patti Guru](https://allyonoguru.com/teen-patti-guru): Directory of Teen Patti apps, with download links, version info, and feature comparisons.
+- [Rummy Sequence Rules: Pure Sequence, Sets and Valid Hands](https://allyonoguru.com/blog/rummy-sequence-rules-pure-sequence-explained)
+- [Joker in Rummy: How Jokers Work](https://allyonoguru.com/blog/joker-in-rummy-how-jokers-work)
+- [Rummy Points Calculation](https://allyonoguru.com/blog/rummy-points-calculation)
+- [When to Drop in Rummy](https://allyonoguru.com/blog/when-to-drop-in-rummy)
+- [Pool Rummy Rules: Points, 101 Pool, 201 Pool and Deals](https://allyonoguru.com/blog/pool-rummy-rules-points-pool-deals)
+- [21-Card Rummy Rules](https://allyonoguru.com/blog/21-card-rummy-rules-explained)
+- [500 Rummy Rules and Scoring](https://allyonoguru.com/blog/500-rummy-rules-and-scoring)
+- [Rummy Discard Strategy](https://allyonoguru.com/blog/rummy-discard-strategy)
+- [Rummy Tips for Beginners](https://allyonoguru.com/blog/rummy-tips-for-beginners)
 
-## Guides
+## Teen Patti Rules Guides
 
-- [Blog](https://allyonoguru.com/blog): Articles on game rules, app safety, and Indian online gaming regulations.
+- [Teen Patti Hand Ranking and Sequence Order](https://allyonoguru.com/blog/teen-patti-hand-ranking-and-sequence-order)
+- [3 Patti Rules: Complete Guide](https://allyonoguru.com/blog/3-patti-rules-complete-guide)
+- [AK47 Teen Patti Rules](https://allyonoguru.com/blog/ak47-teen-patti-rules)
+- [Muflis Teen Patti Rules](https://allyonoguru.com/blog/muflis-teen-patti-rules)
+- [Rummy vs Teen Patti: Key Differences](https://allyonoguru.com/blog/rummy-vs-teen-patti-differences)
 
-## Pages
+## Legal and Safety
 
-- [Home](https://allyonoguru.com/): Full directory of listed apps.
-- [About](https://allyonoguru.com/about): Who we are and how we list apps.
-- [Contact](https://allyonoguru.com/contact): Contact information.
-- [Disclaimer](https://allyonoguru.com/disclaimer): Legal disclaimer and age/state restrictions.
-- [Privacy Policy](https://allyonoguru.com/privacy-policy): Privacy policy.
+- [Online Gaming Laws in India 2026](https://allyonoguru.com/blog/online-gaming-laws-in-india-what-players-should-know): what the Online Gaming Act, 2025 bans and allows, with official sources.
+- [Understanding Android App Permissions Before You Install](https://allyonoguru.com/blog/understanding-android-app-permissions-before-you-install)
+- [Responsible Gaming](https://allyonoguru.com/responsible-gaming): risks, warning signs and free Indian helplines (Tele-MANAS 14416, Cyber Crime 1930).
+
+## Directory
+
+- [Home](https://allyonoguru.com/): full directory of listed apps.
+- [Rummy Guru](https://allyonoguru.com/rummy-guru)
+- [Teen Patti Guru](https://allyonoguru.com/teen-patti-guru)
+- [Guides hub](https://allyonoguru.com/guides)
+- [Blog](https://allyonoguru.com/blog)
+
+## About and Policies
+
+- [About](https://allyonoguru.com/about): who runs the site and how it makes money.
+- [Editorial Policy](https://allyonoguru.com/editorial-policy): sources, verification rules, referral links and corrections.
+- [Disclaimer](https://allyonoguru.com/disclaimer)
+- [Privacy Policy](https://allyonoguru.com/privacy-policy)
+- [Contact](https://allyonoguru.com/contact)

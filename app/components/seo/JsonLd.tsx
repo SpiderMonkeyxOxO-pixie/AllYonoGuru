@@ -2,10 +2,14 @@ import type { FaqItem, AppEntry, CategoryEntry, BlogPostEntry } from "@/app/lib/
 
 const SITE_URL = "https://allyonoguru.com";
 
-export function OrganizationSchema() {
-  const schema = {
+export const ORG_ID = `${SITE_URL}/#organization`;
+
+// The one Organization entity for the site. Everything else references it by
+// @id instead of re-declaring a publisher, so engines see a single entity.
+export const ORG_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": ORG_ID,
     name: "AllYonoGuru.com",
     legalName: "AllYonoGuru.com",
     url: SITE_URL,
@@ -16,7 +20,7 @@ export function OrganizationSchema() {
       height: 512,
     },
     description:
-      "AllYonoGuru.com is an independent directory of Android skill-based game apps in the Yono game network. Not affiliated with SBI or YONO by SBI.",
+      "AllYonoGuru.com is an independent directory and reference site for Yono-network Android game apps, including Rummy Guru and Teen Patti Guru. Not affiliated with SBI or YONO by SBI.",
     contactPoint: [
       {
         "@type": "ContactPoint",
@@ -28,12 +32,13 @@ export function OrganizationSchema() {
     foundingDate: "2025",
     areaServed: { "@type": "Country", name: "India" },
     inLanguage: "en-IN",
-  };
+};
 
+export function OrganizationSchema() {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }}
     />
   );
 }
@@ -42,21 +47,13 @@ export function WebSiteSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
     name: "AllYonoGuru.com",
     url: SITE_URL,
     description:
-      "Independent directory of Android skill-based game apps — Rummy Guru, Teen Patti Guru, and more Yono game apps.",
+      "Independent directory and reference guides for Yono-network Android game apps — Rummy Guru, Teen Patti Guru, and more.",
     inLanguage: "en-IN",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${SITE_URL}/search?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "AllYonoGuru.com",
-      url: SITE_URL,
-    },
+    publisher: { "@id": ORG_ID },
   };
 
   return (
@@ -75,10 +72,10 @@ export function HomePageSchemas({ apps }: HomePageSchemasProps) {
   const collectionPage = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "Yono Game All — Android Skill Game Apps Directory",
+    name: "Yono Game All — Android Game Apps Directory",
     url: SITE_URL,
     description:
-      "The complete AllYonoGuru directory of Yono game apps — skill-based Android card and game apps.",
+      "The complete AllYonoGuru directory of Yono-network Android game apps, with rules and safety guides.",
     inLanguage: "en-IN",
   };
 
@@ -189,7 +186,7 @@ export function BlogPageSchema({ posts }: { posts: BlogPostEntry[] }) {
     "@type": "CollectionPage",
     name: "AllYonoGuru Blog",
     url: `${SITE_URL}/blog`,
-    description: "Editorial guides and articles from AllYonoGuru about Android skill-based card games.",
+    description: "Editorial guides from AllYonoGuru: card-game rules, strategy, app identity and Android safety.",
     inLanguage: "en-IN",
   };
 
@@ -254,12 +251,13 @@ export function BlogPostingSchema({ post }: { post: BlogPostEntry }) {
     description: post.excerpt,
     url: `${SITE_URL}/blog/${post.slug}`,
     datePublished: post.publishedAt ?? undefined,
-    author: { "@type": "Organization", name: post.author },
-    publisher: {
-      "@type": "Organization",
-      name: "AllYonoGuru.com",
-      url: SITE_URL,
-    },
+    dateModified: post.updatedAt ?? post.publishedAt ?? undefined,
+    image: post.coverImage
+      ? (post.coverImage.startsWith("http") ? post.coverImage : `${SITE_URL}${post.coverImage}`)
+      : undefined,
+    author: { "@type": "Organization", "@id": ORG_ID, name: "AllYonoGuru.com" },
+    publisher: { "@id": ORG_ID },
+    mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
     inLanguage: "en-IN",
   };
 

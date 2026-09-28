@@ -22,14 +22,14 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: "Blog — Guides, Game Tips & Updates | AllYonoGuru",
   description:
-    "Independent guides and articles on Rummy, Teen Patti, and Android skill-based game apps from the AllYonoGuru editorial team.",
+    "Independent guides and articles on Rummy, Teen Patti, and Yono-network Android game apps from the AllYonoGuru editorial team.",
   alternates: {
     canonical: `${SITE}/blog`,
   },
   openGraph: {
     title: "Blog — Guides, Game Tips & Updates | AllYonoGuru",
     description:
-      "Independent guides and articles on Rummy, Teen Patti, and Android skill-based game apps from the AllYonoGuru editorial team.",
+      "Independent guides and articles on Rummy, Teen Patti, and Yono-network Android game apps from the AllYonoGuru editorial team.",
     url: `${SITE}/blog`,
     images: [{ url: `${SITE}/og-image.png`, width: 1200, height: 630 }],
   },
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Blog — Guides, Game Tips & Updates | AllYonoGuru",
     description:
-      "Independent guides and articles on Rummy, Teen Patti, and Android skill-based game apps from the AllYonoGuru editorial team.",
+      "Independent guides and articles on Rummy, Teen Patti, and Yono-network Android game apps from the AllYonoGuru editorial team.",
     images: [`${SITE}/og-image.png`],
   },
 };
@@ -88,7 +88,7 @@ export default async function BlogPage() {
               color: "#64748b", lineHeight: "1.65",
               maxWidth: "600px", marginBottom: "24px",
             }}>
-              Independent guides, rules explainers, and safety tips for Rummy, Teen Patti, and other skill-based Android game apps.
+              Independent guides, rules explainers, and safety tips for Rummy, Teen Patti, and other Yono-network Android game apps.
             </p>
 
             {/* Disclaimer strip (Rule 2) */}
@@ -101,7 +101,7 @@ export default async function BlogPage() {
                   </p>
                   <p style={{ margin: 0, fontSize: "11px", color: "#64748b" }}>
                     <strong style={{ color: "#f59e0b" }}>18+</strong>
-                    {" "}· Some apps may be restricted in certain states.
+                    {" "}· Online money games are prohibited in India under the Online Gaming Act, 2025.
                   </p>
                 </div>
               </div>

@@ -4,12 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { ShieldIcon } from "../icons/Icons";
 import RunningBanner from "./RunningBanner";
+import { ORG_SCHEMA } from "../seo/JsonLd";
 
 // ─── Hard rules enforced here ─────────────────────────────────────────────────
 // • Exact disclaimer: "Allyonoguru is not affiliated with, endorsed by, or
 //   connected to SBI, YONO by SBI, or any bank."
 // • 18+ badge mandatory.
-// • "Some apps may be restricted in certain states."
+// • "Online money games are prohibited in India under the Online Gaming Act, 2025."
 // • NO links to allyonoindia / allyonoofficial / allyonoupdate.
 // • Internal app links only.
 // • Organization JSON-LD rendered here.
@@ -39,6 +40,8 @@ const FOOTER_LINKS = [
       { label: "Promo Code",       href: "/all-yono-games-promocode" },
       { label: "Blog",             href: "/blog" },
       { label: "About",            href: "/about" },
+      { label: "Editorial Policy", href: "/editorial-policy" },
+      { label: "Responsible Gaming (18+)", href: "/responsible-gaming" },
       { label: "Disclaimer",       href: "/disclaimer" },
       { label: "Privacy Policy",   href: "/privacy-policy" },
       { label: "Contact",          href: "/contact" },
@@ -46,32 +49,6 @@ const FOOTER_LINKS = [
   },
 ];
 
-const ORG_SCHEMA = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "AllYonoGuru.com",
-  legalName: "AllYonoGuru.com",
-  url: "https://allyonoguru.com",
-  logo: {
-    "@type": "ImageObject",
-    url: "https://allyonoguru.com/logo.png",
-    width: 512,
-    height: 512,
-  },
-  description:
-    "AllYonoGuru.com is an independent directory of Android skill-based game apps in the Yono game network. Not affiliated with SBI or YONO by SBI.",
-  contactPoint: [
-    {
-      "@type": "ContactPoint",
-      contactType: "customer support",
-      email: "Allyonogurusupport@gmail.com",
-      availableLanguage: ["English", "Hindi"],
-    },
-  ],
-  foundingDate: "2025",
-  areaServed: { "@type": "Country", name: "India" },
-  inLanguage: "en-IN",
-};
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -115,7 +92,7 @@ export default function Footer() {
               fontSize: "13px", color: "#64748b", lineHeight: "1.6",
               maxWidth: "260px", marginBottom: "20px",
             }}>
-              Independent directory of Android skill-based game apps in the Yono game network.
+              Independent directory and reference guides for Yono-network Android game apps.
             </p>
 
             {/* Disclaimer strip */}
@@ -148,7 +125,7 @@ export default function Footer() {
                 border: "1px solid rgba(100,116,139,0.15)",
                 borderRadius: "6px", padding: "4px 10px",
               }}>
-                Some apps may be restricted in certain states.
+                Online money games are prohibited in India under the Online Gaming Act, 2025.
               </span>
             </div>
           </div>
@@ -211,7 +188,7 @@ export default function Footer() {
             © {year} AllYonoGuru.com. All rights reserved.
           </p>
           <p style={{ fontSize: "11.5px", color: "#334155", margin: 0, maxWidth: "520px", textAlign: "right" }}>
-            For entertainment and information only. Skill-based games involve risk. Play responsibly.
+            For information only. Real-money games involve financial risk. Some download links are referral links.
           </p>
         </div>
       </div>

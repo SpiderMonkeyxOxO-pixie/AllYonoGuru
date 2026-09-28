@@ -50,7 +50,7 @@ export default function NetworkShowcaseSection({ apps }: { apps: NetworkApp[] })
             Yono Network Apps
           </h2>
           <p style={{ fontSize: "14px", color: "#64748b", maxWidth: "480px", margin: "0 auto" }}>
-            {apps.length} skill-based Android game apps in the Yono network. Independent listing — 18+.
+            {apps.length} Android game apps in the Yono network. Independent listing — 18+.
           </p>
         </motion.div>
 

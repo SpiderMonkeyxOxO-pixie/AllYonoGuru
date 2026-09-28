@@ -74,7 +74,7 @@ export default function AppDetailClient({ app, relatedApps }: Props) {
             {/* Name + meta */}
             <div style={{ flex: 1, minWidth: 0 }}>
               <motion.div
-                initial={{ opacity: 0, y: 12 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.08 }}
               >
@@ -151,7 +151,7 @@ export default function AppDetailClient({ app, relatedApps }: Props) {
                     <motion.a
                       href={app.downloadUrl}
                       title={`Download ${app.name} APK — Free`}
-                      rel="nofollow noopener noreferrer"
+                      rel="sponsored nofollow noopener noreferrer"
                       target="_blank"
                       whileHover={{ scale: 1.03 }}
                       whileTap={{ scale: 0.97 }}
@@ -189,7 +189,7 @@ export default function AppDetailClient({ app, relatedApps }: Props) {
                     <motion.a
                       href={downloadUrl}
                       title={`Download ${app.name} — ${app.primaryDomain}.com`}
-                      rel="nofollow noopener noreferrer"
+                      rel="sponsored nofollow noopener noreferrer"
                       target="_blank"
                       whileHover={{ scale: 1.03 }}
                       whileTap={{ scale: 0.97 }}
@@ -223,6 +223,15 @@ export default function AppDetailClient({ app, relatedApps }: Props) {
                     All Apps
                   </Link>
                 </div>
+
+                {/* Disclosure next to the download CTA (Online Gaming Act, 2025) */}
+                <p style={{ fontSize: "12px", color: "#94a3b8", lineHeight: 1.6, marginTop: "12px", maxWidth: "560px" }}>
+                  <strong style={{ color: "#f59e0b" }}>18+ only.</strong> Download links may be referral links, and
+                  AllYonoGuru may earn a commission. {app.name} is a third-party app that AllYonoGuru does not operate
+                  or endorse. Online money games are prohibited in India under the Online Gaming Act, 2025 — read the{" "}
+                  <Link href="/blog/online-gaming-laws-in-india-what-players-should-know" style={{ color: "#f59e0b" }}>legal guide</Link>{" "}
+                  and <Link href="/responsible-gaming" style={{ color: "#f59e0b" }}>Responsible Gaming</Link>.
+                </p>
               </motion.div>
             </div>
           </div>
@@ -242,7 +251,7 @@ export default function AppDetailClient({ app, relatedApps }: Props) {
                   </p>
                   <p style={{ margin: 0, fontSize: "11px", color: "#64748b" }}>
                     <strong style={{ color: "#f59e0b" }}>18+</strong>
-                    {" "}· {app.compliance?.stateRestrictionNote ?? "Some apps may be restricted in certain states."}
+                    {" "}· {app.compliance?.stateRestrictionNote ?? "Online money games are prohibited in India under the Online Gaming Act, 2025."}
                   </p>
                 </div>
               </div>
@@ -415,7 +424,7 @@ export default function AppDetailClient({ app, relatedApps }: Props) {
                 }}>
                   <p style={{ margin: 0, fontSize: "11px", color: "#64748b", lineHeight: "1.6" }}>
                     <strong style={{ color: "#f59e0b" }}>18+</strong>{" "}
-                    Skill-based game. Not affiliated with SBI or YONO by SBI.
+                    Third-party app. Not affiliated with SBI or YONO by SBI.
                     {app.compliance?.stateRestrictionNote && (
                       <> {app.compliance.stateRestrictionNote}</>
                     )}
