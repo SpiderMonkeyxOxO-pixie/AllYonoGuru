@@ -272,6 +272,46 @@ export const APPS_STATIC: AppEntry[] = [
     },
     links: [],
   },
+  {
+    id: 65,
+    slug: "jeet-spin",
+    name: "Jeet Spin",
+    tagline:
+      "Jeet Spin is an upcoming spin-format game app joining the Yono network — details and download link will be published once the app launches.",
+    description:
+      "Jeet Spin is a newly announced spin-format game app joining the Yono network directory. As a pre-launch listing, its specific game modes, table formats, and download source have not yet been independently reviewed — this page will be updated with verified details once the app becomes available.",
+    downloadUrl: "",
+    appVersion: "",
+    packageSize: "",
+    minAndroid: "",
+    iconUrl: "/logos/jeet-spin.webp",
+    screenshotUrls: [],
+    targetKeyword: "jeet spin",
+    secondaryKeyword: "jeet spin apk",
+    kd: 0,
+    searchVolume: 0,
+    primaryDomain: "allyonoguru",
+    navOrder: -1,
+    tag: "NEW",
+    publishedAt: "2026-09-29T00:00:00.000Z",
+    networkCategory: "spin",
+    comingSoon: true,
+    releaseDate: "2026-09-30T08:00:00+05:30",
+    launchUpdatesUrl: null,
+    seo: {
+      metaTitle: "Jeet Spin — Coming Soon | AllYonoGuru",
+      metaDescription:
+        "Jeet Spin is an upcoming spin-format game app. Check back for the verified download link and app details once it launches.",
+      canonicalURL: "https://allyonoguru.com/jeet-spin",
+    },
+    faq: [],
+    compliance: {
+      showDisclaimer: true,
+      showAgeGate: true,
+      stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025.",
+    },
+    links: [],
+  },
   // ENTITY-SPECIALIST CONFLICT (documented, not resolved — see PrimaryDomain
   // comment in lib/types.ts): DhanGame is assigned to DhanGame.co in the
   // master spec. Hosted here with a live download CTA pending Phase 2/3
@@ -2699,6 +2739,7 @@ export const NETWORK_APPS: NetworkApp[] = [
   { name: "Yes Spin",      logo: "/logos/yes-spin.webp",       category: "spin",        description: "Lightweight skill spin game app for Android with intuitive controls.",                             downloadUrl: "https://www.yesspinmotion.com/?code=47TMD53C9SA&t=1782475635" },
   { name: "Slot Spin",     logo: "/logos/slot-spin.webp",      category: "spin",        description: "Slot-spin mechanics for Android with smooth animations.",                              downloadUrl: "https://www.slotsspinj.com/?code=C1A5F6PQW4M&t=1782470064" },
   { name: "101z",          logo: "/logos/101z.webp",           category: "spin",        description: "101-style Android game with fast rounds and multiple formats.",                        downloadUrl: "https://101zvip2.com/?code=398LS183AB2&t=1782032243" },
+  { name: "Jeet Spin",    logo: "/logos/jeet-spin.webp",     category: "spin",        description: "Upcoming spin-format game app joining the Yono network.",                              downloadUrl: "" },
   // ── Slots (14) ─────────────────────────────────────────────────────────────
   { name: "Share Slots",   logo: "/logos/share-slots.webp",    category: "slots",       description: "Flagship slot-style game in the Yono network, available on Android.",                        downloadUrl: "https://share0022.com/?code=YAZRMEX5W98&t=1782459612" },
   { name: "567 Slots",     logo: "/logos/567-slots.webp",      category: "slots",       description: "Slot gameplay on Android with multiple line configurations.",                           downloadUrl: "https://join567slots.com/?code=9UX4YQ28P28&t=1782032755" },
