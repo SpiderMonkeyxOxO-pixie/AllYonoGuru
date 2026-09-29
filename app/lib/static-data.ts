@@ -295,7 +295,7 @@ export const APPS_STATIC: AppEntry[] = [
     tag: "NEW",
     publishedAt: "2026-09-29T00:00:00.000Z",
     networkCategory: "spin",
-    comingSoon: true,
+    comingSoon: false,
     releaseDate: "2026-09-30T08:00:00+05:30",
     launchUpdatesUrl: null,
     seo: {
