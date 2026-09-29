@@ -32,7 +32,13 @@ export const revalidate = 60;
 async function getPublishedApps(): Promise<AppEntry[]> {
   try {
     const apps = await getAllApps();
-    if (apps.length > 0) return apps;
+    if (apps.length > 0) {
+      const strapiSlugs = new Set(apps.map((a) => a.slug));
+      const staticOnly = APPS_STATIC.filter(
+        (a) => a.publishedAt !== null && !strapiSlugs.has(a.slug)
+      );
+      return [...apps, ...staticOnly].sort((a, b) => a.navOrder - b.navOrder);
+    }
   } catch {
     // Strapi unavailable — fall through to static data.
   }
