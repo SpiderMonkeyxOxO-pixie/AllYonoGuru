@@ -291,11 +291,12 @@ export const APPS_STATIC: AppEntry[] = [
     kd: 0,
     searchVolume: 0,
     primaryDomain: "allyonoguru",
-    navOrder: -1,
+    navOrder: -2,
     tag: "NEW",
     publishedAt: "2026-09-29T00:00:00.000Z",
     networkCategory: "spin",
     comingSoon: false,
+
     releaseDate: "2026-09-30T08:00:00+05:30",
     launchUpdatesUrl: null,
     seo: {
