@@ -4,6 +4,7 @@ import Footer from "./components/layout/Footer";
 import HeroSection from "./components/sections/HeroSection";
 import GuideHighlightsSection from "./components/sections/GuideHighlightsSection";
 import AppGridSection from "./components/sections/AppGridSection";
+import LaunchCountdownSection from "./components/sections/LaunchCountdownSection";
 import CategoryTeaserSection from "./components/sections/CategoryTeaserSection";
 import FAQSection from "./components/sections/FAQSection";
 import NetworkShowcaseSection from "./components/sections/NetworkShowcaseSection";
@@ -144,6 +145,9 @@ export default async function HomePage() {
         {/* 1. Hero — "yono game all" hub, disclaimer in hero */}
         <HeroSection appCount={publishedApps.length} />
 
+        {/* Launch countdown — directly under the hero so a scheduled launch is seen first */}
+        <LaunchCountdownSection apps={publishedApps} />
+
         {/*
           2. Guide highlights — additive section only (Phase 1 repositioning).
           Placed ahead of the app directory/promo content per
@@ -161,7 +165,7 @@ export default async function HomePage() {
         <GuideHighlightsSection posts={guidePosts} />
 
         {/* 3. App grid — published apps only */}
-        <AppGridSection apps={publishedApps} />
+        <AppGridSection apps={publishedApps} hideComingSoon />
 
         {/* 4. Category teasers — DRAFT categories */}
         <CategoryTeaserSection categories={CATEGORIES_STATIC} />

@@ -14,6 +14,8 @@ import type { AppEntry } from "@/app/lib/types";
 
 interface AppGridSectionProps {
   apps: AppEntry[];
+  /** Set when coming-soon cards are rendered elsewhere on the page (e.g. a countdown band under the hero). */
+  hideComingSoon?: boolean;
 }
 
 const SIBLING_DOMAINS: Record<string, string> = {
@@ -50,7 +52,7 @@ function getDownloadUrl(app: AppEntry): { url: string; isExternal: boolean } {
   return { url: `${base}/${app.slug}`, isExternal: true };
 }
 
-export default function AppGridSection({ apps }: AppGridSectionProps) {
+export default function AppGridSection({ apps, hideComingSoon = false }: AppGridSectionProps) {
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState<typeof CATEGORY_TABS[number]["id"]>("all");
   const [sortBy, setSortBy] = useState<SortMode>("default");
@@ -83,7 +85,7 @@ export default function AppGridSection({ apps }: AppGridSectionProps) {
   }, [regularApps, query, activeCategory, sortBy]);
 
   const isFiltered = query.trim() !== "" || activeCategory !== "all";
-  const showComingSoon = comingSoonApps.length > 0 && !isFiltered;
+  const showComingSoon = comingSoonApps.length > 0 && !isFiltered && !hideComingSoon;
 
   function clearFilters() {
     setQuery("");

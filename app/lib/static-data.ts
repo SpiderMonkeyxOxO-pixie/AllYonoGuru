@@ -313,6 +313,45 @@ export const APPS_STATIC: AppEntry[] = [
     },
     links: [],
   },
+  {
+    id: 66,
+    slug: "jaiho-play",
+    name: "Jaiho Play",
+    tagline:
+      "Jaiho Play is an upcoming game app joining the Yono network — details and a download link will be published once the app launches.",
+    description:
+      "Jaiho Play is a newly announced game app joining the Yono network directory, scheduled to launch on 15 October 2026. As a pre-launch listing, its specific game modes, formats and download source have not yet been independently reviewed — this page will be updated with verified details once the app becomes available.",
+    downloadUrl: "",
+    appVersion: "",
+    packageSize: "",
+    minAndroid: "",
+    iconUrl: "/logos/jaiho-play.webp",
+    screenshotUrls: [],
+    targetKeyword: "jaiho play",
+    secondaryKeyword: "jaiho play apk",
+    kd: 0,
+    searchVolume: 0,
+    primaryDomain: "allyonoguru",
+    navOrder: -3,
+    tag: "NEW",
+    publishedAt: "2026-10-07T00:00:00.000Z",
+    comingSoon: true,
+    releaseDate: "2026-10-15T12:00:00+05:30",
+    launchUpdatesUrl: null,
+    seo: {
+      metaTitle: "Jaiho Play — Coming Soon | AllYonoGuru",
+      metaDescription:
+        "Jaiho Play is an upcoming game app launching 15 October 2026. Check back for the verified download link and app details once it launches.",
+      canonicalURL: "https://allyonoguru.com/jaiho-play",
+    },
+    faq: [],
+    compliance: {
+      showDisclaimer: true,
+      showAgeGate: true,
+      stateRestrictionNote: "Online money games are prohibited in India under the Online Gaming Act, 2025.",
+    },
+    links: [],
+  },
   // ENTITY-SPECIALIST CONFLICT (documented, not resolved — see PrimaryDomain
   // comment in lib/types.ts): DhanGame is assigned to DhanGame.co in the
   // master spec. Hosted here with a live download CTA pending Phase 2/3
