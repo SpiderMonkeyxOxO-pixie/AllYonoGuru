@@ -336,7 +336,7 @@ export const APPS_STATIC: AppEntry[] = [
     tag: "NEW",
     publishedAt: "2026-10-07T00:00:00.000Z",
     comingSoon: true,
-    releaseDate: "2026-10-15T12:00:00+05:30",
+    releaseDate: "2026-10-15T08:00:00+05:30",
     launchUpdatesUrl: null,
     seo: {
       metaTitle: "Jaiho Play — Coming Soon | AllYonoGuru",
